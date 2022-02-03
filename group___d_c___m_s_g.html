@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <title>DC_MSG module | Delta Chat Core C Interface</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" rel="stylesheet"/>
+  <link href="m-dark+documentation.compiled.css" rel="stylesheet"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#22272e" name="theme-color"/>
+  <meta content="Delta Chat Core C Interface" name="twitter:title"/>
+  <meta content="Delta Chat Core C Interface" property="og:title"/>
+  <meta content="Delta Chat Core C Interface" itemprop="name"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="Poxy v0.5.3" name="generator"/>
+  <meta content="no-referrer-when-downgrade" name="referrer"/>
+  <link href="poxy-0.5.3.css" rel="stylesheet"/>
+  <link href="poxy-0.5.3-dark.css" rel="stylesheet"/>
+  <script src="poxy-0.5.3.js"></script>
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="Doxyfile-logo.png"/>Delta Chat Core C Interface</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+        </svg></a>
+        <a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+        <a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+      </div>
+      <div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="files.html">Files</a></li>
+            <li><a href="modules.html">Modules</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="namespaces.html">Namespaces</a></li>
+            <li><a href="annotated.html">Classes</a></li>
+            <li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path"></use>
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          DC_MSG <span class="m-thin">module</span></h1>
+        <p>With these constants the type of a message is defined.</p>
+        <div class="m-block m-default poxy-toc">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#define-members">Defines</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>From the view of the library, all types are primary types of the same level, e.g. the library does not regard <a class="m-doc" href="group___d_c___m_s_g.html#ga1203849015c917aa274b05b0d08f1b7c">DC_<wbr/>MSG_<wbr/>GIF</a> as a subtype for <a class="m-doc" href="group___d_c___m_s_g.html#gaf530f0e997ef2e0ef2f2f71fc7c2f9b7">DC_<wbr/>MSG_<wbr/>IMAGE</a> and it's up to the UI to decide whether a GIF is shown e.g. in an IMAGE or in a VIDEO container.</p><p>If you want to define the type of a <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a> object for sending, use <a class="m-doc" href="classdc__msg__t.html#aa694c4f707ad51918703218cc8887143">dc_<wbr/>msg_<wbr/>new()</a>. Depending on the type, you will set more properties using e.g. <a class="m-doc" href="classdc__msg__t.html#a352d9e2cc2fcacac43bb540550a578a1">dc_<wbr/>msg_<wbr/>set_<wbr/>text()</a> or <a class="m-doc" href="classdc__msg__t.html#ae3d4b2a4ed4b10dbe13396ff7739160e">dc_<wbr/>msg_<wbr/>set_<wbr/>file()</a>. To finally send the message, use <a class="m-doc" href="classdc__context__t.html#aaba70910f9c3b3819bba1d04e4d54e02">dc_<wbr/>send_<wbr/>msg()</a>.</p><p>To get the types of <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a> objects received, use <a class="m-doc" href="classdc__msg__t.html#abbe7ce82d642e217363aa27bcc6274b3">dc_<wbr/>msg_<wbr/>get_<wbr/>viewtype()</a>.</p>
+        <section id="define-members">
+          <h2><a href="#define-members">Defines</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga510c9ae279a2e5ee32ba49796a747e83">DC_MSG_AUDIO</a></span>
+            </dt>
+            <dd>Message containing an Audio file.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gac99a50a71b7dfc1ca7f2a145e8be588b">DC_MSG_FILE</a></span>
+            </dt>
+            <dd>Message containing any file, e.g.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga1203849015c917aa274b05b0d08f1b7c">DC_MSG_GIF</a></span>
+            </dt>
+            <dd>Animated GIF message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gaf530f0e997ef2e0ef2f2f71fc7c2f9b7">DC_MSG_IMAGE</a></span>
+            </dt>
+            <dd>Image message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga9638e38fb5b6f93afec10ee30f5bfe34">DC_MSG_STICKER</a></span>
+            </dt>
+            <dd>Message containing a sticker, similar to image.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga1c305b0eaa3d2fe21287d528a83ec524">DC_MSG_TEXT</a></span>
+            </dt>
+            <dd>Text message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga1979f080cdb27c24d519d864e9aa1a06">DC_MSG_VIDEO</a></span>
+            </dt>
+            <dd>Video messages.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga4289e30c154f83ee76c56bb1fcd8fe85">DC_MSG_VIDEOCHAT_INVITATION</a></span>
+            </dt>
+            <dd>Message indicating an incoming or outgoing videochat.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga0c7b507e8de897186e7a31c2fa131058">DC_MSG_VOICE</a></span>
+            </dt>
+            <dd>A voice message that was directly recorded by the user.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga848f9575a28a93b4d8358502c680a98d">DC_MSG_WEBXDC</a></span>
+            </dt>
+            <dd>The message is a webxdc instance.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Define documentation</h2>
+          <section class="m-doc-details" id="ga510c9ae279a2e5ee32ba49796a747e83"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga510c9ae279a2e5ee32ba49796a747e83">DC_MSG_AUDIO</a></span>
+            </h3>
+            <p>Message containing an Audio file.</p>
+<p>File and duration are set via <a class="m-doc" href="classdc__msg__t.html#ae3d4b2a4ed4b10dbe13396ff7739160e">dc_<wbr/>msg_<wbr/>set_<wbr/>file()</a>, <a class="m-doc" href="classdc__msg__t.html#a32bd05a4c5113b098004c16c2b4a14ec">dc_<wbr/>msg_<wbr/>set_<wbr/>duration()</a> and retrieved via <a class="m-doc" href="classdc__msg__t.html#ae8b750f6aa5e388a36c8be4c57b16271">dc_<wbr/>msg_<wbr/>get_<wbr/>file()</a>, <a class="m-doc" href="classdc__msg__t.html#aaedb426314f3d701d606ba3daa24fc1a">dc_<wbr/>msg_<wbr/>get_<wbr/>duration()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="gac99a50a71b7dfc1ca7f2a145e8be588b"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gac99a50a71b7dfc1ca7f2a145e8be588b">DC_MSG_FILE</a></span>
+            </h3>
+            <p>Message containing any file, e.g.</p>
+<p>a PDF. The file is set via <a class="m-doc" href="classdc__msg__t.html#ae3d4b2a4ed4b10dbe13396ff7739160e">dc_<wbr/>msg_<wbr/>set_<wbr/>file()</a> and retrieved via <a class="m-doc" href="classdc__msg__t.html#ae8b750f6aa5e388a36c8be4c57b16271">dc_<wbr/>msg_<wbr/>get_<wbr/>file()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga1203849015c917aa274b05b0d08f1b7c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga1203849015c917aa274b05b0d08f1b7c">DC_MSG_GIF</a></span>
+            </h3>
+            <p>Animated GIF message.</p>
+<p>File, width and height are set via <a class="m-doc" href="classdc__msg__t.html#ae3d4b2a4ed4b10dbe13396ff7739160e">dc_<wbr/>msg_<wbr/>set_<wbr/>file()</a>, <a class="m-doc" href="classdc__msg__t.html#a6bc82bec36d7bc4218f9a26ebc3c24ae">dc_<wbr/>msg_<wbr/>set_<wbr/>dimension()</a> and retrieved via <a class="m-doc" href="classdc__msg__t.html#ae8b750f6aa5e388a36c8be4c57b16271">dc_<wbr/>msg_<wbr/>get_<wbr/>file()</a>, <a class="m-doc" href="classdc__msg__t.html#a5249ddd8d5eea3155a3c0bc121722a1d">dc_<wbr/>msg_<wbr/>get_<wbr/>width()</a>, <a class="m-doc" href="classdc__msg__t.html#ae4b99aa662455a4c37430e678894bfdb">dc_<wbr/>msg_<wbr/>get_<wbr/>height()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="gaf530f0e997ef2e0ef2f2f71fc7c2f9b7"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gaf530f0e997ef2e0ef2f2f71fc7c2f9b7">DC_MSG_IMAGE</a></span>
+            </h3>
+            <p>Image message.</p>
+<p>If the image is an animated GIF, the type <a class="m-doc" href="group___d_c___m_s_g.html#ga1203849015c917aa274b05b0d08f1b7c">DC_<wbr/>MSG_<wbr/>GIF</a> should be used. File, width and height are set via <a class="m-doc" href="classdc__msg__t.html#ae3d4b2a4ed4b10dbe13396ff7739160e">dc_<wbr/>msg_<wbr/>set_<wbr/>file()</a>, <a class="m-doc" href="classdc__msg__t.html#a6bc82bec36d7bc4218f9a26ebc3c24ae">dc_<wbr/>msg_<wbr/>set_<wbr/>dimension()</a> and retrieved via <a class="m-doc" href="classdc__msg__t.html#ae8b750f6aa5e388a36c8be4c57b16271">dc_<wbr/>msg_<wbr/>get_<wbr/>file()</a>, <a class="m-doc" href="classdc__msg__t.html#a5249ddd8d5eea3155a3c0bc121722a1d">dc_<wbr/>msg_<wbr/>get_<wbr/>width()</a>, <a class="m-doc" href="classdc__msg__t.html#ae4b99aa662455a4c37430e678894bfdb">dc_<wbr/>msg_<wbr/>get_<wbr/>height()</a>.</p><p>Before sending, the image is recoded to an reasonable size, see <a class="m-doc" href="classdc__context__t.html#aff3b894f6cfca46cab5248fdffdf083d">dc_<wbr/>set_<wbr/>config()</a>-option <code>media_quality</code>. If you do not want images to be recoded, send them as <a class="m-doc" href="group___d_c___m_s_g.html#gac99a50a71b7dfc1ca7f2a145e8be588b">DC_<wbr/>MSG_<wbr/>FILE</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga9638e38fb5b6f93afec10ee30f5bfe34"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga9638e38fb5b6f93afec10ee30f5bfe34">DC_MSG_STICKER</a></span>
+            </h3>
+            <p>Message containing a sticker, similar to image.</p>
+<p>If possible, the UI should display the image without borders in a transparent way. A click on a sticker will offer to install the sticker set in some future.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga1c305b0eaa3d2fe21287d528a83ec524"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga1c305b0eaa3d2fe21287d528a83ec524">DC_MSG_TEXT</a></span>
+            </h3>
+            <p>Text message.</p>
+<p>The text of the message is set using <a class="m-doc" href="classdc__msg__t.html#a352d9e2cc2fcacac43bb540550a578a1">dc_<wbr/>msg_<wbr/>set_<wbr/>text()</a> and retrieved with <a class="m-doc" href="classdc__msg__t.html#a2577851182c3665a8b8a2de759fd09f1">dc_<wbr/>msg_<wbr/>get_<wbr/>text()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga1979f080cdb27c24d519d864e9aa1a06"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga1979f080cdb27c24d519d864e9aa1a06">DC_MSG_VIDEO</a></span>
+            </h3>
+            <p>Video messages.</p>
+<p>File, width, height and durarion are set via <a class="m-doc" href="classdc__msg__t.html#ae3d4b2a4ed4b10dbe13396ff7739160e">dc_<wbr/>msg_<wbr/>set_<wbr/>file()</a>, <a class="m-doc" href="classdc__msg__t.html#a6bc82bec36d7bc4218f9a26ebc3c24ae">dc_<wbr/>msg_<wbr/>set_<wbr/>dimension()</a>, <a class="m-doc" href="classdc__msg__t.html#a32bd05a4c5113b098004c16c2b4a14ec">dc_<wbr/>msg_<wbr/>set_<wbr/>duration()</a> and retrieved via <a class="m-doc" href="classdc__msg__t.html#ae8b750f6aa5e388a36c8be4c57b16271">dc_<wbr/>msg_<wbr/>get_<wbr/>file()</a>, <a class="m-doc" href="classdc__msg__t.html#a5249ddd8d5eea3155a3c0bc121722a1d">dc_<wbr/>msg_<wbr/>get_<wbr/>width()</a>, <a class="m-doc" href="classdc__msg__t.html#ae4b99aa662455a4c37430e678894bfdb">dc_<wbr/>msg_<wbr/>get_<wbr/>height()</a>, <a class="m-doc" href="classdc__msg__t.html#aaedb426314f3d701d606ba3daa24fc1a">dc_<wbr/>msg_<wbr/>get_<wbr/>duration()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga4289e30c154f83ee76c56bb1fcd8fe85"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga4289e30c154f83ee76c56bb1fcd8fe85">DC_MSG_VIDEOCHAT_INVITATION</a></span>
+            </h3>
+            <p>Message indicating an incoming or outgoing videochat.</p>
+<p>The message was created via <a class="m-doc" href="classdc__context__t.html#aa2995e39153c5007485541da6b5b0f1a">dc_<wbr/>send_<wbr/>videochat_<wbr/>invitation()</a> on this or a remote device.</p><p>Typically, such messages are rendered differently by the UIs, e.g. contain a button to join the videochat. The url for joining can be retrieved using <a class="m-doc" href="classdc__msg__t.html#a4b6cb08857e0631fed7886f26c94ab21">dc_<wbr/>msg_<wbr/>get_<wbr/>videochat_<wbr/>url()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga0c7b507e8de897186e7a31c2fa131058"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga0c7b507e8de897186e7a31c2fa131058">DC_MSG_VOICE</a></span>
+            </h3>
+            <p>A voice message that was directly recorded by the user.</p>
+<p>For all other audio messages, the type <a class="m-doc" href="group___d_c___m_s_g.html#ga510c9ae279a2e5ee32ba49796a747e83">DC_<wbr/>MSG_<wbr/>AUDIO</a> should be used. File and duration are set via <a class="m-doc" href="classdc__msg__t.html#ae3d4b2a4ed4b10dbe13396ff7739160e">dc_<wbr/>msg_<wbr/>set_<wbr/>file()</a>, <a class="m-doc" href="classdc__msg__t.html#a32bd05a4c5113b098004c16c2b4a14ec">dc_<wbr/>msg_<wbr/>set_<wbr/>duration()</a> and retrieved via <a class="m-doc" href="classdc__msg__t.html#ae8b750f6aa5e388a36c8be4c57b16271">dc_<wbr/>msg_<wbr/>get_<wbr/>file()</a>, <a class="m-doc" href="classdc__msg__t.html#aaedb426314f3d701d606ba3daa24fc1a">dc_<wbr/>msg_<wbr/>get_<wbr/>duration()</a></p>
+          </div></section>
+          <section class="m-doc-details" id="ga848f9575a28a93b4d8358502c680a98d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga848f9575a28a93b4d8358502c680a98d">DC_MSG_WEBXDC</a></span>
+            </h3>
+            <p>The message is a webxdc instance.</p>
+<p>To send data to a webxdc instance, use <a class="m-doc" href="classdc__context__t.html#ac53bb4421efd47d156ad0dd550ede288">dc_<wbr/>send_<wbr/>webxdc_<wbr/>status_<wbr/>update()</a></p>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">…</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div class="m-text m-dim m-text-center" id="search-help">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script async="async" src="searchdata-v1.js"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        
+    <a download="" href="Delta_Chat_Core_C_Interface.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+    <br/><br/>
+    Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+
+      </div>
+    </div>
+  </div>
+</nav></footer>
+
+
+</body></html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <title>dc_array_t class | Delta Chat Core C Interface</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" rel="stylesheet"/>
+  <link href="m-dark+documentation.compiled.css" rel="stylesheet"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#22272e" name="theme-color"/>
+  <meta content="Delta Chat Core C Interface" name="twitter:title"/>
+  <meta content="Delta Chat Core C Interface" property="og:title"/>
+  <meta content="Delta Chat Core C Interface" itemprop="name"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="Poxy v0.5.3" name="generator"/>
+  <meta content="no-referrer-when-downgrade" name="referrer"/>
+  <link href="poxy-0.5.3.css" rel="stylesheet"/>
+  <link href="poxy-0.5.3-dark.css" rel="stylesheet"/>
+  <script src="poxy-0.5.3.js"></script>
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="Doxyfile-logo.png"/>Delta Chat Core C Interface</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+        </svg></a>
+        <a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+        <a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+      </div>
+      <div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="files.html">Files</a></li>
+            <li><a href="modules.html">Modules</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="namespaces.html">Namespaces</a></li>
+            <li><a href="annotated.html">Classes</a></li>
+            <li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path"></use>
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          dc_array_t <span class="m-thin">class</span>
+        </h1>
+        <p>An object containing a simple array.</p>
+        <div class="m-block m-default poxy-toc">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#pub-methods">Public functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>This object is used in several places where functions need to return an array. The items of the array are typically IDs. To free an array object, use <a class="m-doc" href="classdc__array__t.html#a0e0e1d3776d26148a5b8cf4b4204f0e3">dc_<wbr/>array_<wbr/>unref()</a>.</p>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a12804ce7eadf0f85f266da829f9ccc1b">dc_array_get_accuracy</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index) -&gt; double</span>
+            </dt>
+            <dd>Return the accuracy of the item at the given index.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a43a8033799950abb44d5d124ae8c60ea">dc_array_get_chat_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+            </dt>
+            <dd>Return the chat-id of the item at the given index.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ab9eda2b3161c3b1e5b451b06785a628c">dc_array_get_cnt</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a></span>
+            </dt>
+            <dd>Find out the number of items in an array.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a6a72ac7ababf254bcf36c4af08c93029">dc_array_get_contact_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+            </dt>
+            <dd>Return the contact-id of the item at the given index.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#abcc5066916ed9c0d9e3a5018604d4d7d">dc_array_get_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+            </dt>
+            <dd>Get the item at the given index as an ID.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ad90ca4ea159037fccaa89cb4bd5440b5">dc_array_get_latitude</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index) -&gt; double</span>
+            </dt>
+            <dd>Return the latitude of the item at the given index.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a9d23f056eff6dc3c1afece4ea65a21f5">dc_array_get_longitude</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index) -&gt; double</span>
+            </dt>
+            <dd>Return the longitude of the item at the given index.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#abd95652e4383dfe578c06383a135a1cf">dc_array_get_marker</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index) -&gt; char*</span>
+            </dt>
+            <dd>Return the marker-character of the item at the given index.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a556284e38698e234a57b08dfe3219a71">dc_array_get_msg_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+            </dt>
+            <dd>Return the message id of the item at the given index.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a3d96a20ebfb3efbc9047338aae947006">dc_array_get_timestamp</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int64_t</a></span>
+            </dt>
+            <dd>Return the timestamp of the item at the given index.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a5134d701d51140dbe8887b1d8316d5ae">dc_array_is_independent</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index) -&gt; int</span>
+            </dt>
+            <dd>Return the independent-state of the location at the given index.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a0e0e1d3776d26148a5b8cf4b4204f0e3">dc_array_unref</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array)</span>
+            </dt>
+            <dd>Free an array object.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a12804ce7eadf0f85f266da829f9ccc1b"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">double dc_<wbr/>array_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a12804ce7eadf0f85f266da829f9ccc1b">dc_array_get_accuracy</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index)</span></span>
+            </h3>
+            <p>Return the accuracy of the item at the given index.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">array</td>
+                  <td>The array object.</td>
+                </tr>
+                <tr>
+                  <td>index</td>
+                  <td>Index of the item. Must be between 0 and <a class="m-doc" href="classdc__array__t.html#ab9eda2b3161c3b1e5b451b06785a628c">dc_<wbr/>array_<wbr/>get_<wbr/>cnt()</a>-1.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Accuracy of the item at the given index. 0.0 if there is no longitude bound to the given item,</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>See <a class="m-doc" href="classdc__context__t.html#a8b8e410c7bfad022443ecb4feba85089">dc_<wbr/>set_<wbr/>location()</a> for more information about the accuracy.</p>
+          </div></section>
+          <section class="m-doc-details" id="a43a8033799950abb44d5d124ae8c60ea"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> dc_<wbr/>array_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a43a8033799950abb44d5d124ae8c60ea">dc_array_get_chat_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index)</span></span>
+            </h3>
+            <p>Return the chat-id of the item at the given index.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">array</td>
+                  <td>The array object.</td>
+                </tr>
+                <tr>
+                  <td>index</td>
+                  <td>Index of the item. Must be between 0 and <a class="m-doc" href="classdc__array__t.html#ab9eda2b3161c3b1e5b451b06785a628c">dc_<wbr/>array_<wbr/>get_<wbr/>cnt()</a>-1.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Chat-id of the item at the given index. 0 if there is no chat-id bound to the given item,</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ab9eda2b3161c3b1e5b451b06785a628c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> dc_<wbr/>array_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ab9eda2b3161c3b1e5b451b06785a628c">dc_array_get_cnt</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array)</span></span>
+            </h3>
+            <p>Find out the number of items in an array.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">array</td>
+                  <td>The array object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Returns the number of items in a <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a> object. 0 on errors or if the array is empty.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a6a72ac7ababf254bcf36c4af08c93029"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> dc_<wbr/>array_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a6a72ac7ababf254bcf36c4af08c93029">dc_array_get_contact_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index)</span></span>
+            </h3>
+            <p>Return the contact-id of the item at the given index.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">array</td>
+                  <td>The array object.</td>
+                </tr>
+                <tr>
+                  <td>index</td>
+                  <td>Index of the item. Must be between 0 and <a class="m-doc" href="classdc__array__t.html#ab9eda2b3161c3b1e5b451b06785a628c">dc_<wbr/>array_<wbr/>get_<wbr/>cnt()</a>-1.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Contact-id of the item at the given index. 0 if there is no contact-id bound to the given item,</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="abcc5066916ed9c0d9e3a5018604d4d7d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> dc_<wbr/>array_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#abcc5066916ed9c0d9e3a5018604d4d7d">dc_array_get_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index)</span></span>
+            </h3>
+            <p>Get the item at the given index as an ID.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">array</td>
+                  <td>The array object.</td>
+                </tr>
+                <tr>
+                  <td>index</td>
+                  <td>Index of the item to get. Must be between 0 and <a class="m-doc" href="classdc__array__t.html#ab9eda2b3161c3b1e5b451b06785a628c">dc_<wbr/>array_<wbr/>get_<wbr/>cnt()</a>-1.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Returns the item at the given index. Returns 0 on errors or if the array is empty.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ad90ca4ea159037fccaa89cb4bd5440b5"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">double dc_<wbr/>array_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ad90ca4ea159037fccaa89cb4bd5440b5">dc_array_get_latitude</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index)</span></span>
+            </h3>
+            <p>Return the latitude of the item at the given index.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">array</td>
+                  <td>The array object.</td>
+                </tr>
+                <tr>
+                  <td>index</td>
+                  <td>Index of the item. Must be between 0 and <a class="m-doc" href="classdc__array__t.html#ab9eda2b3161c3b1e5b451b06785a628c">dc_<wbr/>array_<wbr/>get_<wbr/>cnt()</a>-1.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Latitude of the item at the given index. 0.0 if there is no latitude bound to the given item,</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a9d23f056eff6dc3c1afece4ea65a21f5"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">double dc_<wbr/>array_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a9d23f056eff6dc3c1afece4ea65a21f5">dc_array_get_longitude</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index)</span></span>
+            </h3>
+            <p>Return the longitude of the item at the given index.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">array</td>
+                  <td>The array object.</td>
+                </tr>
+                <tr>
+                  <td>index</td>
+                  <td>Index of the item. Must be between 0 and <a class="m-doc" href="classdc__array__t.html#ab9eda2b3161c3b1e5b451b06785a628c">dc_<wbr/>array_<wbr/>get_<wbr/>cnt()</a>-1.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Latitude of the item at the given index. 0.0 if there is no longitude bound to the given item,</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="abd95652e4383dfe578c06383a135a1cf"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>array_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#abd95652e4383dfe578c06383a135a1cf">dc_array_get_marker</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index)</span></span>
+            </h3>
+            <p>Return the marker-character of the item at the given index.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">array</td>
+                  <td>The array object.</td>
+                </tr>
+                <tr>
+                  <td>index</td>
+                  <td>Index of the item. Must be between 0 and <a class="m-doc" href="classdc__array__t.html#ab9eda2b3161c3b1e5b451b06785a628c">dc_<wbr/>array_<wbr/>get_<wbr/>cnt()</a>-1.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Marker-character of the item at the given index. NULL if there is no marker-character bound to the given item. The returned value must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a> after usage.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Marker-character are typically bound to locations returned by <a class="m-doc" href="classdc__context__t.html#a35435761d33411b62aa2109806f8f08e">dc_<wbr/>get_<wbr/>locations()</a> and are typically created by on-character-messages which can also be an emoticon :)</p>
+          </div></section>
+          <section class="m-doc-details" id="a556284e38698e234a57b08dfe3219a71"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> dc_<wbr/>array_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a556284e38698e234a57b08dfe3219a71">dc_array_get_msg_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index)</span></span>
+            </h3>
+            <p>Return the message id of the item at the given index.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">array</td>
+                  <td>The array object.</td>
+                </tr>
+                <tr>
+                  <td>index</td>
+                  <td>Index of the item. Must be between 0 and <a class="m-doc" href="classdc__array__t.html#ab9eda2b3161c3b1e5b451b06785a628c">dc_<wbr/>array_<wbr/>get_<wbr/>cnt()</a>-1.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Message id of the item at the given index. 0 if there is no message id bound to the given item,</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a3d96a20ebfb3efbc9047338aae947006"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int64_t</a> dc_<wbr/>array_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a3d96a20ebfb3efbc9047338aae947006">dc_array_get_timestamp</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index)</span></span>
+            </h3>
+            <p>Return the timestamp of the item at the given index.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">array</td>
+                  <td>The array object.</td>
+                </tr>
+                <tr>
+                  <td>index</td>
+                  <td>Index of the item. Must be between 0 and <a class="m-doc" href="classdc__array__t.html#ab9eda2b3161c3b1e5b451b06785a628c">dc_<wbr/>array_<wbr/>get_<wbr/>cnt()</a>-1.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Timestamp of the item at the given index. 0 if there is no timestamp bound to the given item,</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a5134d701d51140dbe8887b1d8316d5ae"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>array_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a5134d701d51140dbe8887b1d8316d5ae">dc_array_is_independent</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index)</span></span>
+            </h3>
+            <p>Return the independent-state of the location at the given index.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">array</td>
+                  <td>The array object.</td>
+                </tr>
+                <tr>
+                  <td>index</td>
+                  <td>Index of the item. Must be between 0 and <a class="m-doc" href="classdc__array__t.html#ab9eda2b3161c3b1e5b451b06785a628c">dc_<wbr/>array_<wbr/>get_<wbr/>cnt()</a>-1.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>0=Location belongs to the track of the user, 1=Location was reported independently.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Independent locations do not belong to the track of the user.</p>
+          </div></section>
+          <section class="m-doc-details" id="a0e0e1d3776d26148a5b8cf4b4204f0e3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>array_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a0e0e1d3776d26148a5b8cf4b4204f0e3">dc_array_unref</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* array)</span></span>
+            </h3>
+            <p>Free an array object.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">array</td>
+                  <td>The array object to free, created e.g. by <a class="m-doc" href="classdc__context__t.html#a26c2ff36ce56fdffb7310311352272ae">dc_<wbr/>get_<wbr/>chatlist()</a>, <a class="m-doc" href="classdc__context__t.html#a12e37e12b183a124af1c6a1d5304d074">dc_<wbr/>get_<wbr/>contacts()</a> and so on. If NULL is given, nothing is done.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>Does not free any data items.</p>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">…</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div class="m-text m-dim m-text-center" id="search-help">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script async="async" src="searchdata-v1.js"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        
+    <a download="" href="Delta_Chat_Core_C_Interface.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+    <br/><br/>
+    Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+
+      </div>
+    </div>
+  </div>
+</nav></footer>
+
+
+</body></html>

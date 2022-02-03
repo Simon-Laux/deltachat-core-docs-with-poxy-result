@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <title>dc_chat_t class | Delta Chat Core C Interface</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" rel="stylesheet"/>
+  <link href="m-dark+documentation.compiled.css" rel="stylesheet"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#22272e" name="theme-color"/>
+  <meta content="Delta Chat Core C Interface" name="twitter:title"/>
+  <meta content="Delta Chat Core C Interface" property="og:title"/>
+  <meta content="Delta Chat Core C Interface" itemprop="name"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="Poxy v0.5.3" name="generator"/>
+  <meta content="no-referrer-when-downgrade" name="referrer"/>
+  <link href="poxy-0.5.3.css" rel="stylesheet"/>
+  <link href="poxy-0.5.3-dark.css" rel="stylesheet"/>
+  <script src="poxy-0.5.3.js"></script>
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="Doxyfile-logo.png"/>Delta Chat Core C Interface</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+        </svg></a>
+        <a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+        <a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+      </div>
+      <div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="files.html">Files</a></li>
+            <li><a href="modules.html">Modules</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="namespaces.html">Namespaces</a></li>
+            <li><a href="annotated.html">Classes</a></li>
+            <li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path"></use>
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          dc_chat_t <span class="m-thin">class</span>
+        </h1>
+        <p>An object representing a single chat in memory.</p>
+        <div class="m-block m-default poxy-toc">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#pub-methods">Public functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>Chat objects are created using e.g. <a class="m-doc" href="classdc__context__t.html#a9cec1e2e3dba9d83035cf363cfc3530f">dc_<wbr/>get_<wbr/>chat()</a> and are not updated on database changes; if you want an update, you have to recreate the object.</p>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#acb894b6d56253effbc886299add54872">dc_chat_can_send</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; int</span>
+            </dt>
+            <dd>Check if messages can be sent to a given chat.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ac575ba5901ca24187f0f31492beefe3a">dc_chat_get_color</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+            </dt>
+            <dd>Get a color for the chat.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a4e647c69a9f61fc4497f6293371e0017">dc_chat_get_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+            </dt>
+            <dd>Get chat ID.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a0fb1b4850bcd899eaa06d23648a1efaf">dc_chat_get_name</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; char*</span>
+            </dt>
+            <dd>Get name of a chat.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ad96106c6b88f7705d8ac263133a61c43">dc_chat_get_profile_image</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; char*</span>
+            </dt>
+            <dd>Get the chat's profile image.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a860ee485107eae77cdd9ccf5fe727aad">dc_chat_get_remaining_mute_duration</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int64_t</a></span>
+            </dt>
+            <dd>Get the exact state of the mute of a chat.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a2841f242370f06639a33940e7da17e8d">dc_chat_get_type</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; int</span>
+            </dt>
+            <dd>Get chat type as one of the <a class="m-doc" href="group___d_c___c_h_a_t___t_y_p_e.html">DC_<wbr/>CHAT_<wbr/>TYPE</a> constants:</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a9e8171e1a914cb4ec4f17b622916fab8">dc_chat_get_visibility</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; int</span>
+            </dt>
+            <dd>Get visibility of chat.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a9d23fef011f3e77ed52f8b61e6464430">dc_chat_is_contact_request</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; int</span>
+            </dt>
+            <dd>Check if a chat is a contact request chat.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a560a4ccfa512cad1ecb066ac275b76b8">dc_chat_is_device_talk</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; int</span>
+            </dt>
+            <dd>Check if a chat is a device-talk.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ae93eee9385d1d2c74b4de62619cfd954">dc_chat_is_muted</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; int</span>
+            </dt>
+            <dd>Check whether the chat is currently muted (can be changed by <a class="m-doc" href="classdc__context__t.html#a6460395925d49d2053bc95224bf5ce37">dc_<wbr/>set_<wbr/>chat_<wbr/>mute_<wbr/>duration()</a>).</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#adccb89a809982f91a400fe3a3da83364">dc_chat_is_protected</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; int</span>
+            </dt>
+            <dd>Check if a chat is protected.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ad1a5909513e8990b261cd2c66d1ceb30">dc_chat_is_self_talk</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; int</span>
+            </dt>
+            <dd>Check if a chat is a self talk.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a26d89e24c536b31ff7a62bfd5df065a7">dc_chat_is_sending_locations</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; int</span>
+            </dt>
+            <dd>Check if locations are sent to the chat at the time the object was created using <a class="m-doc" href="classdc__context__t.html#a9cec1e2e3dba9d83035cf363cfc3530f">dc_<wbr/>get_<wbr/>chat()</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#aba1e99ebd5546283bf5f748d86c64a54">dc_chat_is_unpromoted</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; int</span>
+            </dt>
+            <dd>Check if a group chat is still unpromoted.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#aa74cbf05b131b13ee61617628fc91fa0">dc_chat_unref</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span>
+            </dt>
+            <dd>Free a chat object.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="acb894b6d56253effbc886299add54872"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#acb894b6d56253effbc886299add54872">dc_chat_can_send</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Check if messages can be sent to a given chat.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>The chat object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=chat is writable, 0=chat is not writable</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This is not true e.g. for contact requests or for the device-talk, cmp. <a class="m-doc" href="classdc__chat__t.html#a560a4ccfa512cad1ecb066ac275b76b8">dc_<wbr/>chat_<wbr/>is_<wbr/>device_<wbr/>talk()</a>.</p><p>Calling <a class="m-doc" href="classdc__context__t.html#aaba70910f9c3b3819bba1d04e4d54e02">dc_<wbr/>send_<wbr/>msg()</a> for these chats will fail and the UI may decide to hide input controls therefore.</p>
+          </div></section>
+          <section class="m-doc-details" id="ac575ba5901ca24187f0f31492beefe3a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ac575ba5901ca24187f0f31492beefe3a">dc_chat_get_color</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Get a color for the chat.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>The chat object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Color as 0x00rrggbb with rr=red, gg=green, bb=blue each in the range 0-255.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>For 1:1 chats, the color is calculated from the contact's email address. Otherwise, the chat name is used. The color can be used for an fallback avatar with white initials as well as for headlines in bubbles of group chats.</p>
+          </div></section>
+          <section class="m-doc-details" id="a4e647c69a9f61fc4497f6293371e0017"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a4e647c69a9f61fc4497f6293371e0017">dc_chat_get_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Get chat ID.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>The chat object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Chat ID. 0 on errors.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The chat ID is the ID under which the chat is filed in the database.</p><p>Special IDs:</p><ul><li>DC_CHAT_ID_ARCHIVED_LINK (6) - A link at the end of the chatlist, if present the UI should show the button "Archived chats"-</li></ul><p>"Normal" chat IDs are larger than these special IDs (larger than DC_CHAT_ID_LAST_SPECIAL).</p>
+          </div></section>
+          <section class="m-doc-details" id="a0fb1b4850bcd899eaa06d23648a1efaf"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a0fb1b4850bcd899eaa06d23648a1efaf">dc_chat_get_name</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Get name of a chat.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>The chat object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Chat name as a string. Must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a> after usage. Never NULL.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>For one-to-one chats, this is the name of the contact. For group chats, this is the name given e.g. to <a class="m-doc" href="classdc__context__t.html#ae68182461a90d24aae7df62db43ed5aa">dc_<wbr/>create_<wbr/>group_<wbr/>chat()</a> or received by a group-creation message.</p><p>To change the name, use <a class="m-doc" href="classdc__context__t.html#a6e324717f073f0c52f2c77d07dc40fd6">dc_<wbr/>set_<wbr/>chat_<wbr/>name()</a></p>
+          </div></section>
+          <section class="m-doc-details" id="ad96106c6b88f7705d8ac263133a61c43"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ad96106c6b88f7705d8ac263133a61c43">dc_chat_get_profile_image</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Get the chat's profile image.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>The chat object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Path and file of the profile image, if any. NULL otherwise. Must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a> after usage.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>For groups, this is the image set by any group member using <a class="m-doc" href="classdc__context__t.html#a2dc155d28e257fe540c2af4524e20cb6">dc_<wbr/>set_<wbr/>chat_<wbr/>profile_<wbr/>image()</a>. For normal chats, this is the image set by each remote user on their own using dc_set_config(context, "selfavatar", image).</p>
+          </div></section>
+          <section class="m-doc-details" id="a860ee485107eae77cdd9ccf5fe727aad"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int64_t</a> dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a860ee485107eae77cdd9ccf5fe727aad">dc_chat_get_remaining_mute_duration</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Get the exact state of the mute of a chat.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>The chat object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>0=not muted, -1=forever muted, (x&gt;0)=remaining seconds until the mute is lifted</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a2841f242370f06639a33940e7da17e8d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a2841f242370f06639a33940e7da17e8d">dc_chat_get_type</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Get chat type as one of the <a class="m-doc" href="group___d_c___c_h_a_t___t_y_p_e.html">DC_<wbr/>CHAT_<wbr/>TYPE</a> constants:</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>The chat object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Chat type.</td>
+                </tr>
+              </tfoot>
+            </table>
+<ul><li><a class="m-doc" href="group___d_c___c_h_a_t___t_y_p_e.html#ga0fc026bba41b2222cfbdd7897577b770">DC_<wbr/>CHAT_<wbr/>TYPE_<wbr/>SINGLE</a> - a normal chat is a chat with a single contact, chats_contacts contains one record for the user. DC_CONTACT_ID_SELF (see dc_contact_t::id) is added <em>only</em> for a self talk. These chats are created by <a class="m-doc" href="classdc__context__t.html#ac0fad42e07b1973162d27e0fdf4478d1">dc_<wbr/>create_<wbr/>chat_<wbr/>by_<wbr/>contact_<wbr/>id()</a>.</li><li><a class="m-doc" href="group___d_c___c_h_a_t___t_y_p_e.html#ga088108d7e73441f3985461e56b42c8b0">DC_<wbr/>CHAT_<wbr/>TYPE_<wbr/>GROUP</a> - a group chat, chats_contacts contain all group members, incl. DC_CONTACT_ID_SELF. Groups are created by <a class="m-doc" href="classdc__context__t.html#ae68182461a90d24aae7df62db43ed5aa">dc_<wbr/>create_<wbr/>group_<wbr/>chat()</a>.</li><li><a class="m-doc" href="group___d_c___c_h_a_t___t_y_p_e.html#ga35f0f3d916d666115e78a37ffaa5b72c">DC_<wbr/>CHAT_<wbr/>TYPE_<wbr/>MAILINGLIST</a> - a mailing list, this is similar to groups, however, the member list cannot be retrieved completely and cannot be changed using this api. Mailing lists are created as needed by incoming messages and usually require some special server; they cannot be created by a function call as the other chat types. Moreover, for now, mailing lists are read-only.</li><li><a class="m-doc" href="group___d_c___c_h_a_t___t_y_p_e.html#gaad8d41e1eb0ce75d442893646867f9d8">DC_<wbr/>CHAT_<wbr/>TYPE_<wbr/>BROADCAST</a> - a broadcast list, the recipients will get messages in a one-to-one chats and the sender will get answers in a one-to-one as well. chats_contacts contain all recipients but DC_CONTACT_ID_SELF. Broadcasts are created by <a class="m-doc" href="classdc__context__t.html#a6f02e5e53abfe2247e37592087695792">dc_<wbr/>create_<wbr/>broadcast_<wbr/>list()</a>.</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="a9e8171e1a914cb4ec4f17b622916fab8"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a9e8171e1a914cb4ec4f17b622916fab8">dc_chat_get_visibility</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Get visibility of chat.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>The chat object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>One of <a class="m-doc" href="group___d_c___c_h_a_t___v_i_s_i_b_i_l_i_t_y.html">DC_<wbr/>CHAT_<wbr/>VISIBILITY</a></td>
+                </tr>
+              </tfoot>
+            </table>
+<p>See <a class="m-doc" href="group___d_c___c_h_a_t___v_i_s_i_b_i_l_i_t_y.html">DC_<wbr/>CHAT_<wbr/>VISIBILITY</a> for detailed information about the visibilities.</p>
+          </div></section>
+          <section class="m-doc-details" id="a9d23fef011f3e77ed52f8b61e6464430"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a9d23fef011f3e77ed52f8b61e6464430">dc_chat_is_contact_request</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Check if a chat is a contact request chat.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>The chat object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=chat is a contact request chat 0=chat is not a contact request chat</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>UI should display such chats with a [New] badge in the chatlist.</p><p>When such chat is opened, user should be presented with a set of options instead of the message composition area, for example:</p><ul><li>Accept chat (<a class="m-doc" href="classdc__context__t.html#af0e42094d6d7179676b43b337c39a78d">dc_<wbr/>accept_<wbr/>chat()</a>)</li><li>Block chat (<a class="m-doc" href="classdc__context__t.html#a55e98c63ffd58f6dccf5fddc9d453467">dc_<wbr/>block_<wbr/>chat()</a>)</li><li>Delete chat (<a class="m-doc" href="classdc__context__t.html#ad50eed96a11b113c4080886b2b748ff3">dc_<wbr/>delete_<wbr/>chat()</a>)</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="a560a4ccfa512cad1ecb066ac275b76b8"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a560a4ccfa512cad1ecb066ac275b76b8">dc_chat_is_device_talk</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Check if a chat is a device-talk.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>The chat object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=chat is device-talk, 0=chat is no device-talk</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Device-talks contain update information and some hints that are added during the program runs, multi-device etc.</p><p>From the UI view, device-talks are not very special, the user can delete and forward messages, archive the chat, set notifications etc.</p><p>Messages can be added to the device-talk using <a class="m-doc" href="classdc__context__t.html#a1a2aad98bd23c1d21ee42374e241f389">dc_<wbr/>add_<wbr/>device_<wbr/>msg()</a></p>
+          </div></section>
+          <section class="m-doc-details" id="ae93eee9385d1d2c74b4de62619cfd954"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ae93eee9385d1d2c74b4de62619cfd954">dc_chat_is_muted</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Check whether the chat is currently muted (can be changed by <a class="m-doc" href="classdc__context__t.html#a6460395925d49d2053bc95224bf5ce37">dc_<wbr/>set_<wbr/>chat_<wbr/>mute_<wbr/>duration()</a>).</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>The chat object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=muted, 0=not muted</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="adccb89a809982f91a400fe3a3da83364"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#adccb89a809982f91a400fe3a3da83364">dc_chat_is_protected</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Check if a chat is protected.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>The chat object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=chat protected, 0=chat is not protected</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Protected chats contain only verified members and encryption is always enabled. Protected chats are created using <a class="m-doc" href="classdc__context__t.html#ae68182461a90d24aae7df62db43ed5aa">dc_<wbr/>create_<wbr/>group_<wbr/>chat()</a> by setting the 'protect' parameter to 1. The status can be changed using <a class="m-doc" href="classdc__context__t.html#a66d4356a148982b1debba159c28ce75a">dc_<wbr/>set_<wbr/>chat_<wbr/>protection()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ad1a5909513e8990b261cd2c66d1ceb30"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ad1a5909513e8990b261cd2c66d1ceb30">dc_chat_is_self_talk</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Check if a chat is a self talk.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>The chat object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=chat is self talk, 0=chat is no self talk</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Self talks are normal chats with the only contact DC_CONTACT_ID_SELF.</p>
+          </div></section>
+          <section class="m-doc-details" id="a26d89e24c536b31ff7a62bfd5df065a7"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a26d89e24c536b31ff7a62bfd5df065a7">dc_chat_is_sending_locations</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Check if locations are sent to the chat at the time the object was created using <a class="m-doc" href="classdc__context__t.html#a9cec1e2e3dba9d83035cf363cfc3530f">dc_<wbr/>get_<wbr/>chat()</a>.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>The chat object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=locations are sent to chat, 0=no locations are sent to chat</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>To check if locations are sent to <em>any</em> chat, use <a class="m-doc" href="classdc__context__t.html#a532065cd272c597028686689984d0181">dc_<wbr/>is_<wbr/>sending_<wbr/>locations_<wbr/>to_<wbr/>chat()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="aba1e99ebd5546283bf5f748d86c64a54"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aba1e99ebd5546283bf5f748d86c64a54">dc_chat_is_unpromoted</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Check if a group chat is still unpromoted.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>The chat object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=chat is still unpromoted, no message was ever send to the chat, 0=chat is not unpromoted, messages were send and/or received or the chat is not group chat.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>After the creation with <a class="m-doc" href="classdc__context__t.html#ae68182461a90d24aae7df62db43ed5aa">dc_<wbr/>create_<wbr/>group_<wbr/>chat()</a> the chat is usually unpromoted until the first call to <a class="m-doc" href="classdc__context__t.html#a2e30845e0c4676e1b0f7c5b4a15fb2b6">dc_<wbr/>send_<wbr/>text_<wbr/>msg()</a> or another sending function.</p><p>With unpromoted chats, members can be added and settings can be modified without the need of special status messages being sent.</p><p>While the core takes care of the unpromoted state on its own, checking the state from the UI side may be useful to decide whether a hint as "Send the first message to allow others to reply within the group" should be shown to the user or not.</p>
+          </div></section>
+          <section class="m-doc-details" id="aa74cbf05b131b13ee61617628fc91fa0"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>chat_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aa74cbf05b131b13ee61617628fc91fa0">dc_chat_unref</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Free a chat object.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chat</td>
+                  <td>Chat object are returned e.g. by <a class="m-doc" href="classdc__context__t.html#a9cec1e2e3dba9d83035cf363cfc3530f">dc_<wbr/>get_<wbr/>chat()</a>. If NULL is given, nothing is done.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">…</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div class="m-text m-dim m-text-center" id="search-help">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script async="async" src="searchdata-v1.js"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        
+    <a download="" href="Delta_Chat_Core_C_Interface.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+    <br/><br/>
+    Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+
+      </div>
+    </div>
+  </div>
+</nav></footer>
+
+
+</body></html>

@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <title>dc_msg_t class | Delta Chat Core C Interface</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" rel="stylesheet"/>
+  <link href="m-dark+documentation.compiled.css" rel="stylesheet"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#22272e" name="theme-color"/>
+  <meta content="Delta Chat Core C Interface" name="twitter:title"/>
+  <meta content="Delta Chat Core C Interface" property="og:title"/>
+  <meta content="Delta Chat Core C Interface" itemprop="name"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="Poxy v0.5.3" name="generator"/>
+  <meta content="no-referrer-when-downgrade" name="referrer"/>
+  <link href="poxy-0.5.3.css" rel="stylesheet"/>
+  <link href="poxy-0.5.3-dark.css" rel="stylesheet"/>
+  <script src="poxy-0.5.3.js"></script>
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="Doxyfile-logo.png"/>Delta Chat Core C Interface</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+        </svg></a>
+        <a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+        <a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+      </div>
+      <div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="files.html">Files</a></li>
+            <li><a href="modules.html">Modules</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="namespaces.html">Namespaces</a></li>
+            <li><a href="annotated.html">Classes</a></li>
+            <li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path"></use>
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          dc_msg_t <span class="m-thin">class</span>
+        </h1>
+        <p>An object representing a single message in memory.</p>
+        <div class="m-block m-default poxy-toc">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#pub-methods">Public functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>The message object is not updated. If you want an update, you have to recreate the object.</p>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#aa7b7882a4b41ccfb08560dc767586589">dc_msg_force_plaintext</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span>
+            </dt>
+            <dd>Force the message to be sent in plain text.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a21aa5dbd0c7391b707f77b97ac137cbf">dc_msg_get_chat_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+            </dt>
+            <dd>Get the ID of chat the message belongs to.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a2cfa8744f0dfa1d6cada95bf2ea9aaf4">dc_msg_get_download_state</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Check if the message is completely downloaded or if some further action is needed.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#aaedb426314f3d701d606ba3daa24fc1a">dc_msg_get_duration</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Get the duration of audio or video.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a0ed75e2129e5da816918a430db7bae5a">dc_msg_get_ephemeral_timer</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+            </dt>
+            <dd>Get ephemeral timer duration for message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a2c8b564854f39830e1bf80029944018e">dc_msg_get_ephemeral_timestamp</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int64_t</a></span>
+            </dt>
+            <dd>Get timestamp of ephemeral message removal.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ae5914bf190af647c43676e9b35bad9cd">dc_msg_get_error</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; char*</span>
+            </dt>
+            <dd>Gets the error status of the message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ae8b750f6aa5e388a36c8be4c57b16271">dc_msg_get_file</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; char*</span>
+            </dt>
+            <dd>Find out full path, file name and extension of the file associated with a message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a918893073cf6bb0ac324a66a47062db3">dc_msg_get_filebytes</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint64_t</a></span>
+            </dt>
+            <dd>Get the size of the file.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a56b59cbaae2f570723600ba130ea12a4">dc_msg_get_filemime</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; char*</span>
+            </dt>
+            <dd>Get mime type of the file.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a0ee3fda6369513391f64b996c8cbeb34">dc_msg_get_filename</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; char*</span>
+            </dt>
+            <dd>Get base file name without path.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a2b031e216af41a41f6c12f4142d2e447">dc_msg_get_from_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+            </dt>
+            <dd>Get the ID of contact who wrote the message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ae4b99aa662455a4c37430e678894bfdb">dc_msg_get_height</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Get height of image or video.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ab007f6ccf670907af9ac6788c74a0641">dc_msg_get_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+            </dt>
+            <dd>Get the ID of the message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ab3eeb59143e67fda31d3648bd775f77b">dc_msg_get_info_type</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Get the type of an informational message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a47c8d53848c954277926f456919c7eab">dc_msg_get_override_sender_name</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; char*</span>
+            </dt>
+            <dd>Get the name that should be shown over the message (in a group chat) instead of the contact display name, or NULL.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#aa349dbcf03838d6f371d09b16fd7b4ec">dc_msg_get_parent</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>*</span>
+            </dt>
+            <dd>Get parent message, if available.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a9282d97546388655d99018fd63294bb6">dc_msg_get_quoted_msg</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>*</span>
+            </dt>
+            <dd>Get quoted message, if available.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a456299eae0b43c4ec6ee6fe812947ed9">dc_msg_get_quoted_text</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; char*</span>
+            </dt>
+            <dd>Get quoted text, if any.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#aede5976ccc9c2c42d76d770b439c628f">dc_msg_get_received_timestamp</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int64_t</a></span>
+            </dt>
+            <dd>Get message receive time.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a677bca5655a8cc9f7a838fa588562d12">dc_msg_get_setupcodebegin</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; char*</span>
+            </dt>
+            <dd>Get the first characters of the setup code.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a1beb22d18c9c045f7982718879a78440">dc_msg_get_showpadlock</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Check if a padlock should be shown beside the message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ad6b9f44c1a3c7aa96fa9ab268c241a5c">dc_msg_get_sort_timestamp</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int64_t</a></span>
+            </dt>
+            <dd>Get message time used for sorting.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a83fbf6e74d09a0b598ccefe9b48bd68c">dc_msg_get_state</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Get the state of a message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a919df8620e6d9a094dd64842e9360b9d">dc_msg_get_subject</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; char*</span>
+            </dt>
+            <dd>Get the subject of the email.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a2107a9532d0d157766329c53fa1617d8">dc_msg_get_summary</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; <a class="m-doc" href="classdc__lot__t.html">dc_<wbr/>lot_<wbr/>t</a>*</span>
+            </dt>
+            <dd>Get a summary for a message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a14af0d3ec8277eaad7f66464a0cd8fb3">dc_msg_get_summarytext</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              int approx_characters) -&gt; char*</span>
+            </dt>
+            <dd>Get a message summary as a single line of text.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a2577851182c3665a8b8a2de759fd09f1">dc_msg_get_text</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; char*</span>
+            </dt>
+            <dd>Get the text of the message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a3750338f46ffcda730770afcd95ac308">dc_msg_get_timestamp</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int64_t</a></span>
+            </dt>
+            <dd>Get message sending time.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ae0184efeb9f196dc0488212349d1b1c3">dc_msg_get_videochat_type</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Get type of videochat.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a4b6cb08857e0631fed7886f26c94ab21">dc_msg_get_videochat_url</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; char*</span>
+            </dt>
+            <dd>Get url of a videochat invitation.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#abbe7ce82d642e217363aa27bcc6274b3">dc_msg_get_viewtype</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Get the type of the message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a0ce7888a97a8bc127fe5f7a9f869eae2">dc_msg_get_webxdc_blob</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              const char* filename,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a>* ret_bytes) -&gt; char*</span>
+            </dt>
+            <dd>Return file from inside an webxdc message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#aee526949983962ed25adf33a2f5e6878">dc_msg_get_webxdc_info</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; char*</span>
+            </dt>
+            <dd>Get info from a webxdc message, in JSON format.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a5249ddd8d5eea3155a3c0bc121722a1d">dc_msg_get_width</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Get width of image or video.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a6dc38654dbb222305ee086af338113b2">dc_msg_has_deviating_timestamp</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Check if a message has a deviating timestamp.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#aab7b069edb647e01311ee675b267d99a">dc_msg_has_html</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Checks if the message has a full HTML version.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a22b65dfeb2ed17982aeadd5de7077dff">dc_msg_has_location</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Check if a message has a location bound to it.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a64518463c41fb8be46083f6f4fd8edcb">dc_msg_is_bot</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Check if incoming message is a bot message, i.e.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a6d5b3b500fc36d7e1fc53bc2622c7dad">dc_msg_is_forwarded</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Check if the message is a forwarded message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#abd187cb4f114fd77c83b6d914d3977db">dc_msg_is_increation</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Check if a message is still in creation.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a7272ddc7b2da2605463fa3ce0a00edc7">dc_msg_is_info</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Check if the message is an informational message, created by the device or by another users.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ae75e92a28d0c3dc3e7239f0f132d8788">dc_msg_is_sent</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Check if a message was sent successfully.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a8a1c2f34e4b56161bd0057983ac2d104">dc_msg_is_setupmessage</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg) -&gt; int</span>
+            </dt>
+            <dd>Check if the message is an Autocrypt Setup Message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a7687ff969841f3d00c3a212f9ad27861">dc_msg_latefiling_mediasize</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              int width,
+              int height,
+              int duration)</span>
+            </dt>
+            <dd>Late filing information to a message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#aa694c4f707ad51918703218cc8887143">dc_msg_new</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__context__t.html">dc_<wbr/>context_<wbr/>t</a>* context,
+              int viewtype) -&gt; <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>*</span>
+            </dt>
+            <dd>Create new message object.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a6bc82bec36d7bc4218f9a26ebc3c24ae">dc_msg_set_dimension</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              int width,
+              int height)</span>
+            </dt>
+            <dd>Set the dimensions associated with message object.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a32bd05a4c5113b098004c16c2b4a14ec">dc_msg_set_duration</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              int duration)</span>
+            </dt>
+            <dd>Set the duration associated with message object.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#ae3d4b2a4ed4b10dbe13396ff7739160e">dc_msg_set_file</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              const char* file,
+              const char* filemime)</span>
+            </dt>
+            <dd>Set the file associated with a message object.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a0770c59040a07898f6c4723a856de2d7">dc_msg_set_html</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              const char* html)</span>
+            </dt>
+            <dd>Set the HTML part of a message object.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a841ca7926609ae1da64bd0dd237ca5b1">dc_msg_set_location</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              double latitude,
+              double longitude)</span>
+            </dt>
+            <dd>Set any location that should be bound to the message object.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a124864502cf157aae190afca6cc73c99">dc_msg_set_override_sender_name</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              const char* name)</span>
+            </dt>
+            <dd>Set different sender name for a message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a21ea981a536fbd8d37ec8ea3c22d477a">dc_msg_set_quote</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* quote)</span>
+            </dt>
+            <dd>Set the message replying to.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a352d9e2cc2fcacac43bb540550a578a1">dc_msg_set_text</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              const char* text)</span>
+            </dt>
+            <dd>Set the text of a message object.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a578e283b6d9de67e0e51f131ba3bcfa8">dc_msg_unref</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span>
+            </dt>
+            <dd>Free a message object.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="aa7b7882a4b41ccfb08560dc767586589"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aa7b7882a4b41ccfb08560dc767586589">dc_msg_force_plaintext</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Force the message to be sent in plain text.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>This API is for bots, there is no need to expose it in the UI.</p>
+          </div></section>
+          <section class="m-doc-details" id="a21aa5dbd0c7391b707f77b97ac137cbf"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a21aa5dbd0c7391b707f77b97ac137cbf">dc_msg_get_chat_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get the ID of chat the message belongs to.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The ID of the chat the message belongs to, 0 on errors.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>To get details about the chat, pass the returned ID to <a class="m-doc" href="classdc__context__t.html#a9cec1e2e3dba9d83035cf363cfc3530f">dc_<wbr/>get_<wbr/>chat()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a2cfa8744f0dfa1d6cada95bf2ea9aaf4"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a2cfa8744f0dfa1d6cada95bf2ea9aaf4">dc_msg_get_download_state</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Check if the message is completely downloaded or if some further action is needed.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>One of the <a class="m-doc" href="group___d_c___d_o_w_n_l_o_a_d.html">DC_<wbr/>DOWNLOAD</a> values</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Messages may be not fully downloaded if they are larger than the limit set by the <a class="m-doc" href="classdc__context__t.html#aff3b894f6cfca46cab5248fdffdf083d">dc_<wbr/>set_<wbr/>config()</a>-option <code>download_limit</code>.</p><p>The function returns one of:</p><ul><li><a class="m-doc" href="group___d_c___d_o_w_n_l_o_a_d.html#ga54fe46147a3d129916260989ce708fa6">DC_<wbr/>DOWNLOAD_<wbr/>DONE</a> - The message does not need any further download action and should be rendered as usual.</li><li><a class="m-doc" href="group___d_c___d_o_w_n_l_o_a_d.html#ga33ed6e1e946fb8d2209e41d8ce03a2d4">DC_<wbr/>DOWNLOAD_<wbr/>AVAILABLE</a> - There is additional content to download. In addition to the usual message rendering, the UI shall show a download button that calls <a class="m-doc" href="classdc__context__t.html#aaeb16a389d24921e8253545e39cda504">dc_<wbr/>download_<wbr/>full_<wbr/>msg()</a></li><li><a class="m-doc" href="group___d_c___d_o_w_n_l_o_a_d.html#ga03acb9a1bf7fa1fd1e04fa32a66f40cc">DC_<wbr/>DOWNLOAD_<wbr/>IN_<wbr/>PROGRESS</a> - Download was started with <a class="m-doc" href="classdc__context__t.html#aaeb16a389d24921e8253545e39cda504">dc_<wbr/>download_<wbr/>full_<wbr/>msg()</a> and is still in progress. If the download fails or succeeds, the event <a class="m-doc" href="group___d_c___e_v_e_n_t.html#ga0f52cdaad70dd24f7540abda6193cc2d">DC_<wbr/>EVENT_<wbr/>MSGS_<wbr/>CHANGED</a> is emitted.</li><li><a class="m-doc" href="group___d_c___d_o_w_n_l_o_a_d.html#ga85267e4a482ed4fd61d98f719a486937">DC_<wbr/>DOWNLOAD_<wbr/>FAILURE</a> - Download error, the user may start over calling <a class="m-doc" href="classdc__context__t.html#aaeb16a389d24921e8253545e39cda504">dc_<wbr/>download_<wbr/>full_<wbr/>msg()</a> again.</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="aaedb426314f3d701d606ba3daa24fc1a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aaedb426314f3d701d606ba3daa24fc1a">dc_msg_get_duration</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get the duration of audio or video.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Duration in milliseconds, if applicable. 0 otherwise or if unknown.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The duration is returned in milliseconds (ms). If the duration is unknown or if the associated file is no audio or video file, 0 is returned.</p><p>See also <a class="m-doc" href="classdc__msg__t.html#a5249ddd8d5eea3155a3c0bc121722a1d">dc_<wbr/>msg_<wbr/>get_<wbr/>width()</a> and <a class="m-doc" href="classdc__msg__t.html#ae4b99aa662455a4c37430e678894bfdb">dc_<wbr/>msg_<wbr/>get_<wbr/>height()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a0ed75e2129e5da816918a430db7bae5a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a0ed75e2129e5da816918a430db7bae5a">dc_msg_get_ephemeral_timer</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get ephemeral timer duration for message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Duration in seconds, or 0 if no timer is set.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This is the value of <a class="m-doc" href="classdc__context__t.html#a33c981fa61b99a72fb4478f920fff78d">dc_<wbr/>get_<wbr/>chat_<wbr/>ephemeral_<wbr/>timer()</a> in the moment the message was sent.</p><p>To check if the timer is started and calculate remaining time, use <a class="m-doc" href="classdc__msg__t.html#a2c8b564854f39830e1bf80029944018e">dc_<wbr/>msg_<wbr/>get_<wbr/>ephemeral_<wbr/>timestamp()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a2c8b564854f39830e1bf80029944018e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int64_t</a> dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a2c8b564854f39830e1bf80029944018e">dc_msg_get_ephemeral_timestamp</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get timestamp of ephemeral message removal.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Time of message removal, 0 if the timer is not yet started (the timer starts on sending messages or when <a class="m-doc" href="classdc__context__t.html#ae5305a90c09380dffe54e68c2a709128">dc_<wbr/>markseen_<wbr/>msgs()</a> is called)</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>If returned value is non-zero, you can calculate the * fraction of time remaining by divinding the difference between the current timestamp and this timestamp by <a class="m-doc" href="classdc__msg__t.html#a0ed75e2129e5da816918a430db7bae5a">dc_<wbr/>msg_<wbr/>get_<wbr/>ephemeral_<wbr/>timer()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ae5914bf190af647c43676e9b35bad9cd"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ae5914bf190af647c43676e9b35bad9cd">dc_msg_get_error</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Gets the error status of the message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Error or NULL. The result must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a>.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>If there is no error associated with the message, NULL is returned.</p><p>A message can have an associated error status if something went wrong when sending or receiving message itself. The error status is free-form text and should not be further parsed, rather it's presence is meant to indicate <em>something</em> went wrong with the message and the text of the error is detailed information on what.</p><p>Some common reasons error can be associated with messages are:</p><ul><li>Lack of valid signature on an e2ee message, usually for received messages.</li><li>Failure to decrypt an e2ee message, usually for received messages.</li><li>When a message could not be delivered to one or more recipients the non-delivery notification text can be stored in the error status.</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="ae8b750f6aa5e388a36c8be4c57b16271"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ae8b750f6aa5e388a36c8be4c57b16271">dc_msg_get_file</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Find out full path, file name and extension of the file associated with a message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Full path, file name and extension of the file associated with the message. If there is no file associated with the message, an emtpy string is returned. NULL is never returned and the returned value must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a>.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Typically files are associated with images, videos, audios, documents. Plain text messages do not have a file.</p>
+          </div></section>
+          <section class="m-doc-details" id="a918893073cf6bb0ac324a66a47062db3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint64_t</a> dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a918893073cf6bb0ac324a66a47062db3">dc_msg_get_filebytes</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get the size of the file.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>File size in bytes, 0 if not applicable or on errors.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Returns the size of the file associated with a message, if applicable.</p><p>Typically, this is used to show the size of document messages, e.g. a PDF.</p>
+          </div></section>
+          <section class="m-doc-details" id="a56b59cbaae2f570723600ba130ea12a4"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a56b59cbaae2f570723600ba130ea12a4">dc_msg_get_filemime</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get mime type of the file.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>String containing the mime type. Must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a> after usage. NULL is never returned.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>If there is not file, an empty string is returned. If there is no associated mime type with the file, the function guesses on; if in doubt, <code>application/octet-stream</code> is returned. NULL is never returned.</p>
+          </div></section>
+          <section class="m-doc-details" id="a0ee3fda6369513391f64b996c8cbeb34"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a0ee3fda6369513391f64b996c8cbeb34">dc_msg_get_filename</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get base file name without path.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Base file name plus extension without part. If there is no file associated with the message, an empty string is returned. The returned value must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a>.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The base file name includes the extension; the path is not returned. To get the full path, use <a class="m-doc" href="classdc__msg__t.html#ae8b750f6aa5e388a36c8be4c57b16271">dc_<wbr/>msg_<wbr/>get_<wbr/>file()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a2b031e216af41a41f6c12f4142d2e447"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a2b031e216af41a41f6c12f4142d2e447">dc_msg_get_from_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get the ID of contact who wrote the message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The ID of the contact who wrote the message, DC_CONTACT_ID_SELF (1) if this is an outgoing message, 0 on errors.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>If the ID is equal to DC_CONTACT_ID_SELF (1), the message is an outgoing message that is typically shown on the right side of the chat view.</p><p>Otherwise, the message is an incoming message; to get details about the sender, pass the returned ID to <a class="m-doc" href="classdc__context__t.html#a36b0e1a01730411b15294da5024ad311">dc_<wbr/>get_<wbr/>contact()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ae4b99aa662455a4c37430e678894bfdb"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ae4b99aa662455a4c37430e678894bfdb">dc_msg_get_height</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get height of image or video.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Height in pixels, if applicable. 0 otherwise or if unknown.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The height is returned in pixels. If the height is unknown or if the associated file is no image or video file, 0 is returned.</p><p>Often the ascpect ratio is the more interesting thing. You can calculate this using <a class="m-doc" href="classdc__msg__t.html#a5249ddd8d5eea3155a3c0bc121722a1d">dc_<wbr/>msg_<wbr/>get_<wbr/>width()</a> / <a class="m-doc" href="classdc__msg__t.html#ae4b99aa662455a4c37430e678894bfdb">dc_<wbr/>msg_<wbr/>get_<wbr/>height()</a>.</p><p>See also <a class="m-doc" href="classdc__msg__t.html#aaedb426314f3d701d606ba3daa24fc1a">dc_<wbr/>msg_<wbr/>get_<wbr/>duration()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ab007f6ccf670907af9ac6788c74a0641"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ab007f6ccf670907af9ac6788c74a0641">dc_msg_get_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get the ID of the message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The ID of the message. 0 if the given message object is invalid.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ab3eeb59143e67fda31d3648bd775f77b"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ab3eeb59143e67fda31d3648bd775f77b">dc_msg_get_info_type</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get the type of an informational message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>One of the DC_INFO* constants. 0 or other values indicate unspecified types or that the message is not an info-message.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>If <a class="m-doc" href="classdc__msg__t.html#a7272ddc7b2da2605463fa3ce0a00edc7">dc_<wbr/>msg_<wbr/>is_<wbr/>info()</a> returns 1, this function returns the type of the informational message. UIs can display e.g. an icon based upon the type.</p><p>Currently, the following types are defined:</p><ul><li>DC_INFO_PROTECTION_ENABLED (11) - Info-message for "Chat is now protected"</li><li>DC_INFO_PROTECTION_DISABLED (12) - Info-message for "Chat is no longer protected"</li></ul><p>Even when you display an icon, you should still display the text of the informational message using <a class="m-doc" href="classdc__msg__t.html#a2577851182c3665a8b8a2de759fd09f1">dc_<wbr/>msg_<wbr/>get_<wbr/>text()</a></p>
+          </div></section>
+          <section class="m-doc-details" id="a47c8d53848c954277926f456919c7eab"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a47c8d53848c954277926f456919c7eab">dc_msg_get_override_sender_name</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get the name that should be shown over the message (in a group chat) instead of the contact display name, or NULL.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>the name to show over this message or NULL. If this returns NULL, call <code><a class="m-doc" href="classdc__contact__t.html#accb0ce055f5bcc23dee932a1898a718b">dc_<wbr/>contact_<wbr/>get_<wbr/>display_<wbr/>name()</a></code>. The returned string must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a>.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>If this returns non-NULL, put a <code>~</code> before the override-sender-name and show the override-sender-name and the sender's avatar even in 1:1 chats.</p><p>In mailing lists, sender display name and sender address do not always belong together. In this case, this function gives you the name that should actually be shown over the message.</p><p>Also, sometimes, we need to indicate a different sender in 1:1 chats: Suppose that our user writes an email to <a class="poxy-external" href="mailto:support@delta.chat" target="_blank">support@delta.chat</a>, which forwards to Bob <a class="poxy-external" href="mailto:bob@delta.chat" target="_blank">bob@delta.chat</a>, and Bob replies.</p><p>Then, Bob's reply is shown in our 1:1 chat with <a class="poxy-external" href="mailto:support@delta.chat" target="_blank">support@delta.chat</a> and the override-sender-name is set to <code>Bob</code>. The UI should show the sender name as <code>~Bob</code> and show the avatar, just as in group messages. If the user then taps on the avatar, they can see that this message comes from <a class="poxy-external" href="mailto:bob@delta.chat" target="_blank">bob@delta.chat</a>.</p><p>You should show a <code>~</code> before the override-sender-name in chats, so that the user can see that this isn't the sender's actual name.</p>
+          </div></section>
+          <section class="m-doc-details" id="aa349dbcf03838d6f371d09b16fd7b4ec"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aa349dbcf03838d6f371d09b16fd7b4ec">dc_msg_get_parent</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get parent message, if available.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The parent message or NULL. Must be freed using <a class="m-doc" href="classdc__msg__t.html#a578e283b6d9de67e0e51f131ba3bcfa8">dc_<wbr/>msg_<wbr/>unref()</a> after usage.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Used for Webxdc-info-messages to jump to the corresponding instance that created the info message.</p><p>For quotes, please use the more specialized <a class="m-doc" href="classdc__msg__t.html#a456299eae0b43c4ec6ee6fe812947ed9">dc_<wbr/>msg_<wbr/>get_<wbr/>quoted_<wbr/>text()</a> and <a class="m-doc" href="classdc__msg__t.html#a9282d97546388655d99018fd63294bb6">dc_<wbr/>msg_<wbr/>get_<wbr/>quoted_<wbr/>msg()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a9282d97546388655d99018fd63294bb6"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a9282d97546388655d99018fd63294bb6">dc_msg_get_quoted_msg</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get quoted message, if available.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The quoted message or NULL. Must be freed using <a class="m-doc" href="classdc__msg__t.html#a578e283b6d9de67e0e51f131ba3bcfa8">dc_<wbr/>msg_<wbr/>unref()</a> after usage.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>UIs might use this information to offer "jumping back" to the quoted message or to enrich displaying the quote.</p><p>If this function returns NULL, this does not mean there is no quote for the message - it might also mean that a quote exist but the quoted message is deleted meanwhile. Therefore, do not use this function to check if there is a quote for a message. To check if a message has a quote, use <a class="m-doc" href="classdc__msg__t.html#a456299eae0b43c4ec6ee6fe812947ed9">dc_<wbr/>msg_<wbr/>get_<wbr/>quoted_<wbr/>text()</a>.</p><p>To display the quote in the chat, use <a class="m-doc" href="classdc__msg__t.html#a456299eae0b43c4ec6ee6fe812947ed9">dc_<wbr/>msg_<wbr/>get_<wbr/>quoted_<wbr/>text()</a> as a primary source, however, one might add information from the message object (e.g. an image).</p><p>It is not guaranteed that the message belong to the same chat.</p>
+          </div></section>
+          <section class="m-doc-details" id="a456299eae0b43c4ec6ee6fe812947ed9"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a456299eae0b43c4ec6ee6fe812947ed9">dc_msg_get_quoted_text</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get quoted text, if any.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The quoted text or NULL if there is no quote. Returned strings must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a>.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>You can use this function also check if there is a quote for a message.</p><p>The text is a summary of the original text, similar to what is shown in the chatlist.</p><p>If available, you can get the whole quoted message object using <a class="m-doc" href="classdc__msg__t.html#a9282d97546388655d99018fd63294bb6">dc_<wbr/>msg_<wbr/>get_<wbr/>quoted_<wbr/>msg()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="aede5976ccc9c2c42d76d770b439c628f"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int64_t</a> dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aede5976ccc9c2c42d76d770b439c628f">dc_msg_get_received_timestamp</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get message receive time.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Receiving time of the message. For outgoing messages, 0 is returned.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The receive time is returned as a unix timestamp in seconds.</p><p>To get the sending time, use <a class="m-doc" href="classdc__msg__t.html#a3750338f46ffcda730770afcd95ac308">dc_<wbr/>msg_<wbr/>get_<wbr/>timestamp()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a677bca5655a8cc9f7a838fa588562d12"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a677bca5655a8cc9f7a838fa588562d12">dc_msg_get_setupcodebegin</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get the first characters of the setup code.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Typically, the first two digits of the setup code or an empty string if unknown. NULL is never returned. Must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a> when done.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Typically, this is used to pre-fill the first entry field of the setup code. If the user has several setup messages, he can be sure typing in the correct digits.</p><p>To check, if a message is a setup message, use <a class="m-doc" href="classdc__msg__t.html#a8a1c2f34e4b56161bd0057983ac2d104">dc_<wbr/>msg_<wbr/>is_<wbr/>setupmessage()</a>. To decrypt a secret key from a setup message, use <a class="m-doc" href="classdc__context__t.html#a5af2cdd80c7286b2a495d56fa6c0832f">dc_<wbr/>continue_<wbr/>key_<wbr/>transfer()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a1beb22d18c9c045f7982718879a78440"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a1beb22d18c9c045f7982718879a78440">dc_msg_get_showpadlock</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Check if a padlock should be shown beside the message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=padlock should be shown beside message, 0=do not show a padlock beside the message.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ad6b9f44c1a3c7aa96fa9ab268c241a5c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int64_t</a> dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ad6b9f44c1a3c7aa96fa9ab268c241a5c">dc_msg_get_sort_timestamp</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get message time used for sorting.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Time used for ordering.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This function returns the timestamp that is used for sorting the message into lists as returned e.g. by <a class="m-doc" href="classdc__context__t.html#a51353ff6b85fa9278d2ec476c3c95eda">dc_<wbr/>get_<wbr/>chat_<wbr/>msgs()</a>. This may be the reveived time, the sending time or another time.</p><p>To get the receiving time, use <a class="m-doc" href="classdc__msg__t.html#aede5976ccc9c2c42d76d770b439c628f">dc_<wbr/>msg_<wbr/>get_<wbr/>received_<wbr/>timestamp()</a>. To get the sending time, use <a class="m-doc" href="classdc__msg__t.html#a3750338f46ffcda730770afcd95ac308">dc_<wbr/>msg_<wbr/>get_<wbr/>timestamp()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a83fbf6e74d09a0b598ccefe9b48bd68c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a83fbf6e74d09a0b598ccefe9b48bd68c">dc_msg_get_state</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get the state of a message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The state of the message.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Incoming message states:</p><ul><li><a class="m-doc" href="group___d_c___s_t_a_t_e.html#ga51e020f23f5d304b3280dfb881047107">DC_<wbr/>STATE_<wbr/>IN_<wbr/>FRESH</a> - Incoming <em>fresh</em> message. Fresh messages are neither noticed nor seen and are typically shown in notifications. Use <a class="m-doc" href="classdc__context__t.html#a5dc16d0ebe4f837efb42b957948b54b0">dc_<wbr/>get_<wbr/>fresh_<wbr/>msgs()</a> to get all fresh messages.</li><li><a class="m-doc" href="group___d_c___s_t_a_t_e.html#ga58ebb7471667b4fd1126d2ddc4c5d837">DC_<wbr/>STATE_<wbr/>IN_<wbr/>NOTICED</a> - Incoming <em>noticed</em> message. E.g. chat opened but message not yet read. Noticed messages are not counted as unread but were not marked as read nor resulted in MDNs. Use <a class="m-doc" href="classdc__context__t.html#a7286128d6c3ae3f274f72241fbc4353c">dc_<wbr/>marknoticed_<wbr/>chat()</a> to mark messages as being noticed.</li><li><a class="m-doc" href="group___d_c___s_t_a_t_e.html#gab4621fc76c73cbdd871d598a696287e5">DC_<wbr/>STATE_<wbr/>IN_<wbr/>SEEN</a> - Incoming message, really <em>seen</em> by the user. Marked as read on IMAP and MDN may be sent. Use <a class="m-doc" href="classdc__context__t.html#ae5305a90c09380dffe54e68c2a709128">dc_<wbr/>markseen_<wbr/>msgs()</a> to mark messages as being seen.</li></ul><p>Outgoing message states:</p><ul><li><a class="m-doc" href="group___d_c___s_t_a_t_e.html#gae8ebaa13f1222d329a1d16212043b672">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>PREPARING</a> - For files which need time to be prepared before they can be sent, the message enters this state before <a class="m-doc" href="group___d_c___s_t_a_t_e.html#ga796d22b160b58d2683da1088dabe934c">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>PENDING</a>.</li><li><a class="m-doc" href="group___d_c___s_t_a_t_e.html#ga4889d63e4eaf4c5791aad50126359931">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>DRAFT</a> - Message saved as draft using <a class="m-doc" href="classdc__context__t.html#a131ee8d251dc1ab2d115822f6a2f7a66">dc_<wbr/>set_<wbr/>draft()</a></li><li><a class="m-doc" href="group___d_c___s_t_a_t_e.html#ga796d22b160b58d2683da1088dabe934c">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>PENDING</a> - The user has pressed the "send" button but the message is not yet sent and is pending in some way. Maybe we're offline (no checkmark).</li><li><a class="m-doc" href="group___d_c___s_t_a_t_e.html#ga5ce5dbd6ee227e66a771be7202de8786">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>FAILED</a> - <em>Unrecoverable</em> error (<em>recoverable</em> errors result in pending messages), you'll receive the event <a class="m-doc" href="group___d_c___e_v_e_n_t.html#ga1690a84950e2bc948c674d0271262d2a">DC_<wbr/>EVENT_<wbr/>MSG_<wbr/>FAILED</a>.</li><li><a class="m-doc" href="group___d_c___s_t_a_t_e.html#gac7f31ab9eee663b86d5745e82e4df861">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>DELIVERED</a> - Outgoing message successfully delivered to server (one checkmark). Note, that already delivered messages may get into the state <a class="m-doc" href="group___d_c___s_t_a_t_e.html#ga5ce5dbd6ee227e66a771be7202de8786">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>FAILED</a> if we get such a hint from the server. If a sent message changes to this state, you'll receive the event <a class="m-doc" href="group___d_c___e_v_e_n_t.html#ga4438030310448a61af0a4bc72c6765dc">DC_<wbr/>EVENT_<wbr/>MSG_<wbr/>DELIVERED</a>.</li><li><a class="m-doc" href="group___d_c___s_t_a_t_e.html#ga96a73f1935f0a059d0304c70e5971077">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>MDN_<wbr/>RCVD</a> - Outgoing message read by the recipient (two checkmarks; this requires goodwill on the receiver's side) If a sent message changes to this state, you'll receive the event <a class="m-doc" href="group___d_c___e_v_e_n_t.html#ga750f252b4bc82d91dfdd788860f36989">DC_<wbr/>EVENT_<wbr/>MSG_<wbr/>READ</a>. Also messages already read by some recipients may get into the state <a class="m-doc" href="group___d_c___s_t_a_t_e.html#ga5ce5dbd6ee227e66a771be7202de8786">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>FAILED</a> at a later point, e.g. when in a group, delivery fails for some recipients.</li></ul><p>If you just want to check if a message is sent or not, please use <a class="m-doc" href="classdc__msg__t.html#ae75e92a28d0c3dc3e7239f0f132d8788">dc_<wbr/>msg_<wbr/>is_<wbr/>sent()</a> which regards all states accordingly.</p><p>The state of just created message objects is <a class="m-doc" href="group___d_c___s_t_a_t_e.html#ga361ec8246f2215ccccb0a410d0ff92a7">DC_<wbr/>STATE_<wbr/>UNDEFINED</a>. The state is always set by the core-library, users of the library cannot set the state directly, but it is changed implicitly e.g. when calling <a class="m-doc" href="classdc__context__t.html#a7286128d6c3ae3f274f72241fbc4353c">dc_<wbr/>marknoticed_<wbr/>chat()</a> or <a class="m-doc" href="classdc__context__t.html#ae5305a90c09380dffe54e68c2a709128">dc_<wbr/>markseen_<wbr/>msgs()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a919df8620e6d9a094dd64842e9360b9d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a919df8620e6d9a094dd64842e9360b9d">dc_msg_get_subject</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get the subject of the email.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The subject. The result must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a>. Never returns NULL.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>If there is no subject associated with the message, an empty string is returned. NULL is never returned.</p><p>You usually don't need this; if the core thinks that the subject might contain important information, it automatically prepends it to the message text.</p><p>This function was introduced so that you can use the subject as the title for the full-message-view (see <a class="m-doc" href="classdc__context__t.html#aaedfc31d404f1adbd266cfd663ee78bc">dc_<wbr/>get_<wbr/>msg_<wbr/>html()</a>).</p><p>For outgoing messages, the subject is not stored and an empty string is returned.</p>
+          </div></section>
+          <section class="m-doc-details" id="a2107a9532d0d157766329c53fa1617d8"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classdc__lot__t.html">dc_<wbr/>lot_<wbr/>t</a>* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a2107a9532d0d157766329c53fa1617d8">dc_msg_get_summary</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              const <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Get a summary for a message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+                <tr>
+                  <td>chat</td>
+                  <td>To speed up things, pass an already available chat object here. If the chat object is not yet available, it is faster to pass NULL.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The summary as an <a class="m-doc" href="classdc__lot__t.html">dc_<wbr/>lot_<wbr/>t</a> object. Must be freed using <a class="m-doc" href="classdc__lot__t.html#ae71859691d1dd92eb3a4f759754d7c2a">dc_<wbr/>lot_<wbr/>unref()</a>. NULL is never returned.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The summary is returned by a <a class="m-doc" href="classdc__lot__t.html">dc_<wbr/>lot_<wbr/>t</a> object with the following fields:</p><ul><li>dc_lot_t::text1: contains the username or the string "Me". The string may be colored by having a look at text1_meaning. If the name should not be displayed, the element is NULL.</li><li>dc_lot_t::text1_meaning: one of DC_TEXT1_USERNAME or DC_TEXT1_SELF. Typically used to show dc_lot_t::text1 with different colors. 0 if not applicable.</li><li>dc_lot_t::text2: contains an excerpt of the message text.</li><li>dc_lot_t::timestamp: the timestamp of the message.</li><li>dc_lot_t::state: The state of the message as one of the <a class="m-doc" href="group___d_c___s_t_a_t_e.html">DC_<wbr/>STATE</a> constants.</li></ul><p>Typically used to display a search result. See also <a class="m-doc" href="classdc__chatlist__t.html#a7e155ba468613547743bf383600914d1">dc_<wbr/>chatlist_<wbr/>get_<wbr/>summary()</a> to display a list of chats.</p>
+          </div></section>
+          <section class="m-doc-details" id="a14af0d3ec8277eaad7f66464a0cd8fb3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a14af0d3ec8277eaad7f66464a0cd8fb3">dc_msg_get_summarytext</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              int approx_characters)</span></span>
+            </h3>
+            <p>Get a message summary as a single line of text.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+                <tr>
+                  <td>approx_characters</td>
+                  <td>Rough length of the expected string.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>A summary for the given messages. The returned string must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a>. Returns an empty string on errors, never returns NULL.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Typically used for notifications.</p>
+          </div></section>
+          <section class="m-doc-details" id="a2577851182c3665a8b8a2de759fd09f1"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a2577851182c3665a8b8a2de759fd09f1">dc_msg_get_text</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get the text of the message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Message text. The result must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a>. Never returns NULL.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>If there is no text associated with the message, an empty string is returned. NULL is never returned.</p><p>The returned text is plain text, HTML is stripped. The returned text is truncated to a max. length of currently about 30000 characters, it does not make sense to show more text in the message list and typical controls will have problems with showing much more text. This max. length is to avoid passing <em>lots</em> of data to the frontend which may result e.g. from decoding errors (assume some bytes missing in a mime structure, forcing an attachment to be plain text).</p><p>To get information about the message and more/raw text, use <a class="m-doc" href="classdc__context__t.html#a9752923b64ca8288045e999a11ccf7f4">dc_<wbr/>get_<wbr/>msg_<wbr/>info()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a3750338f46ffcda730770afcd95ac308"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int64_t</a> dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a3750338f46ffcda730770afcd95ac308">dc_msg_get_timestamp</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get message sending time.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The time of the message.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The sending time is returned as a unix timestamp in seconds.</p><p>Note that the message lists returned e.g. by <a class="m-doc" href="classdc__context__t.html#a51353ff6b85fa9278d2ec476c3c95eda">dc_<wbr/>get_<wbr/>chat_<wbr/>msgs()</a> are not sorted by the <em>sending</em> time but by the <em>receiving</em> time. This ensures newly received messages always pop up at the end of the list, however, for delayed messages, the correct sending time will be displayed.</p><p>To display detailed information about the times to the user, the UI can use <a class="m-doc" href="classdc__context__t.html#a9752923b64ca8288045e999a11ccf7f4">dc_<wbr/>get_<wbr/>msg_<wbr/>info()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ae0184efeb9f196dc0488212349d1b1c3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ae0184efeb9f196dc0488212349d1b1c3">dc_msg_get_videochat_type</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get type of videochat.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Type of the videochat as of DC_VIDEOCHATTYPE_BASICWEBRTC, DC_VIDEOCHATTYPE_JITSI or DC_VIDEOCHATTYPE_UNKNOWN.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Calling this functions only makes sense for messages of type <a class="m-doc" href="group___d_c___m_s_g.html#ga4289e30c154f83ee76c56bb1fcd8fe85">DC_<wbr/>MSG_<wbr/>VIDEOCHAT_<wbr/>INVITATION</a>, in this case, if <code>basicwebrtc:</code> as of <a class="poxy-external" href="https://github.com/cracker0dks/basicwebrtc" target="_blank">https:/<wbr/>/<wbr/>github.com/<wbr/>cracker0dks/<wbr/>basicwebrtc</a> or <code>jitsi</code> were used to initiate the videochat, <a class="m-doc" href="classdc__msg__t.html#ae0184efeb9f196dc0488212349d1b1c3">dc_<wbr/>msg_<wbr/>get_<wbr/>videochat_<wbr/>type()</a> returns the corresponding type.</p><p>The videochat-url can be retrieved using <a class="m-doc" href="classdc__msg__t.html#a4b6cb08857e0631fed7886f26c94ab21">dc_<wbr/>msg_<wbr/>get_<wbr/>videochat_<wbr/>url()</a>. To check if a message is a videochat invitation at all, check the message type for <a class="m-doc" href="group___d_c___m_s_g.html#ga4289e30c154f83ee76c56bb1fcd8fe85">DC_<wbr/>MSG_<wbr/>VIDEOCHAT_<wbr/>INVITATION</a>.</p><p>Example:</p><pre class="m-code"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dc_msg_get_viewtype</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">DC_MSG_VIDEOCHAT_INVITATION</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ut">dc_msg_get_videochat_type</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">DC_VIDEOCHATTYPE_BASICWEBRTC</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// videochat invitation that we ship a client for</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// use browser for videochat - or add an additional check for DC_VIDEOCHATTYPE_JITSI</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="c1">// not a videochat invitation</span>
+<span class="p">}</span></pre>
+          </div></section>
+          <section class="m-doc-details" id="a4b6cb08857e0631fed7886f26c94ab21"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a4b6cb08857e0631fed7886f26c94ab21">dc_msg_get_videochat_url</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get url of a videochat invitation.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>If the message contains a videochat invitation, the url of the invitation is returned. If the message is no videochat invitation, NULL is returned. Must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a> when done.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Videochat invitations are sent out using <a class="m-doc" href="classdc__context__t.html#aa2995e39153c5007485541da6b5b0f1a">dc_<wbr/>send_<wbr/>videochat_<wbr/>invitation()</a> and <a class="m-doc" href="classdc__msg__t.html#abbe7ce82d642e217363aa27bcc6274b3">dc_<wbr/>msg_<wbr/>get_<wbr/>viewtype()</a> returns <a class="m-doc" href="group___d_c___m_s_g.html#ga4289e30c154f83ee76c56bb1fcd8fe85">DC_<wbr/>MSG_<wbr/>VIDEOCHAT_<wbr/>INVITATION</a> for such invitations.</p>
+          </div></section>
+          <section class="m-doc-details" id="abbe7ce82d642e217363aa27bcc6274b3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#abbe7ce82d642e217363aa27bcc6274b3">dc_msg_get_viewtype</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get the type of the message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>One of the <a class="m-doc" href="group___d_c___m_s_g.html">DC_<wbr/>MSG</a> constants. 0 if the given message object is invalid.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a0ce7888a97a8bc127fe5f7a9f869eae2"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a0ce7888a97a8bc127fe5f7a9f869eae2">dc_msg_get_webxdc_blob</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              const char* filename,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a>* ret_bytes)</span></span>
+            </h3>
+            <p>Return file from inside an webxdc message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The webxdc instance.</td>
+                </tr>
+                <tr>
+                  <td>filename</td>
+                  <td>The name inside the archive, can be given as an absolute path (<code>/file.png</code>) or as a relative path (<code>file.png</code>, no leading slash)</td>
+                </tr>
+                <tr>
+                  <td>ret_bytes</td>
+                  <td>Pointer to a <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a>. The size of the blob will be written here.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The blob must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a> after usage. NULL if there is no such file in the archive or on errors.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="aee526949983962ed25adf33a2f5e6878"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aee526949983962ed25adf33a2f5e6878">dc_msg_get_webxdc_info</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get info from a webxdc message, in JSON format.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The webxdc instance.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>a UTF8-encoded JSON string containing all requested info. Must be freed using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a>. NULL is never returned.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The returned JSON string has the following key/values:</p><ul><li>name: The name of the app. Defaults to the filename if not set in the manifest.</li><li>icon: App icon file name. Defaults to an standard icon if nothing is set in the manifest. To get the file, use <a class="m-doc" href="classdc__msg__t.html#a0ce7888a97a8bc127fe5f7a9f869eae2">dc_<wbr/>msg_<wbr/>get_<wbr/>webxdc_<wbr/>blob()</a>. App icons should should be square, the implementations will add round corners etc. as needed.</li><li>summary: short string describing the state of the app, sth. as "2 votes", "Highscore: 123", can be changed by the apps and defaults to an empty string.</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="a5249ddd8d5eea3155a3c0bc121722a1d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a5249ddd8d5eea3155a3c0bc121722a1d">dc_msg_get_width</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Get width of image or video.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Width in pixels, if applicable. 0 otherwise or if unknown.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The width is returned in pixels. If the width is unknown or if the associated file is no image or video file, 0 is returned.</p><p>Often the aspect ratio is the more interesting thing. You can calculate this using <a class="m-doc" href="classdc__msg__t.html#a5249ddd8d5eea3155a3c0bc121722a1d">dc_<wbr/>msg_<wbr/>get_<wbr/>width()</a> / <a class="m-doc" href="classdc__msg__t.html#ae4b99aa662455a4c37430e678894bfdb">dc_<wbr/>msg_<wbr/>get_<wbr/>height()</a>.</p><p>See also <a class="m-doc" href="classdc__msg__t.html#aaedb426314f3d701d606ba3daa24fc1a">dc_<wbr/>msg_<wbr/>get_<wbr/>duration()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a6dc38654dbb222305ee086af338113b2"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a6dc38654dbb222305ee086af338113b2">dc_msg_has_deviating_timestamp</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Check if a message has a deviating timestamp.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=Timestamp is deviating, the UI should display the full date beside the message. 0=Timestamp is not deviating and belongs to the same date as the date headers, displaying the time only is sufficient in this case.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>A message has a deviating timestamp when it is sent on another day as received/sorted by.</p><p>When the UI displays normally only the time beside the message and the full day as headlines, the UI should display the full date directly beside the message if the timestamp is deviating.</p>
+          </div></section>
+          <section class="m-doc-details" id="aab7b069edb647e01311ee675b267d99a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aab7b069edb647e01311ee675b267d99a">dc_msg_has_html</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Checks if the message has a full HTML version.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>0=Message as displayed using <a class="m-doc" href="classdc__msg__t.html#a2577851182c3665a8b8a2de759fd09f1">dc_<wbr/>msg_<wbr/>get_<wbr/>text()</a> is just fine; 1=The message has a full HTML version, should be displayed using <a class="m-doc" href="classdc__msg__t.html#a2577851182c3665a8b8a2de759fd09f1">dc_<wbr/>msg_<wbr/>get_<wbr/>text()</a> and a button to show the full version should be offered</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Messages have a full HTML version if the original message <em>may</em> contain important parts that are removed by some heuristics or if the message is just too long or too complex to get displayed properly by just using plain text. If so, the UI should offer a button as "Show full message" that shows the uncut message using <a class="m-doc" href="classdc__context__t.html#aaedfc31d404f1adbd266cfd663ee78bc">dc_<wbr/>get_<wbr/>msg_<wbr/>html()</a>.</p><p>Even if a "Show full message" button is recommended, the UI should display the text in the bubble using the normal <a class="m-doc" href="classdc__msg__t.html#a2577851182c3665a8b8a2de759fd09f1">dc_<wbr/>msg_<wbr/>get_<wbr/>text()</a> function - which will still be fine in many cases.</p>
+          </div></section>
+          <section class="m-doc-details" id="a22b65dfeb2ed17982aeadd5de7077dff"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a22b65dfeb2ed17982aeadd5de7077dff">dc_msg_has_location</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Check if a message has a location bound to it.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=Message has location bound to it, 0=No location bound to message.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>These messages are also returned by <a class="m-doc" href="classdc__context__t.html#a35435761d33411b62aa2109806f8f08e">dc_<wbr/>get_<wbr/>locations()</a> and the UI may decide to display a special icon beside such messages,</p>
+          </div></section>
+          <section class="m-doc-details" id="a64518463c41fb8be46083f6f4fd8edcb"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a64518463c41fb8be46083f6f4fd8edcb">dc_msg_is_bot</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Check if incoming message is a bot message, i.e.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=message is submitted automatically, 0=message is not automatically submitted.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>automatically submitted.</p><p>Return value for outgoing messages is unspecified.</p>
+          </div></section>
+          <section class="m-doc-details" id="a6d5b3b500fc36d7e1fc53bc2622c7dad"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a6d5b3b500fc36d7e1fc53bc2622c7dad">dc_msg_is_forwarded</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Check if the message is a forwarded message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=message is a forwarded message, 0=message not forwarded.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Forwarded messages may not be created by the contact given as "from".</p><p>Typically, the UI shows a little text for a symbol above forwarded messages.</p><p>For privacy reasons, we do not provide the name or the email address of the original author (in a typical GUI, you select the messages text and click on "forwared"; you won't expect other data to be send to the new recipient, esp. as the new recipient may not be in any relationship to the original author)</p>
+          </div></section>
+          <section class="m-doc-details" id="abd187cb4f114fd77c83b6d914d3977db"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#abd187cb4f114fd77c83b6d914d3977db">dc_msg_is_increation</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Check if a message is still in creation.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=message is still in creation (<a class="m-doc" href="classdc__context__t.html#aaba70910f9c3b3819bba1d04e4d54e02">dc_<wbr/>send_<wbr/>msg()</a> was not called yet), 0=message no longer in creation</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>A message is in creation between the calls to <a class="m-doc" href="classdc__context__t.html#a94ed0bfbf9fa616f7aa7a8c15df813ff">dc_<wbr/>prepare_<wbr/>msg()</a> and <a class="m-doc" href="classdc__context__t.html#aaba70910f9c3b3819bba1d04e4d54e02">dc_<wbr/>send_<wbr/>msg()</a>.</p><p>Typically, this is used for videos that are recoded by the UI before they can be sent.</p>
+          </div></section>
+          <section class="m-doc-details" id="a7272ddc7b2da2605463fa3ce0a00edc7"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a7272ddc7b2da2605463fa3ce0a00edc7">dc_msg_is_info</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Check if the message is an informational message, created by the device or by another users.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=message is a system command, 0=normal message</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Such messages are not "typed" by the user but created due to other actions, e.g. <a class="m-doc" href="classdc__context__t.html#a6e324717f073f0c52f2c77d07dc40fd6">dc_<wbr/>set_<wbr/>chat_<wbr/>name()</a>, <a class="m-doc" href="classdc__context__t.html#a2dc155d28e257fe540c2af4524e20cb6">dc_<wbr/>set_<wbr/>chat_<wbr/>profile_<wbr/>image()</a>, <a class="m-doc" href="classdc__context__t.html#a66d4356a148982b1debba159c28ce75a">dc_<wbr/>set_<wbr/>chat_<wbr/>protection()</a> or <a class="m-doc" href="classdc__context__t.html#a9360baf78e9b45e45af1de5856b63282">dc_<wbr/>add_<wbr/>contact_<wbr/>to_<wbr/>chat()</a>.</p><p>These messages are typically shown in the center of the chat view, <a class="m-doc" href="classdc__msg__t.html#a2577851182c3665a8b8a2de759fd09f1">dc_<wbr/>msg_<wbr/>get_<wbr/>text()</a> returns a descriptive text about what is going on.</p><p>For informational messages created by Webxdc apps, <a class="m-doc" href="classdc__msg__t.html#aa349dbcf03838d6f371d09b16fd7b4ec">dc_<wbr/>msg_<wbr/>get_<wbr/>parent()</a> usually returns the Webxdc instance; UIs can use that to scroll to the Webxdc app when the info is tapped.</p><p>There is no need to perform any action when seeing such a message - this is already done by the core.</p>
+          </div></section>
+          <section class="m-doc-details" id="ae75e92a28d0c3dc3e7239f0f132d8788"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ae75e92a28d0c3dc3e7239f0f132d8788">dc_msg_is_sent</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Check if a message was sent successfully.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=message sent successfully, 0=message not yet sent or message is an incoming message.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Currently, "sent" messages are messages that are in the state "delivered" or "mdn received", see <a class="m-doc" href="classdc__msg__t.html#a83fbf6e74d09a0b598ccefe9b48bd68c">dc_<wbr/>msg_<wbr/>get_<wbr/>state()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a8a1c2f34e4b56161bd0057983ac2d104"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a8a1c2f34e4b56161bd0057983ac2d104">dc_msg_is_setupmessage</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Check if the message is an Autocrypt Setup Message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=message is a setup message, 0=no setup message. For setup messages, <a class="m-doc" href="classdc__msg__t.html#abbe7ce82d642e217363aa27bcc6274b3">dc_<wbr/>msg_<wbr/>get_<wbr/>viewtype()</a> returns <a class="m-doc" href="group___d_c___m_s_g.html#gac99a50a71b7dfc1ca7f2a145e8be588b">DC_<wbr/>MSG_<wbr/>FILE</a>.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Setup messages should be shown in an unique way e.g. using a different text color. On a click or another action, the user should be prompted for the setup code which is forwarded to <a class="m-doc" href="classdc__context__t.html#a5af2cdd80c7286b2a495d56fa6c0832f">dc_<wbr/>continue_<wbr/>key_<wbr/>transfer()</a> then.</p><p>Setup message are typically generated by <a class="m-doc" href="classdc__context__t.html#af327aa51e2e18ce3f5948545a637eac9">dc_<wbr/>initiate_<wbr/>key_<wbr/>transfer()</a> on another device.</p>
+          </div></section>
+          <section class="m-doc-details" id="a7687ff969841f3d00c3a212f9ad27861"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a7687ff969841f3d00c3a212f9ad27861">dc_msg_latefiling_mediasize</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              int width,
+              int height,
+              int duration)</span></span>
+            </h3>
+            <p>Late filing information to a message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+                <tr>
+                  <td>width</td>
+                  <td>The new width to store in the message object. 0 if you do not want to change width and height.</td>
+                </tr>
+                <tr>
+                  <td>height</td>
+                  <td>The new height to store in the message object. 0 if you do not want to change width and height.</td>
+                </tr>
+                <tr>
+                  <td>duration</td>
+                  <td>The new duration to store in the message object. 0 if you do not want to change it.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>In contrast to the dc_msg_set_*() functions, this function really stores the information in the database.</p><p>Sometimes, the core cannot find out the width, the height or the duration of an image, an audio or a video.</p><p>If, in these cases, the frontend can provide the information, it can save them together with the message object for later usage.</p><p>This function should only be used if <a class="m-doc" href="classdc__msg__t.html#a5249ddd8d5eea3155a3c0bc121722a1d">dc_<wbr/>msg_<wbr/>get_<wbr/>width()</a>, <a class="m-doc" href="classdc__msg__t.html#ae4b99aa662455a4c37430e678894bfdb">dc_<wbr/>msg_<wbr/>get_<wbr/>height()</a> or <a class="m-doc" href="classdc__msg__t.html#aaedb426314f3d701d606ba3daa24fc1a">dc_<wbr/>msg_<wbr/>get_<wbr/>duration()</a> do not provide the expected values.</p><p>To get the stored values later, use <a class="m-doc" href="classdc__msg__t.html#a5249ddd8d5eea3155a3c0bc121722a1d">dc_<wbr/>msg_<wbr/>get_<wbr/>width()</a>, <a class="m-doc" href="classdc__msg__t.html#ae4b99aa662455a4c37430e678894bfdb">dc_<wbr/>msg_<wbr/>get_<wbr/>height()</a> or <a class="m-doc" href="classdc__msg__t.html#aaedb426314f3d701d606ba3daa24fc1a">dc_<wbr/>msg_<wbr/>get_<wbr/>duration()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="aa694c4f707ad51918703218cc8887143"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aa694c4f707ad51918703218cc8887143">dc_msg_new</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__context__t.html">dc_<wbr/>context_<wbr/>t</a>* context,
+              int viewtype)</span></span>
+            </h3>
+            <p>Create new message object.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">context</td>
+                  <td>The context that should be stored in the message object.</td>
+                </tr>
+                <tr>
+                  <td>viewtype</td>
+                  <td>The type to the message object to create, one of the <a class="m-doc" href="group___d_c___m_s_g.html">DC_<wbr/>MSG</a> constants.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The created message object.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Message objects are needed e.g. for sending messages using <a class="m-doc" href="classdc__context__t.html#aaba70910f9c3b3819bba1d04e4d54e02">dc_<wbr/>send_<wbr/>msg()</a>. Moreover, they are returned e.g. from <a class="m-doc" href="classdc__context__t.html#a4fd6b4565081c558fcd6ff827f22cb01">dc_<wbr/>get_<wbr/>msg()</a>, set up with the current state of a message. The message object is not updated; to achieve this, you have to recreate it.</p>
+          </div></section>
+          <section class="m-doc-details" id="a6bc82bec36d7bc4218f9a26ebc3c24ae"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a6bc82bec36d7bc4218f9a26ebc3c24ae">dc_msg_set_dimension</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              int width,
+              int height)</span></span>
+            </h3>
+            <p>Set the dimensions associated with message object.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+                <tr>
+                  <td>width</td>
+                  <td>Width in pixels, if known. 0 if you don't know or don't care.</td>
+                </tr>
+                <tr>
+                  <td>height</td>
+                  <td>Height in pixels, if known. 0 if you don't know or don't care.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>Typically this is the width and the height of an image or video associated using <a class="m-doc" href="classdc__msg__t.html#ae3d4b2a4ed4b10dbe13396ff7739160e">dc_<wbr/>msg_<wbr/>set_<wbr/>file()</a>. This does not alter any information in the database; this may be done by <a class="m-doc" href="classdc__context__t.html#aaba70910f9c3b3819bba1d04e4d54e02">dc_<wbr/>send_<wbr/>msg()</a> later.</p>
+          </div></section>
+          <section class="m-doc-details" id="a32bd05a4c5113b098004c16c2b4a14ec"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a32bd05a4c5113b098004c16c2b4a14ec">dc_msg_set_duration</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              int duration)</span></span>
+            </h3>
+            <p>Set the duration associated with message object.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+                <tr>
+                  <td>duration</td>
+                  <td>Length in milliseconds. 0 if you don't know or don't care.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>Typically this is the duration of an audio or video associated using <a class="m-doc" href="classdc__msg__t.html#ae3d4b2a4ed4b10dbe13396ff7739160e">dc_<wbr/>msg_<wbr/>set_<wbr/>file()</a>. This does not alter any information in the database; this may be done by <a class="m-doc" href="classdc__context__t.html#aaba70910f9c3b3819bba1d04e4d54e02">dc_<wbr/>send_<wbr/>msg()</a> later.</p>
+          </div></section>
+          <section class="m-doc-details" id="ae3d4b2a4ed4b10dbe13396ff7739160e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ae3d4b2a4ed4b10dbe13396ff7739160e">dc_msg_set_file</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              const char* file,
+              const char* filemime)</span></span>
+            </h3>
+            <p>Set the file associated with a message object.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+                <tr>
+                  <td>file</td>
+                  <td>If the message object is used in <a class="m-doc" href="classdc__context__t.html#aaba70910f9c3b3819bba1d04e4d54e02">dc_<wbr/>send_<wbr/>msg()</a> later, this must be the full path of the image file to send.</td>
+                </tr>
+                <tr>
+                  <td>filemime</td>
+                  <td>Mime type of the file. NULL if you don't know or don't care.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>This does not alter any information in the database nor copy or move the file or checks if the file exist. All this can be done with <a class="m-doc" href="classdc__context__t.html#aaba70910f9c3b3819bba1d04e4d54e02">dc_<wbr/>send_<wbr/>msg()</a> later.</p>
+          </div></section>
+          <section class="m-doc-details" id="a0770c59040a07898f6c4723a856de2d7"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a0770c59040a07898f6c4723a856de2d7">dc_msg_set_html</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              const char* html)</span></span>
+            </h3>
+            <p>Set the HTML part of a message object.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+                <tr>
+                  <td>html</td>
+                  <td>HTML to send.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>As for all other <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a> setters, this is only useful if the message is sent using <a class="m-doc" href="classdc__context__t.html#aaba70910f9c3b3819bba1d04e4d54e02">dc_<wbr/>send_<wbr/>msg()</a> later.</p><p>Please note, that Delta Chat clients show the plain text set with <a class="m-doc" href="classdc__msg__t.html#a352d9e2cc2fcacac43bb540550a578a1">dc_<wbr/>msg_<wbr/>set_<wbr/>text()</a> at the first place; the HTML part is not shown instead of this text. However, for messages with HTML parts, on the receiver's device, <a class="m-doc" href="classdc__msg__t.html#aab7b069edb647e01311ee675b267d99a">dc_<wbr/>msg_<wbr/>has_<wbr/>html()</a> will return 1 and a button "Show full message" is typically shown.</p><p>So adding a HTML part might be useful eg. for bots, that want to add rich content to a message, eg. a website; this HTML part is similar to an attachment then.</p><p><strong><a class="m-doc" href="classdc__msg__t.html#a0770c59040a07898f6c4723a856de2d7">dc_<wbr/>msg_<wbr/>set_<wbr/>html()</a> is currently not meant for sending a message, a "normal user" has typed in!</strong> Use <a class="m-doc" href="classdc__msg__t.html#a352d9e2cc2fcacac43bb540550a578a1">dc_<wbr/>msg_<wbr/>set_<wbr/>text()</a> for that purpose.</p>
+          </div></section>
+          <section class="m-doc-details" id="a841ca7926609ae1da64bd0dd237ca5b1"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a841ca7926609ae1da64bd0dd237ca5b1">dc_msg_set_location</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              double latitude,
+              double longitude)</span></span>
+            </h3>
+            <p>Set any location that should be bound to the message object.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+                <tr>
+                  <td>latitude</td>
+                  <td>North-south position of the location.</td>
+                </tr>
+                <tr>
+                  <td>longitude</td>
+                  <td>East-west position of the location.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>The function is useful to add a marker to the map at a position different from the self-location. You should not call this function if you want to bind the current self-location to a message; this is done by <a class="m-doc" href="classdc__context__t.html#a8b8e410c7bfad022443ecb4feba85089">dc_<wbr/>set_<wbr/>location()</a> and <a class="m-doc" href="classdc__context__t.html#a35fe6c1736fbfc6666b19e68c9cd09e0">dc_<wbr/>send_<wbr/>locations_<wbr/>to_<wbr/>chat()</a>.</p><p>Typically results in the event <a class="m-doc" href="group___d_c___e_v_e_n_t.html#ga1eded0156765a6c55f31e39ca6cf6adf">DC_<wbr/>EVENT_<wbr/>LOCATION_<wbr/>CHANGED</a> with contact_id set to DC_CONTACT_ID_SELF.</p>
+          </div></section>
+          <section class="m-doc-details" id="a124864502cf157aae190afca6cc73c99"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a124864502cf157aae190afca6cc73c99">dc_msg_set_override_sender_name</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              const char* name)</span></span>
+            </h3>
+            <p>Set different sender name for a message.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+                <tr>
+                  <td>name</td>
+                  <td>The name to send along with the message.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>This overrides the name set by the <a class="m-doc" href="classdc__context__t.html#aff3b894f6cfca46cab5248fdffdf083d">dc_<wbr/>set_<wbr/>config()</a>-option <code>displayname</code>.</p><p>Usually, this function is not needed when implementing pure messaging functions. However, it might be useful for bots eg. building bridges to other networks.</p>
+          </div></section>
+          <section class="m-doc-details" id="a21ea981a536fbd8d37ec8ea3c22d477a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a21ea981a536fbd8d37ec8ea3c22d477a">dc_msg_set_quote</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              const <a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* quote)</span></span>
+            </h3>
+            <p>Set the message replying to.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object to set the reply to.</td>
+                </tr>
+                <tr>
+                  <td>quote</td>
+                  <td>The quote to set for the message object given as <code>msg</code>. NULL removes an previously set quote.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>This allows optionally to reply to an explicit message instead of replying implicitly to the end of the chat.</p><p><a class="m-doc" href="classdc__msg__t.html#a21ea981a536fbd8d37ec8ea3c22d477a">dc_<wbr/>msg_<wbr/>set_<wbr/>quote()</a> copies some basic data from the quoted message object so that <a class="m-doc" href="classdc__msg__t.html#a456299eae0b43c4ec6ee6fe812947ed9">dc_<wbr/>msg_<wbr/>get_<wbr/>quoted_<wbr/>text()</a> will always work. <a class="m-doc" href="classdc__msg__t.html#a9282d97546388655d99018fd63294bb6">dc_<wbr/>msg_<wbr/>get_<wbr/>quoted_<wbr/>msg()</a> gets back the quoted message only if it is <em>not</em> deleted.</p>
+          </div></section>
+          <section class="m-doc-details" id="a352d9e2cc2fcacac43bb540550a578a1"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a352d9e2cc2fcacac43bb540550a578a1">dc_msg_set_text</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg,
+              const char* text)</span></span>
+            </h3>
+            <p>Set the text of a message object.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object.</td>
+                </tr>
+                <tr>
+                  <td>text</td>
+                  <td>Message text.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>This does not alter any information in the database; this may be done by <a class="m-doc" href="classdc__context__t.html#aaba70910f9c3b3819bba1d04e4d54e02">dc_<wbr/>send_<wbr/>msg()</a> later.</p>
+          </div></section>
+          <section class="m-doc-details" id="a578e283b6d9de67e0e51f131ba3bcfa8"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>msg_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a578e283b6d9de67e0e51f131ba3bcfa8">dc_msg_unref</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__msg__t.html">dc_<wbr/>msg_<wbr/>t</a>* msg)</span></span>
+            </h3>
+            <p>Free a message object.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">msg</td>
+                  <td>The message object to free. If NULL is given, nothing is done.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>Message objects are created e.g. by <a class="m-doc" href="classdc__context__t.html#a4fd6b4565081c558fcd6ff827f22cb01">dc_<wbr/>get_<wbr/>msg()</a>.</p>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">…</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div class="m-text m-dim m-text-center" id="search-help">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script async="async" src="searchdata-v1.js"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        
+    <a download="" href="Delta_Chat_Core_C_Interface.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+    <br/><br/>
+    Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+
+      </div>
+    </div>
+  </div>
+</nav></footer>
+
+
+</body></html>

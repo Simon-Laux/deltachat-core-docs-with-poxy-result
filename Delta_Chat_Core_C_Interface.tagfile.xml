@@ -1,0 +1,2925 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile doxygen_version="1.9.3">
+  <compound kind="class">
+    <name>dc_accounts_event_emitter_t</name>
+    <filename>classdc__accounts__event__emitter__t.html</filename>
+    <member kind="function">
+      <type>dc_event_t *</type>
+      <name>dc_accounts_get_next_event</name>
+      <anchorfile>classdc__accounts__event__emitter__t.html</anchorfile>
+      <anchor>a0ab2aaba09fac304432799553c21606c</anchor>
+      <arglist>(dc_accounts_event_emitter_t *emitter)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_accounts_event_emitter_unref</name>
+      <anchorfile>classdc__accounts__event__emitter__t.html</anchorfile>
+      <anchor>aed8d80b3bbbdf815edffe41d54033ecd</anchor>
+      <arglist>(dc_accounts_event_emitter_t *emitter)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>dc_accounts_t</name>
+    <filename>classdc__accounts__t.html</filename>
+    <member kind="function">
+      <type>dc_accounts_t *</type>
+      <name>dc_accounts_new</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>a6e88b85f765439665c299dccd85f7a59</anchor>
+      <arglist>(const char *os_name, const char *dir)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_accounts_unref</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>a1b44bb38f8e7b3ef268a550f63867191</anchor>
+      <arglist>(dc_accounts_t *accounts)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_accounts_add_account</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>acf9e9ca54aeec496d4abfb6877e6451e</anchor>
+      <arglist>(dc_accounts_t *accounts)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_accounts_add_closed_account</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>adb272218d32aa5ed4d08f46c52c46333</anchor>
+      <arglist>(dc_accounts_t *accounts)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_accounts_migrate_account</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>a323d8e8f541e4f6415ba6b5713cab0ad</anchor>
+      <arglist>(dc_accounts_t *accounts, const char *dbfile)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_accounts_remove_account</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>ae02553e45229afb70a8fcc0521ea5bcd</anchor>
+      <arglist>(dc_accounts_t *accounts, uint32_t account_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_array_t *</type>
+      <name>dc_accounts_get_all</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>a6859b296a8de872983b900086b3f9e89</anchor>
+      <arglist>(dc_accounts_t *accounts)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_context_t *</type>
+      <name>dc_accounts_get_account</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>a6524044350c476a4e8e969ae3d091b01</anchor>
+      <arglist>(dc_accounts_t *accounts, uint32_t account_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_context_t *</type>
+      <name>dc_accounts_get_selected_account</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>a248604bc2d5d4b5f0c83f01e7fdeab32</anchor>
+      <arglist>(dc_accounts_t *accounts)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_accounts_select_account</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>a115792e5dd63a068a8383d4bc8b1254a</anchor>
+      <arglist>(dc_accounts_t *accounts, uint32_t account_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_accounts_all_work_done</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>a23e7f5095f52a80a605e0266f686f3b7</anchor>
+      <arglist>(dc_accounts_t *accounts)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_accounts_start_io</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>a8eeea2b50af2ed92c30dacdb40c6d5f7</anchor>
+      <arglist>(dc_accounts_t *accounts)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_accounts_stop_io</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>a976eaf8ce4eba43cdcbe62287b9331f1</anchor>
+      <arglist>(dc_accounts_t *accounts)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_accounts_maybe_network</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>a2d652b774acda018cb818e50bd390595</anchor>
+      <arglist>(dc_accounts_t *accounts)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_accounts_maybe_network_lost</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>aae556265a33a29f2c38fa6c791b061bd</anchor>
+      <arglist>(dc_accounts_t *accounts)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_accounts_event_emitter_t *</type>
+      <name>dc_accounts_get_event_emitter</name>
+      <anchorfile>classdc__accounts__t.html</anchorfile>
+      <anchor>ad74f8ea4e3ad2cb14f459a0661238c9e</anchor>
+      <arglist>(dc_accounts_t *accounts)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>dc_array_t</name>
+    <filename>classdc__array__t.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_array_unref</name>
+      <anchorfile>classdc__array__t.html</anchorfile>
+      <anchor>a0e0e1d3776d26148a5b8cf4b4204f0e3</anchor>
+      <arglist>(dc_array_t *array)</arglist>
+    </member>
+    <member kind="function">
+      <type>size_t</type>
+      <name>dc_array_get_cnt</name>
+      <anchorfile>classdc__array__t.html</anchorfile>
+      <anchor>ab9eda2b3161c3b1e5b451b06785a628c</anchor>
+      <arglist>(const dc_array_t *array)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_array_get_id</name>
+      <anchorfile>classdc__array__t.html</anchorfile>
+      <anchor>abcc5066916ed9c0d9e3a5018604d4d7d</anchor>
+      <arglist>(const dc_array_t *array, size_t index)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>dc_array_get_latitude</name>
+      <anchorfile>classdc__array__t.html</anchorfile>
+      <anchor>ad90ca4ea159037fccaa89cb4bd5440b5</anchor>
+      <arglist>(const dc_array_t *array, size_t index)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>dc_array_get_longitude</name>
+      <anchorfile>classdc__array__t.html</anchorfile>
+      <anchor>a9d23f056eff6dc3c1afece4ea65a21f5</anchor>
+      <arglist>(const dc_array_t *array, size_t index)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>dc_array_get_accuracy</name>
+      <anchorfile>classdc__array__t.html</anchorfile>
+      <anchor>a12804ce7eadf0f85f266da829f9ccc1b</anchor>
+      <arglist>(const dc_array_t *array, size_t index)</arglist>
+    </member>
+    <member kind="function">
+      <type>int64_t</type>
+      <name>dc_array_get_timestamp</name>
+      <anchorfile>classdc__array__t.html</anchorfile>
+      <anchor>a3d96a20ebfb3efbc9047338aae947006</anchor>
+      <arglist>(const dc_array_t *array, size_t index)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_array_get_chat_id</name>
+      <anchorfile>classdc__array__t.html</anchorfile>
+      <anchor>a43a8033799950abb44d5d124ae8c60ea</anchor>
+      <arglist>(const dc_array_t *array, size_t index)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_array_get_contact_id</name>
+      <anchorfile>classdc__array__t.html</anchorfile>
+      <anchor>a6a72ac7ababf254bcf36c4af08c93029</anchor>
+      <arglist>(const dc_array_t *array, size_t index)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_array_get_msg_id</name>
+      <anchorfile>classdc__array__t.html</anchorfile>
+      <anchor>a556284e38698e234a57b08dfe3219a71</anchor>
+      <arglist>(const dc_array_t *array, size_t index)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_array_get_marker</name>
+      <anchorfile>classdc__array__t.html</anchorfile>
+      <anchor>abd95652e4383dfe578c06383a135a1cf</anchor>
+      <arglist>(const dc_array_t *array, size_t index)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_array_is_independent</name>
+      <anchorfile>classdc__array__t.html</anchorfile>
+      <anchor>a5134d701d51140dbe8887b1d8316d5ae</anchor>
+      <arglist>(const dc_array_t *array, size_t index)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>dc_chat_t</name>
+    <filename>classdc__chat__t.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_chat_unref</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>aa74cbf05b131b13ee61617628fc91fa0</anchor>
+      <arglist>(dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_chat_get_id</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>a4e647c69a9f61fc4497f6293371e0017</anchor>
+      <arglist>(const dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_chat_get_type</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>a2841f242370f06639a33940e7da17e8d</anchor>
+      <arglist>(const dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_chat_get_name</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>a0fb1b4850bcd899eaa06d23648a1efaf</anchor>
+      <arglist>(const dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_chat_get_profile_image</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>ad96106c6b88f7705d8ac263133a61c43</anchor>
+      <arglist>(const dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_chat_get_color</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>ac575ba5901ca24187f0f31492beefe3a</anchor>
+      <arglist>(const dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_chat_get_visibility</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>a9e8171e1a914cb4ec4f17b622916fab8</anchor>
+      <arglist>(const dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_chat_is_contact_request</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>a9d23fef011f3e77ed52f8b61e6464430</anchor>
+      <arglist>(const dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_chat_is_unpromoted</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>aba1e99ebd5546283bf5f748d86c64a54</anchor>
+      <arglist>(const dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_chat_is_self_talk</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>ad1a5909513e8990b261cd2c66d1ceb30</anchor>
+      <arglist>(const dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_chat_is_device_talk</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>a560a4ccfa512cad1ecb066ac275b76b8</anchor>
+      <arglist>(const dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_chat_can_send</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>acb894b6d56253effbc886299add54872</anchor>
+      <arglist>(const dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_chat_is_protected</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>adccb89a809982f91a400fe3a3da83364</anchor>
+      <arglist>(const dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_chat_is_sending_locations</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>a26d89e24c536b31ff7a62bfd5df065a7</anchor>
+      <arglist>(const dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_chat_is_muted</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>ae93eee9385d1d2c74b4de62619cfd954</anchor>
+      <arglist>(const dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>int64_t</type>
+      <name>dc_chat_get_remaining_mute_duration</name>
+      <anchorfile>classdc__chat__t.html</anchorfile>
+      <anchor>a860ee485107eae77cdd9ccf5fe727aad</anchor>
+      <arglist>(const dc_chat_t *chat)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>dc_chatlist_t</name>
+    <filename>classdc__chatlist__t.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_chatlist_unref</name>
+      <anchorfile>classdc__chatlist__t.html</anchorfile>
+      <anchor>a1308af80825a43d5d9e337b4e44abbb3</anchor>
+      <arglist>(dc_chatlist_t *chatlist)</arglist>
+    </member>
+    <member kind="function">
+      <type>size_t</type>
+      <name>dc_chatlist_get_cnt</name>
+      <anchorfile>classdc__chatlist__t.html</anchorfile>
+      <anchor>af3ee352c8891416c1be865ed11de1878</anchor>
+      <arglist>(const dc_chatlist_t *chatlist)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_chatlist_get_chat_id</name>
+      <anchorfile>classdc__chatlist__t.html</anchorfile>
+      <anchor>ac0fcc0aaa05adc66a7813d86f168320c</anchor>
+      <arglist>(const dc_chatlist_t *chatlist, size_t index)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_chatlist_get_msg_id</name>
+      <anchorfile>classdc__chatlist__t.html</anchorfile>
+      <anchor>a0d089b4a45faa0e29d4350ef29049fd3</anchor>
+      <arglist>(const dc_chatlist_t *chatlist, size_t index)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_lot_t *</type>
+      <name>dc_chatlist_get_summary</name>
+      <anchorfile>classdc__chatlist__t.html</anchorfile>
+      <anchor>a7e155ba468613547743bf383600914d1</anchor>
+      <arglist>(const dc_chatlist_t *chatlist, size_t index, dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_context_t *</type>
+      <name>dc_chatlist_get_context</name>
+      <anchorfile>classdc__chatlist__t.html</anchorfile>
+      <anchor>ab91c14baafac86c9a59039576b9a5faa</anchor>
+      <arglist>(dc_chatlist_t *chatlist)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>dc_contact_t</name>
+    <filename>classdc__contact__t.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_contact_unref</name>
+      <anchorfile>classdc__contact__t.html</anchorfile>
+      <anchor>a4aab8c1846c708343a2ee04f23de7904</anchor>
+      <arglist>(dc_contact_t *contact)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_contact_get_id</name>
+      <anchorfile>classdc__contact__t.html</anchorfile>
+      <anchor>ae445bdaeca959849a6780fe72869c432</anchor>
+      <arglist>(const dc_contact_t *contact)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_contact_get_addr</name>
+      <anchorfile>classdc__contact__t.html</anchorfile>
+      <anchor>a017fc5f3c27f52547c515fadc5658e01</anchor>
+      <arglist>(const dc_contact_t *contact)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_contact_get_name</name>
+      <anchorfile>classdc__contact__t.html</anchorfile>
+      <anchor>acc088a0f8599c35fa9adde8feed358b7</anchor>
+      <arglist>(const dc_contact_t *contact)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_contact_get_auth_name</name>
+      <anchorfile>classdc__contact__t.html</anchorfile>
+      <anchor>a7778540e0592d4c7a480222ea30e9ac8</anchor>
+      <arglist>(const dc_contact_t *contact)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_contact_get_display_name</name>
+      <anchorfile>classdc__contact__t.html</anchorfile>
+      <anchor>accb0ce055f5bcc23dee932a1898a718b</anchor>
+      <arglist>(const dc_contact_t *contact)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_contact_get_name_n_addr</name>
+      <anchorfile>classdc__contact__t.html</anchorfile>
+      <anchor>a16056431c6926d327f5728ad3ddd4fdf</anchor>
+      <arglist>(const dc_contact_t *contact)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_contact_get_profile_image</name>
+      <anchorfile>classdc__contact__t.html</anchorfile>
+      <anchor>a2ebee8ac3729e4db85041eaf35bfce73</anchor>
+      <arglist>(const dc_contact_t *contact)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_contact_get_color</name>
+      <anchorfile>classdc__contact__t.html</anchorfile>
+      <anchor>ad6b75bcf0a7011aacbcc1a963b3f2d32</anchor>
+      <arglist>(const dc_contact_t *contact)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_contact_get_status</name>
+      <anchorfile>classdc__contact__t.html</anchorfile>
+      <anchor>a9bf4bab2b6f54f00ce8561e7d1aacf19</anchor>
+      <arglist>(const dc_contact_t *contact)</arglist>
+    </member>
+    <member kind="function">
+      <type>int64_t</type>
+      <name>dc_contact_get_last_seen</name>
+      <anchorfile>classdc__contact__t.html</anchorfile>
+      <anchor>a7eba4dda86fe61f5de261cf2917961c1</anchor>
+      <arglist>(const dc_contact_t *contact)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_contact_is_blocked</name>
+      <anchorfile>classdc__contact__t.html</anchorfile>
+      <anchor>ac1cce8a12bb9f1c64c644682fdc8d9cc</anchor>
+      <arglist>(const dc_contact_t *contact)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_contact_is_verified</name>
+      <anchorfile>classdc__contact__t.html</anchorfile>
+      <anchor>a287ad50725bd26f8a8a7df36ce56b91f</anchor>
+      <arglist>(dc_contact_t *contact)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>dc_context_t</name>
+    <filename>classdc__context__t.html</filename>
+    <member kind="function">
+      <type>dc_context_t *</type>
+      <name>dc_context_new</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a9f4a6e04a111ff4e9e6e7d5d8fb59df7</anchor>
+      <arglist>(const char *os_name, const char *dbfile, const char *blobdir)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_context_t *</type>
+      <name>dc_context_new_closed</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a050593d66031db962896222edfbd9e27</anchor>
+      <arglist>(const char *dbfile)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_context_open</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>af22fd7b46b4383901d328dcc3bf9ff0f</anchor>
+      <arglist>(dc_context_t *context, const char *passphrase)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_context_is_open</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>aed4eff7f078d91caf91a438f061690c7</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_context_unref</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a4d9482502241924728ad66251f779184</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_get_id</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a9d35589da938b3e9c4d8581c034fae38</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_event_emitter_t *</type>
+      <name>dc_get_event_emitter</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>aaee94728c947b297a2d3e34b4f1a84dd</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_get_blobdir</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a479a14f05a63c62d18e44957dedff120</anchor>
+      <arglist>(const dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_set_config</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>aff3b894f6cfca46cab5248fdffdf083d</anchor>
+      <arglist>(dc_context_t *context, const char *key, const char *value)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_get_config</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a8876ed2c7ca6c54eac9c31bcc304b6ad</anchor>
+      <arglist>(dc_context_t *context, const char *key)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_set_stock_translation</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a6092255f0b5317d08c41ea214a319461</anchor>
+      <arglist>(dc_context_t *context, uint32_t stock_id, const char *stock_msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_set_config_from_qr</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ac95d7275f01862fba70169b8cbb937c0</anchor>
+      <arglist>(dc_context_t *context, const char *qr)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_get_info</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a51a8b6af738c0a1e4526428b8a79367a</anchor>
+      <arglist>(const dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_get_oauth2_url</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a86eb36a93aba65fc4ab7c675a4d76158</anchor>
+      <arglist>(dc_context_t *context, const char *addr, const char *redirect_uri)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_get_connectivity</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a80bf9812eb5a50f8eb097cbe72df1096</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_get_connectivity_html</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a98d41f00d9a96d83a662f39d0fc23afb</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_configure</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>adfe52669a5bed893df78a620566dd698</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_is_configured</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a7b2e6b5e8b970209596d8218eea9e62c</anchor>
+      <arglist>(const dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_start_io</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ab020d546b0f859cc603d0a8df57ecece</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_stop_io</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a38b66c7232d5fc486ef8b87a3908cd5e</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_maybe_network</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a2f61e875270dbb7e7a2533461baa659b</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_preconfigure_keypair</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a06810465e44f1e7bdc7da7774b944fa2</anchor>
+      <arglist>(dc_context_t *context, const char *addr, const char *public_data, const char *secret_data)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_chatlist_t *</type>
+      <name>dc_get_chatlist</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a26c2ff36ce56fdffb7310311352272ae</anchor>
+      <arglist>(dc_context_t *context, int flags, const char *query_str, uint32_t query_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_create_chat_by_contact_id</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ac0fad42e07b1973162d27e0fdf4478d1</anchor>
+      <arglist>(dc_context_t *context, uint32_t contact_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_get_chat_id_by_contact_id</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a8736b580af3d4e33e5bd205159af2e29</anchor>
+      <arglist>(dc_context_t *context, uint32_t contact_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_prepare_msg</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a94ed0bfbf9fa616f7aa7a8c15df813ff</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_send_msg</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>aaba70910f9c3b3819bba1d04e4d54e02</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_send_msg_sync</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>aa7c4e5237717f4cdaca7d74a6b6588e6</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_send_text_msg</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a2e30845e0c4676e1b0f7c5b4a15fb2b6</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, const char *text_to_send)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_send_videochat_invitation</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>aa2995e39153c5007485541da6b5b0f1a</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_send_webxdc_status_update</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ac53bb4421efd47d156ad0dd550ede288</anchor>
+      <arglist>(dc_context_t *context, uint32_t msg_id, const char *json, const char *descr)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_get_webxdc_status_updates</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ae308c5f89c29da5b0580ce05a5c36887</anchor>
+      <arglist>(dc_context_t *context, uint32_t msg_id, uint32_t status_update_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_set_draft</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a131ee8d251dc1ab2d115822f6a2f7a66</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_add_device_msg</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a1a2aad98bd23c1d21ee42374e241f389</anchor>
+      <arglist>(dc_context_t *context, const char *label, dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_was_device_msg_ever_added</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a307254ef759195aade2d10716849637e</anchor>
+      <arglist>(dc_context_t *context, const char *label)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_msg_t *</type>
+      <name>dc_get_draft</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a3c76757cbdaab9f1ce27f0fd1d86ea27</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_array_t *</type>
+      <name>dc_get_chat_msgs</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a51353ff6b85fa9278d2ec476c3c95eda</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, uint32_t flags, uint32_t marker1before)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_get_msg_cnt</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a02a76fdb6a574f914ef6fc16a4d18cfc</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_get_fresh_msg_cnt</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a6d47f15d87049f2afa60e059f705c1c5</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_estimate_deletion_cnt</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a7e3af483f020a6f53b6fc70c643d0e93</anchor>
+      <arglist>(dc_context_t *context, int from_server, int64_t seconds)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_array_t *</type>
+      <name>dc_get_fresh_msgs</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a5dc16d0ebe4f837efb42b957948b54b0</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_marknoticed_chat</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a7286128d6c3ae3f274f72241fbc4353c</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_array_t *</type>
+      <name>dc_get_chat_media</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a344a82b9f288b5eb5d39c7cf475cddb7</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, int msg_type, int msg_type2, int msg_type3)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_get_next_media</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a9bb2762236dc193c7e5fd155d66c80d5</anchor>
+      <arglist>(dc_context_t *context, uint32_t msg_id, int dir, int msg_type, int msg_type2, int msg_type3)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_set_chat_protection</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a66d4356a148982b1debba159c28ce75a</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, int protect)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_set_chat_visibility</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a928d2e135f42a01d3ba1051e12042614</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, int visibility)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_delete_chat</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ad50eed96a11b113c4080886b2b748ff3</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_block_chat</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a55e98c63ffd58f6dccf5fddc9d453467</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_accept_chat</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>af0e42094d6d7179676b43b337c39a78d</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_array_t *</type>
+      <name>dc_get_chat_contacts</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a9939ef09de5a5026dbac6fe209186969</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_get_chat_encrinfo</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>afdda9fd371e9179cd2bf94278e61a35f</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_get_chat_ephemeral_timer</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a33c981fa61b99a72fb4478f920fff78d</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_array_t *</type>
+      <name>dc_search_msgs</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a777bb1e11d7ea0288984ad23c2d8663b</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, const char *query)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_chat_t *</type>
+      <name>dc_get_chat</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a9cec1e2e3dba9d83035cf363cfc3530f</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_create_group_chat</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ae68182461a90d24aae7df62db43ed5aa</anchor>
+      <arglist>(dc_context_t *context, int protect, const char *name)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_create_broadcast_list</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a6f02e5e53abfe2247e37592087695792</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_is_contact_in_chat</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>aec6e3c1cecd0e4e4ea99c4fdfbd177cd</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, uint32_t contact_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_add_contact_to_chat</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a9360baf78e9b45e45af1de5856b63282</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, uint32_t contact_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_remove_contact_from_chat</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a72d4db8f0fcb595f11045882284f408f</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, uint32_t contact_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_set_chat_name</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a6e324717f073f0c52f2c77d07dc40fd6</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, const char *name)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_set_chat_ephemeral_timer</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a72b030947fb93e5829c7b8e1abe788da</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, uint32_t timer)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_set_chat_profile_image</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a2dc155d28e257fe540c2af4524e20cb6</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, const char *image)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_set_chat_mute_duration</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a6460395925d49d2053bc95224bf5ce37</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, int64_t duration)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_get_msg_info</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a9752923b64ca8288045e999a11ccf7f4</anchor>
+      <arglist>(dc_context_t *context, uint32_t msg_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_get_msg_html</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>aaedfc31d404f1adbd266cfd663ee78bc</anchor>
+      <arglist>(dc_context_t *context, uint32_t msg_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_download_full_msg</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>aaeb16a389d24921e8253545e39cda504</anchor>
+      <arglist>(dc_context_t *context, int msg_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_get_mime_headers</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ad0f0df9128a6881af5114561c54ef53e</anchor>
+      <arglist>(dc_context_t *context, uint32_t msg_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_delete_msgs</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ad6bdf2f72adcd382d849f2c3e25c5908</anchor>
+      <arglist>(dc_context_t *context, const uint32_t *msg_ids, int msg_cnt)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_forward_msgs</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ac303193c06b1302948fd110c03f399e1</anchor>
+      <arglist>(dc_context_t *context, const uint32_t *msg_ids, int msg_cnt, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_markseen_msgs</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ae5305a90c09380dffe54e68c2a709128</anchor>
+      <arglist>(dc_context_t *context, const uint32_t *msg_ids, int msg_cnt)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_msg_t *</type>
+      <name>dc_get_msg</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a4fd6b4565081c558fcd6ff827f22cb01</anchor>
+      <arglist>(dc_context_t *context, uint32_t msg_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_may_be_valid_addr</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a78f5a96398b3763bde51b1a057c84903</anchor>
+      <arglist>(const char *addr)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_lookup_contact_id_by_addr</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a2b5248d480d763bdee55f15e64d02109</anchor>
+      <arglist>(dc_context_t *context, const char *addr)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_create_contact</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>aaa30fc04300944691d6d7073ce16d053</anchor>
+      <arglist>(dc_context_t *context, const char *name, const char *addr)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_add_address_book</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a01f6252d7db5a4f747c3cac25edd6d1f</anchor>
+      <arglist>(dc_context_t *context, const char *addr_book)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_array_t *</type>
+      <name>dc_get_contacts</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a12e37e12b183a124af1c6a1d5304d074</anchor>
+      <arglist>(dc_context_t *context, uint32_t flags, const char *query)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_get_blocked_cnt</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>af99d5708a1d38c7ef2be8f4ce4d8f311</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_array_t *</type>
+      <name>dc_get_blocked_contacts</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a4a82db96366b91b1e009f3c1fa9410c7</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_block_contact</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ad607cf9354ff8da926fc32bce61b7c57</anchor>
+      <arglist>(dc_context_t *context, uint32_t contact_id, int block)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_get_contact_encrinfo</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a2a14d2a3389b16ba5ffff02a7ed232b1</anchor>
+      <arglist>(dc_context_t *context, uint32_t contact_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_delete_contact</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>acea00dc340861113c18983eb5206b7f9</anchor>
+      <arglist>(dc_context_t *context, uint32_t contact_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_contact_t *</type>
+      <name>dc_get_contact</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a36b0e1a01730411b15294da5024ad311</anchor>
+      <arglist>(dc_context_t *context, uint32_t contact_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_imex</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ab04a07bb49363824f6fe3b03e6aaaca7</anchor>
+      <arglist>(dc_context_t *context, int what, const char *param1, const char *param2)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_imex_has_backup</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a0084f073b0dbca90cafbb4214658d479</anchor>
+      <arglist>(dc_context_t *context, const char *dir)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_initiate_key_transfer</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>af327aa51e2e18ce3f5948545a637eac9</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_continue_key_transfer</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a5af2cdd80c7286b2a495d56fa6c0832f</anchor>
+      <arglist>(dc_context_t *context, uint32_t msg_id, const char *setup_code)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_stop_ongoing_process</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a4df8b12ccbfb482a0557d027eae43cfc</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_lot_t *</type>
+      <name>dc_check_qr</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a34a865a52127ed2cc8c2f016f085086c</anchor>
+      <arglist>(dc_context_t *context, const char *qr)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_get_securejoin_qr</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a586a3211762fd27924f53c316955e03d</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_get_securejoin_qr_svg</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ab32aaf3b05974b0944156c98eed6e711</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_join_securejoin</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ae49176cbc26d4d40d52de4f5301d1fa7</anchor>
+      <arglist>(dc_context_t *context, const char *qr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_send_locations_to_chat</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a35fe6c1736fbfc6666b19e68c9cd09e0</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, int seconds)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_is_sending_locations_to_chat</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a532065cd272c597028686689984d0181</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_set_location</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a8b8e410c7bfad022443ecb4feba85089</anchor>
+      <arglist>(dc_context_t *context, double latitude, double longitude, double accuracy)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_array_t *</type>
+      <name>dc_get_locations</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a35435761d33411b62aa2109806f8f08e</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, uint32_t contact_id, int64_t timestamp_begin, int64_t timestamp_end)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_delete_all_locations</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>ae736732045da81ddad13b615b7e6a447</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_get_last_error</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>a84c9f09e57c2985fd1c47809eea01969</anchor>
+      <arglist>(dc_context_t *context)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_str_unref</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>aca9549878866d55e33175f333ed8cfca</anchor>
+      <arglist>(char *str)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_lot_t *</type>
+      <name>dc_chatlist_get_summary2</name>
+      <anchorfile>classdc__context__t.html</anchorfile>
+      <anchor>abc6109f42637aedaf789d8063964fbe6</anchor>
+      <arglist>(dc_context_t *context, uint32_t chat_id, uint32_t msg_id)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>dc_event_emitter_t</name>
+    <filename>classdc__event__emitter__t.html</filename>
+    <member kind="function">
+      <type>dc_event_t *</type>
+      <name>dc_get_next_event</name>
+      <anchorfile>classdc__event__emitter__t.html</anchorfile>
+      <anchor>abd0356a4eeaddc091067e85c8a857812</anchor>
+      <arglist>(dc_event_emitter_t *emitter)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_event_emitter_unref</name>
+      <anchorfile>classdc__event__emitter__t.html</anchorfile>
+      <anchor>a811d7c5cae509455c380dfb1f81a268e</anchor>
+      <arglist>(dc_event_emitter_t *emitter)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>dc_event_t</name>
+    <filename>classdc__event__t.html</filename>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_event_get_id</name>
+      <anchorfile>classdc__event__t.html</anchorfile>
+      <anchor>a8cc366fb32b99326a668bec80ebca8be</anchor>
+      <arglist>(dc_event_t *event)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_event_get_data1_int</name>
+      <anchorfile>classdc__event__t.html</anchorfile>
+      <anchor>a900f267609b9768610ecbb5f833ead0e</anchor>
+      <arglist>(dc_event_t *event)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_event_get_data2_int</name>
+      <anchorfile>classdc__event__t.html</anchorfile>
+      <anchor>a189a61d211040263eb9c19582539c941</anchor>
+      <arglist>(dc_event_t *event)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_event_get_data2_str</name>
+      <anchorfile>classdc__event__t.html</anchorfile>
+      <anchor>a65954ff569082bf7c2f2f3f1ea1ef401</anchor>
+      <arglist>(dc_event_t *event)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_event_get_account_id</name>
+      <anchorfile>classdc__event__t.html</anchorfile>
+      <anchor>a6b33bd6d1c6c5634cae607914f037d2c</anchor>
+      <arglist>(dc_event_t *event)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_event_unref</name>
+      <anchorfile>classdc__event__t.html</anchorfile>
+      <anchor>a02c4a2aa5004e02f356968513b1c497f</anchor>
+      <arglist>(dc_event_t *event)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>dc_lot_t</name>
+    <filename>classdc__lot__t.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_lot_unref</name>
+      <anchorfile>classdc__lot__t.html</anchorfile>
+      <anchor>ae71859691d1dd92eb3a4f759754d7c2a</anchor>
+      <arglist>(dc_lot_t *lot)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_lot_get_text1</name>
+      <anchorfile>classdc__lot__t.html</anchorfile>
+      <anchor>aec2595b576242390fb759039c3e6c854</anchor>
+      <arglist>(const dc_lot_t *lot)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_lot_get_text2</name>
+      <anchorfile>classdc__lot__t.html</anchorfile>
+      <anchor>af729cffd86d8eb01f85884a6628683e7</anchor>
+      <arglist>(const dc_lot_t *lot)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_lot_get_text1_meaning</name>
+      <anchorfile>classdc__lot__t.html</anchorfile>
+      <anchor>aba1dec0fb2d145ada23d655f1d198e83</anchor>
+      <arglist>(const dc_lot_t *lot)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_lot_get_state</name>
+      <anchorfile>classdc__lot__t.html</anchorfile>
+      <anchor>a0f5a4ad12b017a21ebeb3c1e971a7bc1</anchor>
+      <arglist>(const dc_lot_t *lot)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_lot_get_id</name>
+      <anchorfile>classdc__lot__t.html</anchorfile>
+      <anchor>aaa5641298d6eda304d139e2c43e8e137</anchor>
+      <arglist>(const dc_lot_t *lot)</arglist>
+    </member>
+    <member kind="function">
+      <type>int64_t</type>
+      <name>dc_lot_get_timestamp</name>
+      <anchorfile>classdc__lot__t.html</anchorfile>
+      <anchor>a0f535d39812706182c555ea79e0c5759</anchor>
+      <arglist>(const dc_lot_t *lot)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>dc_msg_t</name>
+    <filename>classdc__msg__t.html</filename>
+    <member kind="function">
+      <type>dc_msg_t *</type>
+      <name>dc_msg_new</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>aa694c4f707ad51918703218cc8887143</anchor>
+      <arglist>(dc_context_t *context, int viewtype)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_msg_unref</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a578e283b6d9de67e0e51f131ba3bcfa8</anchor>
+      <arglist>(dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_msg_get_id</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>ab007f6ccf670907af9ac6788c74a0641</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_msg_get_from_id</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a2b031e216af41a41f6c12f4142d2e447</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_msg_get_chat_id</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a21aa5dbd0c7391b707f77b97ac137cbf</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_get_viewtype</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>abbe7ce82d642e217363aa27bcc6274b3</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_get_state</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a83fbf6e74d09a0b598ccefe9b48bd68c</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int64_t</type>
+      <name>dc_msg_get_timestamp</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a3750338f46ffcda730770afcd95ac308</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int64_t</type>
+      <name>dc_msg_get_received_timestamp</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>aede5976ccc9c2c42d76d770b439c628f</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int64_t</type>
+      <name>dc_msg_get_sort_timestamp</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>ad6b9f44c1a3c7aa96fa9ab268c241a5c</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_msg_get_text</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a2577851182c3665a8b8a2de759fd09f1</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_msg_get_subject</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a919df8620e6d9a094dd64842e9360b9d</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_msg_get_file</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>ae8b750f6aa5e388a36c8be4c57b16271</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_msg_get_filename</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a0ee3fda6369513391f64b996c8cbeb34</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_msg_get_filemime</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a56b59cbaae2f570723600ba130ea12a4</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_msg_get_webxdc_blob</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a0ce7888a97a8bc127fe5f7a9f869eae2</anchor>
+      <arglist>(const dc_msg_t *msg, const char *filename, size_t *ret_bytes)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_msg_get_webxdc_info</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>aee526949983962ed25adf33a2f5e6878</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint64_t</type>
+      <name>dc_msg_get_filebytes</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a918893073cf6bb0ac324a66a47062db3</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_get_width</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a5249ddd8d5eea3155a3c0bc121722a1d</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_get_height</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>ae4b99aa662455a4c37430e678894bfdb</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_get_duration</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>aaedb426314f3d701d606ba3daa24fc1a</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_get_showpadlock</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a1beb22d18c9c045f7982718879a78440</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_is_bot</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a64518463c41fb8be46083f6f4fd8edcb</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>dc_msg_get_ephemeral_timer</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a0ed75e2129e5da816918a430db7bae5a</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int64_t</type>
+      <name>dc_msg_get_ephemeral_timestamp</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a2c8b564854f39830e1bf80029944018e</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_lot_t *</type>
+      <name>dc_msg_get_summary</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a2107a9532d0d157766329c53fa1617d8</anchor>
+      <arglist>(const dc_msg_t *msg, const dc_chat_t *chat)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_msg_get_summarytext</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a14af0d3ec8277eaad7f66464a0cd8fb3</anchor>
+      <arglist>(const dc_msg_t *msg, int approx_characters)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_msg_get_override_sender_name</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a47c8d53848c954277926f456919c7eab</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_has_deviating_timestamp</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a6dc38654dbb222305ee086af338113b2</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_has_location</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a22b65dfeb2ed17982aeadd5de7077dff</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_is_sent</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>ae75e92a28d0c3dc3e7239f0f132d8788</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_is_forwarded</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a6d5b3b500fc36d7e1fc53bc2622c7dad</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_is_info</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a7272ddc7b2da2605463fa3ce0a00edc7</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_get_info_type</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>ab3eeb59143e67fda31d3648bd775f77b</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_is_increation</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>abd187cb4f114fd77c83b6d914d3977db</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_is_setupmessage</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a8a1c2f34e4b56161bd0057983ac2d104</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_msg_get_setupcodebegin</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a677bca5655a8cc9f7a838fa588562d12</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_msg_get_videochat_url</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a4b6cb08857e0631fed7886f26c94ab21</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_msg_get_error</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>ae5914bf190af647c43676e9b35bad9cd</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_get_videochat_type</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>ae0184efeb9f196dc0488212349d1b1c3</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_has_html</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>aab7b069edb647e01311ee675b267d99a</anchor>
+      <arglist>(dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_msg_get_download_state</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a2cfa8744f0dfa1d6cada95bf2ea9aaf4</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_msg_set_text</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a352d9e2cc2fcacac43bb540550a578a1</anchor>
+      <arglist>(dc_msg_t *msg, const char *text)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_msg_set_html</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a0770c59040a07898f6c4723a856de2d7</anchor>
+      <arglist>(dc_msg_t *msg, const char *html)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_msg_set_override_sender_name</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a124864502cf157aae190afca6cc73c99</anchor>
+      <arglist>(dc_msg_t *msg, const char *name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_msg_set_file</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>ae3d4b2a4ed4b10dbe13396ff7739160e</anchor>
+      <arglist>(dc_msg_t *msg, const char *file, const char *filemime)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_msg_set_dimension</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a6bc82bec36d7bc4218f9a26ebc3c24ae</anchor>
+      <arglist>(dc_msg_t *msg, int width, int height)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_msg_set_duration</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a32bd05a4c5113b098004c16c2b4a14ec</anchor>
+      <arglist>(dc_msg_t *msg, int duration)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_msg_set_location</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a841ca7926609ae1da64bd0dd237ca5b1</anchor>
+      <arglist>(dc_msg_t *msg, double latitude, double longitude)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_msg_latefiling_mediasize</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a7687ff969841f3d00c3a212f9ad27861</anchor>
+      <arglist>(dc_msg_t *msg, int width, int height, int duration)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_msg_set_quote</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a21ea981a536fbd8d37ec8ea3c22d477a</anchor>
+      <arglist>(dc_msg_t *msg, const dc_msg_t *quote)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_msg_get_quoted_text</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a456299eae0b43c4ec6ee6fe812947ed9</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_msg_t *</type>
+      <name>dc_msg_get_quoted_msg</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>a9282d97546388655d99018fd63294bb6</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>dc_msg_t *</type>
+      <name>dc_msg_get_parent</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>aa349dbcf03838d6f371d09b16fd7b4ec</anchor>
+      <arglist>(const dc_msg_t *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_msg_force_plaintext</name>
+      <anchorfile>classdc__msg__t.html</anchorfile>
+      <anchor>aa7b7882a4b41ccfb08560dc767586589</anchor>
+      <arglist>(dc_msg_t *msg)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>dc_provider_t</name>
+    <filename>classdc__provider__t.html</filename>
+    <member kind="function">
+      <type>dc_provider_t *</type>
+      <name>dc_provider_new_from_email</name>
+      <anchorfile>classdc__provider__t.html</anchorfile>
+      <anchor>ad6a166c6cf4793acab8d038c76d37c35</anchor>
+      <arglist>(const dc_context_t *context, const char *email)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_provider_get_overview_page</name>
+      <anchorfile>classdc__provider__t.html</anchorfile>
+      <anchor>ab32fc5beb439838a16dee3c3160e0f03</anchor>
+      <arglist>(const dc_provider_t *provider)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>dc_provider_get_before_login_hint</name>
+      <anchorfile>classdc__provider__t.html</anchorfile>
+      <anchor>a72740dc24e660fabb6db32feb613cbfb</anchor>
+      <arglist>(const dc_provider_t *provider)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>dc_provider_get_status</name>
+      <anchorfile>classdc__provider__t.html</anchorfile>
+      <anchor>a2feeb8709214272a21430dd3bbd0258e</anchor>
+      <arglist>(const dc_provider_t *provider)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>dc_provider_unref</name>
+      <anchorfile>classdc__provider__t.html</anchorfile>
+      <anchor>af49391e0457067d83eece869febb82fe</anchor>
+      <arglist>(dc_provider_t *provider)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>DC_CERTCK</name>
+    <title>DC_CERTCK</title>
+    <filename>group___d_c___c_e_r_t_c_k.html</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_CERTCK_AUTO</name>
+      <anchorfile>group___d_c___c_e_r_t_c_k.html</anchorfile>
+      <anchor>ga4165c480470804083b182714ab4f5183</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_CERTCK_STRICT</name>
+      <anchorfile>group___d_c___c_e_r_t_c_k.html</anchorfile>
+      <anchor>ga6f1f5fe3ac6a3aa38b947da7c921ce9d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_CERTCK_ACCEPT_INVALID_CERTIFICATES</name>
+      <anchorfile>group___d_c___c_e_r_t_c_k.html</anchorfile>
+      <anchor>gaca71df831dd67febfdb596c4ee6e8773</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>DC_CHAT_TYPE</name>
+    <title>DC_CHAT_TYPE</title>
+    <filename>group___d_c___c_h_a_t___t_y_p_e.html</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_CHAT_TYPE_UNDEFINED</name>
+      <anchorfile>group___d_c___c_h_a_t___t_y_p_e.html</anchorfile>
+      <anchor>gaf862a7ad162378d4e4cbe1ea2b611411</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_CHAT_TYPE_SINGLE</name>
+      <anchorfile>group___d_c___c_h_a_t___t_y_p_e.html</anchorfile>
+      <anchor>ga0fc026bba41b2222cfbdd7897577b770</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_CHAT_TYPE_GROUP</name>
+      <anchorfile>group___d_c___c_h_a_t___t_y_p_e.html</anchorfile>
+      <anchor>ga088108d7e73441f3985461e56b42c8b0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_CHAT_TYPE_MAILINGLIST</name>
+      <anchorfile>group___d_c___c_h_a_t___t_y_p_e.html</anchorfile>
+      <anchor>ga35f0f3d916d666115e78a37ffaa5b72c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_CHAT_TYPE_BROADCAST</name>
+      <anchorfile>group___d_c___c_h_a_t___t_y_p_e.html</anchorfile>
+      <anchor>gaad8d41e1eb0ce75d442893646867f9d8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>DC_CHAT_VISIBILITY</name>
+    <title>DC_CHAT_VISIBILITY</title>
+    <filename>group___d_c___c_h_a_t___v_i_s_i_b_i_l_i_t_y.html</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_CHAT_VISIBILITY_NORMAL</name>
+      <anchorfile>group___d_c___c_h_a_t___v_i_s_i_b_i_l_i_t_y.html</anchorfile>
+      <anchor>ga2d9b58b7be3e6b114b341bf24bc6fa28</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_CHAT_VISIBILITY_ARCHIVED</name>
+      <anchorfile>group___d_c___c_h_a_t___v_i_s_i_b_i_l_i_t_y.html</anchorfile>
+      <anchor>gafe8406c16cdba6422fdc241caf84ad1f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_CHAT_VISIBILITY_PINNED</name>
+      <anchorfile>group___d_c___c_h_a_t___v_i_s_i_b_i_l_i_t_y.html</anchorfile>
+      <anchor>ga07e8739dc4a3649673b08846a22da46f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>DC_DOWNLOAD</name>
+    <title>DC_DOWNLOAD</title>
+    <filename>group___d_c___d_o_w_n_l_o_a_d.html</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_DOWNLOAD_DONE</name>
+      <anchorfile>group___d_c___d_o_w_n_l_o_a_d.html</anchorfile>
+      <anchor>ga54fe46147a3d129916260989ce708fa6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_DOWNLOAD_AVAILABLE</name>
+      <anchorfile>group___d_c___d_o_w_n_l_o_a_d.html</anchorfile>
+      <anchor>ga33ed6e1e946fb8d2209e41d8ce03a2d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_DOWNLOAD_FAILURE</name>
+      <anchorfile>group___d_c___d_o_w_n_l_o_a_d.html</anchorfile>
+      <anchor>ga85267e4a482ed4fd61d98f719a486937</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_DOWNLOAD_IN_PROGRESS</name>
+      <anchorfile>group___d_c___d_o_w_n_l_o_a_d.html</anchorfile>
+      <anchor>ga03acb9a1bf7fa1fd1e04fa32a66f40cc</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>DC_EVENT</name>
+    <title>DC_EVENT</title>
+    <filename>group___d_c___e_v_e_n_t.html</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_INFO</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga0f492424e22941431e2562731a5f21ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_SMTP_CONNECTED</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga68af4630b2e79d8a387c8a9b83c9a088</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_IMAP_CONNECTED</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga867b454250458393e4f405a064c02928</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_SMTP_MESSAGE_SENT</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>gace252b291eaa12fd593ea8384b2205e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_IMAP_MESSAGE_DELETED</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga93ef5602e9e411aa5306d0c9ed299cd8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_IMAP_MESSAGE_MOVED</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga947fbe70db73f2b6d26f0a96db3ae25d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_NEW_BLOB_FILE</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga9eef48ff47b135c5481db88ce2cff72c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_DELETED_BLOB_FILE</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga22f447da7529e86c72b1c925633d9286</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_WARNING</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga2e4cc3e6e1c3ba8f152b2cf94632a967</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_ERROR</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>gaf7b3f4a361fc9515a79758bd49a376d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_ERROR_SELF_NOT_IN_GROUP</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>gab55bc1fec869d92d722618c05bd74604</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_MSGS_CHANGED</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga0f52cdaad70dd24f7540abda6193cc2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_INCOMING_MSG</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga3f0831ca83189879a2f224b424d8b58f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_MSGS_NOTICED</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>gaa02ff510ef8c8b16e5829b6fd2bd82a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_MSG_DELIVERED</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga4438030310448a61af0a4bc72c6765dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_MSG_FAILED</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga1690a84950e2bc948c674d0271262d2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_MSG_READ</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga750f252b4bc82d91dfdd788860f36989</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_CHAT_MODIFIED</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga27512e465c573fcf295014f8e0075adf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_CHAT_EPHEMERAL_TIMER_MODIFIED</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga7aae7c07140fa24095ba054e83374aed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_CONTACTS_CHANGED</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga658b9fc4315badab7afe265b7fa8c2af</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_LOCATION_CHANGED</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga1eded0156765a6c55f31e39ca6cf6adf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_CONFIGURE_PROGRESS</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>gae047f9361d57c42d82a794324f5b9fd6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_IMEX_PROGRESS</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga006ea41d9c1a76ffc672752484c61e6c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_IMEX_FILE_WRITTEN</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga7ffbea55be6a5e6da7ac7e35ba6bf985</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_SECUREJOIN_INVITER_PROGRESS</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>gae1b19779138b8ea63d1b6a5b450c181a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_SECUREJOIN_JOINER_PROGRESS</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>gae9113049bec969095e2cda81ebc1773a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_CONNECTIVITY_CHANGED</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga3ced1bbde752feba46ab089611287d71</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_SELFAVATAR_CHANGED</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga1e7835bb5dd4d752df5f4783a48f7353</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_EVENT_WEBXDC_STATUS_UPDATE</name>
+      <anchorfile>group___d_c___e_v_e_n_t.html</anchorfile>
+      <anchor>ga4f235a085abfc3b70e37a8e4149aa838</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>DC_LP</name>
+    <title>DC_LP</title>
+    <filename>group___d_c___l_p.html</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_LP_AUTH_OAUTH2</name>
+      <anchorfile>group___d_c___l_p.html</anchorfile>
+      <anchor>ga349c080fbc694dc5410f2c0fe8ddb21a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_LP_AUTH_NORMAL</name>
+      <anchorfile>group___d_c___l_p.html</anchorfile>
+      <anchor>ga445ab2551c9ad140db8dd2e09986b3f2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>DC_MSG</name>
+    <title>DC_MSG</title>
+    <filename>group___d_c___m_s_g.html</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_MSG_TEXT</name>
+      <anchorfile>group___d_c___m_s_g.html</anchorfile>
+      <anchor>ga1c305b0eaa3d2fe21287d528a83ec524</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_MSG_IMAGE</name>
+      <anchorfile>group___d_c___m_s_g.html</anchorfile>
+      <anchor>gaf530f0e997ef2e0ef2f2f71fc7c2f9b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_MSG_GIF</name>
+      <anchorfile>group___d_c___m_s_g.html</anchorfile>
+      <anchor>ga1203849015c917aa274b05b0d08f1b7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_MSG_STICKER</name>
+      <anchorfile>group___d_c___m_s_g.html</anchorfile>
+      <anchor>ga9638e38fb5b6f93afec10ee30f5bfe34</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_MSG_AUDIO</name>
+      <anchorfile>group___d_c___m_s_g.html</anchorfile>
+      <anchor>ga510c9ae279a2e5ee32ba49796a747e83</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_MSG_VOICE</name>
+      <anchorfile>group___d_c___m_s_g.html</anchorfile>
+      <anchor>ga0c7b507e8de897186e7a31c2fa131058</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_MSG_VIDEO</name>
+      <anchorfile>group___d_c___m_s_g.html</anchorfile>
+      <anchor>ga1979f080cdb27c24d519d864e9aa1a06</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_MSG_FILE</name>
+      <anchorfile>group___d_c___m_s_g.html</anchorfile>
+      <anchor>gac99a50a71b7dfc1ca7f2a145e8be588b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_MSG_VIDEOCHAT_INVITATION</name>
+      <anchorfile>group___d_c___m_s_g.html</anchorfile>
+      <anchor>ga4289e30c154f83ee76c56bb1fcd8fe85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_MSG_WEBXDC</name>
+      <anchorfile>group___d_c___m_s_g.html</anchorfile>
+      <anchor>ga848f9575a28a93b4d8358502c680a98d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>DC_PROVIDER_STATUS</name>
+    <title>DC_PROVIDER_STATUS</title>
+    <filename>group___d_c___p_r_o_v_i_d_e_r___s_t_a_t_u_s.html</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_PROVIDER_STATUS_OK</name>
+      <anchorfile>group___d_c___p_r_o_v_i_d_e_r___s_t_a_t_u_s.html</anchorfile>
+      <anchor>gacdd5dbddbbf0b7fa4eb1f531ae432634</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_PROVIDER_STATUS_PREPARATION</name>
+      <anchorfile>group___d_c___p_r_o_v_i_d_e_r___s_t_a_t_u_s.html</anchorfile>
+      <anchor>gaa1f8abe384455b7b069b31e432914e29</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_PROVIDER_STATUS_BROKEN</name>
+      <anchorfile>group___d_c___p_r_o_v_i_d_e_r___s_t_a_t_u_s.html</anchorfile>
+      <anchor>gadb6c83dcc2002d49c810019e1a690719</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>DC_SOCKET</name>
+    <title>DC_SOCKET</title>
+    <filename>group___d_c___s_o_c_k_e_t.html</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_SOCKET_AUTO</name>
+      <anchorfile>group___d_c___s_o_c_k_e_t.html</anchorfile>
+      <anchor>gaa39c186e9e60d975945a7dca2ef9f9aa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_SOCKET_SSL</name>
+      <anchorfile>group___d_c___s_o_c_k_e_t.html</anchorfile>
+      <anchor>gafb023cf06869c1e5f143dba04ad3cfb8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_SOCKET_STARTTLS</name>
+      <anchorfile>group___d_c___s_o_c_k_e_t.html</anchorfile>
+      <anchor>gac8e083bfbb69fc8f481c52da2dc0adde</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_SOCKET_PLAIN</name>
+      <anchorfile>group___d_c___s_o_c_k_e_t.html</anchorfile>
+      <anchor>gad161efe8e6fabf25e78249035e99a985</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>DC_STATE</name>
+    <title>DC_STATE</title>
+    <filename>group___d_c___s_t_a_t_e.html</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STATE_UNDEFINED</name>
+      <anchorfile>group___d_c___s_t_a_t_e.html</anchorfile>
+      <anchor>ga361ec8246f2215ccccb0a410d0ff92a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STATE_IN_FRESH</name>
+      <anchorfile>group___d_c___s_t_a_t_e.html</anchorfile>
+      <anchor>ga51e020f23f5d304b3280dfb881047107</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STATE_IN_NOTICED</name>
+      <anchorfile>group___d_c___s_t_a_t_e.html</anchorfile>
+      <anchor>ga58ebb7471667b4fd1126d2ddc4c5d837</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STATE_IN_SEEN</name>
+      <anchorfile>group___d_c___s_t_a_t_e.html</anchorfile>
+      <anchor>gab4621fc76c73cbdd871d598a696287e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STATE_OUT_PREPARING</name>
+      <anchorfile>group___d_c___s_t_a_t_e.html</anchorfile>
+      <anchor>gae8ebaa13f1222d329a1d16212043b672</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STATE_OUT_DRAFT</name>
+      <anchorfile>group___d_c___s_t_a_t_e.html</anchorfile>
+      <anchor>ga4889d63e4eaf4c5791aad50126359931</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STATE_OUT_PENDING</name>
+      <anchorfile>group___d_c___s_t_a_t_e.html</anchorfile>
+      <anchor>ga796d22b160b58d2683da1088dabe934c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STATE_OUT_FAILED</name>
+      <anchorfile>group___d_c___s_t_a_t_e.html</anchorfile>
+      <anchor>ga5ce5dbd6ee227e66a771be7202de8786</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STATE_OUT_DELIVERED</name>
+      <anchorfile>group___d_c___s_t_a_t_e.html</anchorfile>
+      <anchor>gac7f31ab9eee663b86d5745e82e4df861</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STATE_OUT_MDN_RCVD</name>
+      <anchorfile>group___d_c___s_t_a_t_e.html</anchorfile>
+      <anchor>ga96a73f1935f0a059d0304c70e5971077</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>DC_STR</name>
+    <title>DC_STR</title>
+    <filename>group___d_c___s_t_r.html</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_NOMESSAGES</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gadceaecbcff0edc3c8d5d22e68e82b969</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_SELF</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga3ad91f704c34907b0754378715c487a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_DRAFT</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga10f70ad058363762f8194d2c68700ecc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_VOICEMESSAGE</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gacbaf2ae986a8af9f6d0d163ee79f510b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_IMAGE</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga0c3333e38172bf80bb1587e82432336d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_VIDEO</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga41a81693b87270aea81234e6ad66c34f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_AUDIO</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gae108b1686a2192ac82081c4c9333231b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_FILE</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga77fb4b783ea13309da947820032a4bb5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_MSGGRPNAME</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gac9a26bbb92b8e95600e1aacff07c1d8c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_MSGGRPIMGCHANGED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga31b33b24dcbec1aab2fd16466f876aa3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_MSGADDMEMBER</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gaf3f97754f75eb30c405a01ac4df54e35</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_MSGDELMEMBER</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gab9e9f6bbe84abe733a78511ba1839d8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_MSGGROUPLEFT</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga029aa6cdf2d246167e9cbe4091a0d9bd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_GIF</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gaae22bd1ca0c55fcd870b93f4bda4c691</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_ENCRYPTEDMSG</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga20281b4761405991b0dd1ea1a979ec5e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_E2E_AVAILABLE</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga2025629ecb152101fca8347b97ce516d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_ENCR_TRANSP</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga24581f76704545ef1f88e0ea649a05f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_ENCR_NONE</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gafd0f5b0bf9d001598559ff8a9d4caf61</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_CANTDECRYPT_MSG_BODY</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga48634840a17a6ae0d9c325cc7a565964</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_FINGERPRINTS</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga7ff4a320b47368040d2e5dd1b1d8b5d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_READRCPT</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga36c9cce855db9636aaaa0ce40bd45230</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_READRCPT_MAILBODY</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gaa161f2c1b75d840bfabffe3412a1c205</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_MSGGRPIMGDELETED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga0128c79abfd114d312a5251f8ff6335c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_E2E_PREFERRED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gaaf68df9f876a78d007461d1dd269560b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_CONTACT_VERIFIED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga4dc4deb46af399f2f6832ad0d460d34f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_CONTACT_NOT_VERIFIED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gae10f9b7d0c37e354f1e593f485a7024e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_CONTACT_SETUP_CHANGED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga21b83579f3690229bd0818b6c68ebc2f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_ARCHIVEDCHATS</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gad7bc2feb24e09d00b176a05adae338e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_AC_SETUP_MSG_SUBJECT</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gaa03cb244d9e4804a4995f99098b09ca8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_AC_SETUP_MSG_BODY</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gae42728ca3c34eafd38b3a150055d88c7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_CANNOT_LOGIN</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gac5cdb11994a15b4a6e997b09b3ca5535</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_MSGACTIONBYUSER</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gab9c23c06cbbf2026e75544791e4661ea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_MSGACTIONBYME</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gab4904e074545e6770047c11453ac6da1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_MSGLOCATIONENABLED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga483c687a375513c32c84c6e195b6c285</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_MSGLOCATIONDISABLED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga794c5e5ee2ed3581880582bb824e36f8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_LOCATION</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga40a01c6c8a3c5e8a35e72b18a4b97dc1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_STICKER</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga3a8d4cc17dbc96dbbbf7b3a80df5dd62</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_DEVICE_MESSAGES</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga927f9dfbd4a6d383c7dce3c013aad239</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_SAVED_MESSAGES</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga7b1ef37ea4799ff0b0e146b2783a7ab6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_DEVICE_MESSAGES_HINT</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gadd2af3bb51f5a47c6c22f5354e57f52d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_WELCOME_MESSAGE</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga2443bdf947f9a9929a6626f77593dd48</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_UNKNOWN_SENDER_FOR_CHAT</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga06bca814b724337a990579e72ca9a89c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_SUBJECT_FOR_NEW_CONTACT</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gaeb679cf77838ba08fe5d0d97d23d0264</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_FAILED_SENDING_TO</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gab66a98fa2bc3b5856381799898583fe0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_EPHEMERAL_DISABLED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gae5501c1ef396cd0b4659a2ba40f54417</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_EPHEMERAL_SECONDS</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gadefbca4773823dfcf4d0c869bf23c1d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_EPHEMERAL_MINUTE</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga13200b7a48eed83981104a61130b9d0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_EPHEMERAL_HOUR</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga18df9e971887ae1b188e89f10af06916</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_EPHEMERAL_DAY</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga8b5d01d752862187cab5effde4f2f339</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_EPHEMERAL_WEEK</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga01f4e6b1cd217c8ec39ba9c8dbb93311</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_EPHEMERAL_FOUR_WEEKS</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gafc9c171f7bc9e17c4fd9410d5e23e368</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_VIDEOCHAT_INVITATION</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga84e1b47635042d8dd8878338133bfcdf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_VIDEOCHAT_INVITE_MSG_BODY</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gad8c4812198dd2f5fa5dfeac78353d353</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_CONFIGURATION_FAILED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gad574b0ccc0fd06993b98a85d0321de2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_BAD_TIME_MSG_BODY</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga198e96473a92e1a40c75d4047acf57a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_UPDATE_REMINDER_MSG_BODY</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga6e18cd97f1a48952198b75cae0138304</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_ERROR_NO_NETWORK</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga582c682078b6aa2239bf07e07c9d3bd2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_PROTECTION_ENABLED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga58b5e9f6262bf281d98dce49c6685947</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_PROTECTION_DISABLED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga78c4a463db6a17f9eea8f86d43ffc59e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_REPLY_NOUN</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga960a5990c391d2a3cdfe6c4d28cff043</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_SELF_DELETED_MSG_BODY</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gacf49846d4ac6e5aec692e83f364b8823</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_SERVER_TURNED_OFF</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gaebd7630af52d1a3703b6a4a005775d7a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_EPHEMERAL_MINUTES</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga026deada25788acc3b8d2e1b4a309e81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_EPHEMERAL_HOURS</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gadf717393ad0a58dd808a24513541136f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_EPHEMERAL_DAYS</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga0acc2a84a1b55b40abac40ffde7af1e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_EPHEMERAL_WEEKS</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga6cf8a005233f490fb5dc0b1028a3903a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_FORWARDED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga334341f876a29a2435d6d89476930d1d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_QUOTA_EXCEEDING_MSG_BODY</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga86b137524876d3ed1e499de3a3f484c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_PARTIAL_DOWNLOAD_MSG_BODY</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gac4a7aff04b384fc8439d7f2bcf46ae9f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_DOWNLOAD_AVAILABILITY</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga7f468d641c63e8e6c92cec0b3bf0bafc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_SYNC_MSG_SUBJECT</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga64f36379657a5cd6dfada6baf44e67a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_SYNC_MSG_BODY</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gade330d1585edd0e0bdf94a1add4a9078</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_INCOMING_MESSAGES</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga9bb7930167b8095087d640b3ec70433a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_OUTGOING_MESSAGES</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gad51dc20f927150812ee12394e6832c4f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_STORAGE_ON_DOMAIN</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga92ca03d0c3b2b6a1cacd01f1de8e62dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_ONE_MOMENT</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga46a29cef70ed2b9ed669a547796f9faf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_CONNECTED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga80d9344b36e059d404df61b34fa18447</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_CONNTECTING</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga7441c8a479d467f31bd984afb587767c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_UPDATING</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gabec4c1916530fad3bdfd615e1ac3ee43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_SENDING</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga22df69cd85b1a4ae9575d961e77b76dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_LAST_MSG_SENT_SUCCESSFULLY</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga53f8ce615ad09a0888118fde7fc3e2f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_ERROR</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gaa3ce238e89e8ba08e05878b5a2c2ff53</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_NOT_SUPPORTED_BY_PROVIDER</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga44a6a551b99c4a49044b2ab94dd1865c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_MESSAGES</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga232d506032cc6ced0b72e5b8bc7945d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_BROADCAST_LIST</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gaafc066cea642dffe341c49a2bceeb287</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_PART_OF_TOTAL_USED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga5dd321d40f02afd6964ff202e44b6923</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_SECURE_JOIN_STARTED</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga4ecaa0ca7081003410fff75d18eaff5f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_SECURE_JOIN_REPLIES</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gae5e3b9aca9c067ca376555157b266d19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_SETUP_CONTACT_QR_DESC</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>gada2d2977a881cbb0208a608a962d79f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>DC_STR_SECURE_JOIN_GROUP_QR_DESC</name>
+      <anchorfile>group___d_c___s_t_r.html</anchorfile>
+      <anchor>ga968725c107867bf4ec0a65d01a12caa4</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title>Getting started</title>
+    <filename>index.html</filename>
+  </compound>
+</tagfile>

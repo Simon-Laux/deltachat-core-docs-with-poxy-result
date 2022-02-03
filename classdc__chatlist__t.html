@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <title>dc_chatlist_t class | Delta Chat Core C Interface</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" rel="stylesheet"/>
+  <link href="m-dark+documentation.compiled.css" rel="stylesheet"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#22272e" name="theme-color"/>
+  <meta content="Delta Chat Core C Interface" name="twitter:title"/>
+  <meta content="Delta Chat Core C Interface" property="og:title"/>
+  <meta content="Delta Chat Core C Interface" itemprop="name"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="Poxy v0.5.3" name="generator"/>
+  <meta content="no-referrer-when-downgrade" name="referrer"/>
+  <link href="poxy-0.5.3.css" rel="stylesheet"/>
+  <link href="poxy-0.5.3-dark.css" rel="stylesheet"/>
+  <script src="poxy-0.5.3.js"></script>
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="Doxyfile-logo.png"/>Delta Chat Core C Interface</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+        </svg></a>
+        <a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+        <a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+      </div>
+      <div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="files.html">Files</a></li>
+            <li><a href="modules.html">Modules</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="namespaces.html">Namespaces</a></li>
+            <li><a href="annotated.html">Classes</a></li>
+            <li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path"></use>
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          dc_chatlist_t <span class="m-thin">class</span>
+        </h1>
+        <p>An object representing a single chatlist in memory.</p>
+        <div class="m-block m-default poxy-toc">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#pub-methods">Public functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>Chatlist objects contain chat IDs and, if possible, message IDs belonging to them. The chatlist object is not updated; if you want an update, you have to recreate the object.</p><p>For a <strong>typical chat overview</strong>, the idea is to get the list of all chats via <a class="m-doc" href="classdc__context__t.html#a26c2ff36ce56fdffb7310311352272ae">dc_<wbr/>get_<wbr/>chatlist()</a> without any listflags (see below) and to implement a "virtual list" or so (the count of chats is known by <a class="m-doc" href="classdc__chatlist__t.html#af3ee352c8891416c1be865ed11de1878">dc_<wbr/>chatlist_<wbr/>get_<wbr/>cnt()</a>).</p><p>Only for the items that are in view (the list may have several hundreds chats), the UI should call <a class="m-doc" href="classdc__chatlist__t.html#a7e155ba468613547743bf383600914d1">dc_<wbr/>chatlist_<wbr/>get_<wbr/>summary()</a> then. <a class="m-doc" href="classdc__chatlist__t.html#a7e155ba468613547743bf383600914d1">dc_<wbr/>chatlist_<wbr/>get_<wbr/>summary()</a> provides all elements needed for painting the item.</p><p>On a click of such an item, the UI should change to the chat view and get all messages from this view via <a class="m-doc" href="classdc__context__t.html#a51353ff6b85fa9278d2ec476c3c95eda">dc_<wbr/>get_<wbr/>chat_<wbr/>msgs()</a>. Again, a "virtual list" is created (the count of messages is known) and for each messages that is scrolled into view, <a class="m-doc" href="classdc__context__t.html#a4fd6b4565081c558fcd6ff827f22cb01">dc_<wbr/>get_<wbr/>msg()</a> is called then.</p><p>Why no listflags? Without listflags, <a class="m-doc" href="classdc__context__t.html#a26c2ff36ce56fdffb7310311352272ae">dc_<wbr/>get_<wbr/>chatlist()</a> adds the archive "link" automatically as needed. The UI can just render these items differently then.</p>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ac0fcc0aaa05adc66a7813d86f168320c">dc_chatlist_get_chat_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chatlist__t.html">dc_<wbr/>chatlist_<wbr/>t</a>* chatlist,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+            </dt>
+            <dd>Get a single chat ID of a chatlist.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#af3ee352c8891416c1be865ed11de1878">dc_chatlist_get_cnt</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chatlist__t.html">dc_<wbr/>chatlist_<wbr/>t</a>* chatlist) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a></span>
+            </dt>
+            <dd>Find out the number of chats in a chatlist.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ab91c14baafac86c9a59039576b9a5faa">dc_chatlist_get_context</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__chatlist__t.html">dc_<wbr/>chatlist_<wbr/>t</a>* chatlist) -&gt; <a class="m-doc" href="classdc__context__t.html">dc_<wbr/>context_<wbr/>t</a>*</span>
+            </dt>
+            <dd>Helper function to get the associated context object.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a0d089b4a45faa0e29d4350ef29049fd3">dc_chatlist_get_msg_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chatlist__t.html">dc_<wbr/>chatlist_<wbr/>t</a>* chatlist,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+            </dt>
+            <dd>Get a single message ID of a chatlist.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a7e155ba468613547743bf383600914d1">dc_chatlist_get_summary</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chatlist__t.html">dc_<wbr/>chatlist_<wbr/>t</a>* chatlist,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index,
+              <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat) -&gt; <a class="m-doc" href="classdc__lot__t.html">dc_<wbr/>lot_<wbr/>t</a>*</span>
+            </dt>
+            <dd>Get a summary for a chatlist index.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a1308af80825a43d5d9e337b4e44abbb3">dc_chatlist_unref</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__chatlist__t.html">dc_<wbr/>chatlist_<wbr/>t</a>* chatlist)</span>
+            </dt>
+            <dd>Free a chatlist object.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="ac0fcc0aaa05adc66a7813d86f168320c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> dc_<wbr/>chatlist_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ac0fcc0aaa05adc66a7813d86f168320c">dc_chatlist_get_chat_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chatlist__t.html">dc_<wbr/>chatlist_<wbr/>t</a>* chatlist,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index)</span></span>
+            </h3>
+            <p>Get a single chat ID of a chatlist.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chatlist</td>
+                  <td>The chatlist object as created e.g. by <a class="m-doc" href="classdc__context__t.html#a26c2ff36ce56fdffb7310311352272ae">dc_<wbr/>get_<wbr/>chatlist()</a>.</td>
+                </tr>
+                <tr>
+                  <td>index</td>
+                  <td>The index to get the chat ID for.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Returns the chat_id of the item at the given index. Index must be between 0 and <a class="m-doc" href="classdc__chatlist__t.html#af3ee352c8891416c1be865ed11de1878">dc_<wbr/>chatlist_<wbr/>get_<wbr/>cnt()</a>-1.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>To get the message object from the message ID, use <a class="m-doc" href="classdc__context__t.html#a9cec1e2e3dba9d83035cf363cfc3530f">dc_<wbr/>get_<wbr/>chat()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="af3ee352c8891416c1be865ed11de1878"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> dc_<wbr/>chatlist_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#af3ee352c8891416c1be865ed11de1878">dc_chatlist_get_cnt</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chatlist__t.html">dc_<wbr/>chatlist_<wbr/>t</a>* chatlist)</span></span>
+            </h3>
+            <p>Find out the number of chats in a chatlist.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chatlist</td>
+                  <td>The chatlist object as created e.g. by <a class="m-doc" href="classdc__context__t.html#a26c2ff36ce56fdffb7310311352272ae">dc_<wbr/>get_<wbr/>chatlist()</a>.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Returns the number of items in a <a class="m-doc" href="classdc__chatlist__t.html">dc_<wbr/>chatlist_<wbr/>t</a> object. 0 on errors or if the list is empty.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ab91c14baafac86c9a59039576b9a5faa"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classdc__context__t.html">dc_<wbr/>context_<wbr/>t</a>* dc_<wbr/>chatlist_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ab91c14baafac86c9a59039576b9a5faa">dc_chatlist_get_context</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__chatlist__t.html">dc_<wbr/>chatlist_<wbr/>t</a>* chatlist)</span></span>
+            </h3>
+            <p>Helper function to get the associated context object.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chatlist</td>
+                  <td>The chatlist object to empty.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Context object associated with the chatlist. NULL if none or on errors.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a0d089b4a45faa0e29d4350ef29049fd3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> dc_<wbr/>chatlist_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a0d089b4a45faa0e29d4350ef29049fd3">dc_chatlist_get_msg_id</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chatlist__t.html">dc_<wbr/>chatlist_<wbr/>t</a>* chatlist,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index)</span></span>
+            </h3>
+            <p>Get a single message ID of a chatlist.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chatlist</td>
+                  <td>The chatlist object as created e.g. by <a class="m-doc" href="classdc__context__t.html#a26c2ff36ce56fdffb7310311352272ae">dc_<wbr/>get_<wbr/>chatlist()</a>.</td>
+                </tr>
+                <tr>
+                  <td>index</td>
+                  <td>The index to get the chat ID for.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Returns the message_id of the item at the given index. Index must be between 0 and <a class="m-doc" href="classdc__chatlist__t.html#af3ee352c8891416c1be865ed11de1878">dc_<wbr/>chatlist_<wbr/>get_<wbr/>cnt()</a>-1. If there is no message at the given index (e.g. the chat may be empty), 0 is returned.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>To get the message object from the message ID, use <a class="m-doc" href="classdc__context__t.html#a4fd6b4565081c558fcd6ff827f22cb01">dc_<wbr/>get_<wbr/>msg()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a7e155ba468613547743bf383600914d1"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classdc__lot__t.html">dc_<wbr/>lot_<wbr/>t</a>* dc_<wbr/>chatlist_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a7e155ba468613547743bf383600914d1">dc_chatlist_get_summary</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__chatlist__t.html">dc_<wbr/>chatlist_<wbr/>t</a>* chatlist,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> index,
+              <a class="m-doc" href="classdc__chat__t.html">dc_<wbr/>chat_<wbr/>t</a>* chat)</span></span>
+            </h3>
+            <p>Get a summary for a chatlist index.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chatlist</td>
+                  <td>The chatlist to query as returned e.g. from <a class="m-doc" href="classdc__context__t.html#a26c2ff36ce56fdffb7310311352272ae">dc_<wbr/>get_<wbr/>chatlist()</a>.</td>
+                </tr>
+                <tr>
+                  <td>index</td>
+                  <td>The index to query in the chatlist.</td>
+                </tr>
+                <tr>
+                  <td>chat</td>
+                  <td>To speed up things, pass an already available chat object here. If the chat object is not yet available, it is faster to pass NULL.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The summary as an <a class="m-doc" href="classdc__lot__t.html">dc_<wbr/>lot_<wbr/>t</a> object. Must be freed using <a class="m-doc" href="classdc__lot__t.html#ae71859691d1dd92eb3a4f759754d7c2a">dc_<wbr/>lot_<wbr/>unref()</a>. NULL is never returned.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The summary is returned by a <a class="m-doc" href="classdc__lot__t.html">dc_<wbr/>lot_<wbr/>t</a> object with the following fields:</p><ul><li>dc_lot_t::text1: contains the username or the strings "Me", "Draft" and so on. The string may be colored by having a look at text1_meaning. If there is no such name or it should not be displayed, the element is NULL.</li><li>dc_lot_t::text1_meaning: one of DC_TEXT1_USERNAME, DC_TEXT1_SELF or DC_TEXT1_DRAFT. Typically used to show dc_lot_t::text1 with different colors. 0 if not applicable.</li><li>dc_lot_t::text2: contains an excerpt of the message text or strings as "No messages". May be NULL of there is no such text (e.g. for the archive link)</li><li>dc_lot_t::timestamp: the timestamp of the message. 0 if not applicable.</li><li>dc_lot_t::state: The state of the message as one of the <a class="m-doc" href="group___d_c___s_t_a_t_e.html">DC_<wbr/>STATE</a> constants. 0 if not applicable.</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="a1308af80825a43d5d9e337b4e44abbb3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>chatlist_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a1308af80825a43d5d9e337b4e44abbb3">dc_chatlist_unref</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__chatlist__t.html">dc_<wbr/>chatlist_<wbr/>t</a>* chatlist)</span></span>
+            </h3>
+            <p>Free a chatlist object.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">chatlist</td>
+                  <td>The chatlist object to free, created e.g. by <a class="m-doc" href="classdc__context__t.html#a26c2ff36ce56fdffb7310311352272ae">dc_<wbr/>get_<wbr/>chatlist()</a>, <a class="m-doc" href="classdc__context__t.html#a777bb1e11d7ea0288984ad23c2d8663b">dc_<wbr/>search_<wbr/>msgs()</a>. If NULL is given, nothing is done.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">…</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div class="m-text m-dim m-text-center" id="search-help">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script async="async" src="searchdata-v1.js"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        
+    <a download="" href="Delta_Chat_Core_C_Interface.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+    <br/><br/>
+    Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+
+      </div>
+    </div>
+  </div>
+</nav></footer>
+
+
+</body></html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <title>dc_accounts_t class | Delta Chat Core C Interface</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" rel="stylesheet"/>
+  <link href="m-dark+documentation.compiled.css" rel="stylesheet"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#22272e" name="theme-color"/>
+  <meta content="Delta Chat Core C Interface" name="twitter:title"/>
+  <meta content="Delta Chat Core C Interface" property="og:title"/>
+  <meta content="Delta Chat Core C Interface" itemprop="name"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="Poxy v0.5.3" name="generator"/>
+  <meta content="no-referrer-when-downgrade" name="referrer"/>
+  <link href="poxy-0.5.3.css" rel="stylesheet"/>
+  <link href="poxy-0.5.3-dark.css" rel="stylesheet"/>
+  <script src="poxy-0.5.3.js"></script>
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="Doxyfile-logo.png"/>Delta Chat Core C Interface</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+        </svg></a>
+        <a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+        <a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+      </div>
+      <div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="files.html">Files</a></li>
+            <li><a href="modules.html">Modules</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="namespaces.html">Namespaces</a></li>
+            <li><a href="annotated.html">Classes</a></li>
+            <li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path"></use>
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          dc_accounts_t <span class="m-thin">class</span>
+        </h1>
+        <p>This class provides functionality that can be used to manage several <a class="m-doc" href="classdc__context__t.html">dc_<wbr/>context_<wbr/>t</a> objects running at the same time.</p>
+        <div class="m-block m-default poxy-toc">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#pub-methods">Public functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>The account manager takes a directory where all context-databases are created in.</p><p>You can add, remove, import account to the account manager, all context-databases are persisted and stay available once the account manager is created again for the same directory.</p><p>All accounts may receive messages at the same time (e.g. by <a class="m-doc" href="group___d_c___e_v_e_n_t.html#ga3f0831ca83189879a2f224b424d8b58f">DC_<wbr/>EVENT_<wbr/>INCOMING_<wbr/>MSG</a>), and all accounts may be accessed by their own <a class="m-doc" href="classdc__context__t.html">dc_<wbr/>context_<wbr/>t</a> object.</p><p>To make this possible, some <a class="m-doc" href="classdc__context__t.html">dc_<wbr/>context_<wbr/>t</a> functions must not be called when using the account manager:</p><ul><li>use <a class="m-doc" href="classdc__accounts__t.html#acf9e9ca54aeec496d4abfb6877e6451e">dc_<wbr/>accounts_<wbr/>add_<wbr/>account()</a> and <a class="m-doc" href="classdc__accounts__t.html#a6524044350c476a4e8e969ae3d091b01">dc_<wbr/>accounts_<wbr/>get_<wbr/>account()</a> instead of <a class="m-doc" href="classdc__context__t.html#a9f4a6e04a111ff4e9e6e7d5d8fb59df7">dc_<wbr/>context_<wbr/>new()</a></li><li>use <a class="m-doc" href="classdc__accounts__t.html#adb272218d32aa5ed4d08f46c52c46333">dc_<wbr/>accounts_<wbr/>add_<wbr/>closed_<wbr/>account()</a> instead of <a class="m-doc" href="classdc__context__t.html#a050593d66031db962896222edfbd9e27">dc_<wbr/>context_<wbr/>new_<wbr/>closed()</a></li><li>use <a class="m-doc" href="classdc__accounts__t.html#a8eeea2b50af2ed92c30dacdb40c6d5f7">dc_<wbr/>accounts_<wbr/>start_<wbr/>io()</a> and <a class="m-doc" href="classdc__accounts__t.html#a976eaf8ce4eba43cdcbe62287b9331f1">dc_<wbr/>accounts_<wbr/>stop_<wbr/>io()</a> instead of <a class="m-doc" href="classdc__context__t.html#ab020d546b0f859cc603d0a8df57ecece">dc_<wbr/>start_<wbr/>io()</a> and <a class="m-doc" href="classdc__context__t.html#a38b66c7232d5fc486ef8b87a3908cd5e">dc_<wbr/>stop_<wbr/>io()</a></li><li>use <a class="m-doc" href="classdc__accounts__t.html#a2d652b774acda018cb818e50bd390595">dc_<wbr/>accounts_<wbr/>maybe_<wbr/>network()</a> instead of <a class="m-doc" href="classdc__context__t.html#a2f61e875270dbb7e7a2533461baa659b">dc_<wbr/>maybe_<wbr/>network()</a></li><li>use <a class="m-doc" href="classdc__accounts__t.html#ad74f8ea4e3ad2cb14f459a0661238c9e">dc_<wbr/>accounts_<wbr/>get_<wbr/>event_<wbr/>emitter()</a> instead of <a class="m-doc" href="classdc__context__t.html#aaee94728c947b297a2d3e34b4f1a84dd">dc_<wbr/>get_<wbr/>event_<wbr/>emitter()</a></li></ul><p>Additionally, there are functions to list, import and migrate accounts and to handle a "selected" account, see below.</p>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#acf9e9ca54aeec496d4abfb6877e6451e">dc_accounts_add_account</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+            </dt>
+            <dd>Add a new account to the account manager.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#adb272218d32aa5ed4d08f46c52c46333">dc_accounts_add_closed_account</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+            </dt>
+            <dd>Add a new closed account to the account manager.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a23e7f5095f52a80a605e0266f686f3b7">dc_accounts_all_work_done</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts) -&gt; int</span>
+            </dt>
+            <dd>This is meant especially for iOS, because iOS needs to tell the system when its background work is done.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a6524044350c476a4e8e969ae3d091b01">dc_accounts_get_account</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> account_id) -&gt; <a class="m-doc" href="classdc__context__t.html">dc_<wbr/>context_<wbr/>t</a>*</span>
+            </dt>
+            <dd>Get an account-context from an account-id.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a6859b296a8de872983b900086b3f9e89">dc_accounts_get_all</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts) -&gt; <a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>*</span>
+            </dt>
+            <dd>List all accounts.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ad74f8ea4e3ad2cb14f459a0661238c9e">dc_accounts_get_event_emitter</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts) -&gt; <a class="m-doc" href="classdc__accounts__event__emitter__t.html">dc_<wbr/>accounts_<wbr/>event_<wbr/>emitter_<wbr/>t</a>*</span>
+            </dt>
+            <dd>Create the event emitter that is used to receive events.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a248604bc2d5d4b5f0c83f01e7fdeab32">dc_accounts_get_selected_account</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts) -&gt; <a class="m-doc" href="classdc__context__t.html">dc_<wbr/>context_<wbr/>t</a>*</span>
+            </dt>
+            <dd>Get the currently selected account.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a2d652b774acda018cb818e50bd390595">dc_accounts_maybe_network</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span>
+            </dt>
+            <dd>This function should be called when there is a hint that the network is available again.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#aae556265a33a29f2c38fa6c791b061bd">dc_accounts_maybe_network_lost</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span>
+            </dt>
+            <dd>This function can be called when there is a hint that the network is lost.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a323d8e8f541e4f6415ba6b5713cab0ad">dc_accounts_migrate_account</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts,
+              const char* dbfile) -&gt; <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+            </dt>
+            <dd>Migrate independent accounts into accounts managed by the account manager.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a6e88b85f765439665c299dccd85f7a59">dc_accounts_new</a>(</span><span class="m-doc-wrap">const char* os_name,
+              const char* dir) -&gt; <a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>*</span>
+            </dt>
+            <dd>Create a new account manager.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ae02553e45229afb70a8fcc0521ea5bcd">dc_accounts_remove_account</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> account_id) -&gt; int</span>
+            </dt>
+            <dd>Remove an account from the account manager.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a115792e5dd63a068a8383d4bc8b1254a">dc_accounts_select_account</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> account_id) -&gt; int</span>
+            </dt>
+            <dd>Change the selected account.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a8eeea2b50af2ed92c30dacdb40c6d5f7">dc_accounts_start_io</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span>
+            </dt>
+            <dd>Start job and IMAP/SMTP tasks for all accounts managed by the account manager.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a976eaf8ce4eba43cdcbe62287b9331f1">dc_accounts_stop_io</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span>
+            </dt>
+            <dd>Stop job and IMAP/SMTP tasks for all accounts and return when they are finished.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a1b44bb38f8e7b3ef268a550f63867191">dc_accounts_unref</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span>
+            </dt>
+            <dd>Free an account manager object.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="acf9e9ca54aeec496d4abfb6877e6451e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#acf9e9ca54aeec496d4abfb6877e6451e">dc_accounts_add_account</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span></span>
+            </h3>
+            <p>Add a new account to the account manager.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">accounts</td>
+                  <td>Account manager as created by <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Account-id, use <a class="m-doc" href="classdc__accounts__t.html#a6524044350c476a4e8e969ae3d091b01">dc_<wbr/>accounts_<wbr/>get_<wbr/>account()</a> to get the context object. On errors, 0 is returned.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Internally, <a class="m-doc" href="classdc__context__t.html#a9f4a6e04a111ff4e9e6e7d5d8fb59df7">dc_<wbr/>context_<wbr/>new()</a> is called using a unique database-name in the directory specified at <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</p><p>If the function succeeds, <a class="m-doc" href="classdc__accounts__t.html#a6859b296a8de872983b900086b3f9e89">dc_<wbr/>accounts_<wbr/>get_<wbr/>all()</a> will return one more account and you can access the newly created account using <a class="m-doc" href="classdc__accounts__t.html#a6524044350c476a4e8e969ae3d091b01">dc_<wbr/>accounts_<wbr/>get_<wbr/>account()</a>. Moreover, the newly created account will be the selected one.</p>
+          </div></section>
+          <section class="m-doc-details" id="adb272218d32aa5ed4d08f46c52c46333"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#adb272218d32aa5ed4d08f46c52c46333">dc_accounts_add_closed_account</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span></span>
+            </h3>
+            <p>Add a new closed account to the account manager.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">accounts</td>
+                  <td>Account manager as created by <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Account-id, use <a class="m-doc" href="classdc__accounts__t.html#a6524044350c476a4e8e969ae3d091b01">dc_<wbr/>accounts_<wbr/>get_<wbr/>account()</a> to get the context object. On errors, 0 is returned.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Internally, <a class="m-doc" href="classdc__context__t.html#a050593d66031db962896222edfbd9e27">dc_<wbr/>context_<wbr/>new_<wbr/>closed()</a> is called using a unique database-name in the directory specified at <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</p><p>If the function succeeds, <a class="m-doc" href="classdc__accounts__t.html#a6859b296a8de872983b900086b3f9e89">dc_<wbr/>accounts_<wbr/>get_<wbr/>all()</a> will return one more account and you can access the newly created account using <a class="m-doc" href="classdc__accounts__t.html#a6524044350c476a4e8e969ae3d091b01">dc_<wbr/>accounts_<wbr/>get_<wbr/>account()</a>. Moreover, the newly created account will be the selected one.</p>
+          </div></section>
+          <section class="m-doc-details" id="a23e7f5095f52a80a605e0266f686f3b7"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a23e7f5095f52a80a605e0266f686f3b7">dc_accounts_all_work_done</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span></span>
+            </h3>
+            <p>This is meant especially for iOS, because iOS needs to tell the system when its background work is done.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">accounts</td>
+                  <td>Account manager as created by <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Whether all accounts finished their background work. <a class="m-doc" href="group___d_c___e_v_e_n_t.html#ga3ced1bbde752feba46ab089611287d71">DC_<wbr/>EVENT_<wbr/>CONNECTIVITY_<wbr/>CHANGED</a> will be sent when this turns to true.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>iOS can:</p><ul><li>call <a class="m-doc" href="classdc__context__t.html#ab020d546b0f859cc603d0a8df57ecece">dc_<wbr/>start_<wbr/>io()</a> (in case IO was not running)</li><li>call <a class="m-doc" href="classdc__context__t.html#a2f61e875270dbb7e7a2533461baa659b">dc_<wbr/>maybe_<wbr/>network()</a></li><li>while <a class="m-doc" href="classdc__accounts__t.html#a23e7f5095f52a80a605e0266f686f3b7">dc_<wbr/>accounts_<wbr/>all_<wbr/>work_<wbr/>done()</a> returns false:<ul><li>Wait for <a class="m-doc" href="group___d_c___e_v_e_n_t.html#ga3ced1bbde752feba46ab089611287d71">DC_<wbr/>EVENT_<wbr/>CONNECTIVITY_<wbr/>CHANGED</a></li></ul></li></ul>
+          </div></section>
+          <section class="m-doc-details" id="a6524044350c476a4e8e969ae3d091b01"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classdc__context__t.html">dc_<wbr/>context_<wbr/>t</a>* dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a6524044350c476a4e8e969ae3d091b01">dc_accounts_get_account</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> account_id)</span></span>
+            </h3>
+            <p>Get an account-context from an account-id.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">accounts</td>
+                  <td>Account manager as created by <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</td>
+                </tr>
+                <tr>
+                  <td>account_id</td>
+                  <td>The account-id as returned e.g. by <a class="m-doc" href="classdc__accounts__t.html#a6859b296a8de872983b900086b3f9e89">dc_<wbr/>accounts_<wbr/>get_<wbr/>all()</a> or <a class="m-doc" href="classdc__accounts__t.html#acf9e9ca54aeec496d4abfb6877e6451e">dc_<wbr/>accounts_<wbr/>add_<wbr/>account()</a>.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The account-context, this can be used most similar as a normal, unmanaged account-context as created by <a class="m-doc" href="classdc__context__t.html#a9f4a6e04a111ff4e9e6e7d5d8fb59df7">dc_<wbr/>context_<wbr/>new()</a>. Once you do no longer need the context-object, you have to call <a class="m-doc" href="classdc__context__t.html#a4d9482502241924728ad66251f779184">dc_<wbr/>context_<wbr/>unref()</a> on it, which, however, will not close the account but only decrease a reference counter.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a6859b296a8de872983b900086b3f9e89"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classdc__array__t.html">dc_<wbr/>array_<wbr/>t</a>* dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a6859b296a8de872983b900086b3f9e89">dc_accounts_get_all</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span></span>
+            </h3>
+            <p>List all accounts.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">accounts</td>
+                  <td>Account manager as created by <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>An array containing all account-ids, use <a class="m-doc" href="classdc__array__t.html#abcc5066916ed9c0d9e3a5018604d4d7d">dc_<wbr/>array_<wbr/>get_<wbr/>id()</a> to get the ids.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ad74f8ea4e3ad2cb14f459a0661238c9e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classdc__accounts__event__emitter__t.html">dc_<wbr/>accounts_<wbr/>event_<wbr/>emitter_<wbr/>t</a>* dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ad74f8ea4e3ad2cb14f459a0661238c9e">dc_accounts_get_event_emitter</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span></span>
+            </h3>
+            <p>Create the event emitter that is used to receive events.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">accounts</td>
+                  <td>Account manager as created by <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Returns the event emitter, NULL on errors. Must be freed using <a class="m-doc" href="classdc__accounts__event__emitter__t.html#aed8d80b3bbbdf815edffe41d54033ecd">dc_<wbr/>accounts_<wbr/>event_<wbr/>emitter_<wbr/>unref()</a> after usage.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The library will emit various <a class="m-doc" href="group___d_c___e_v_e_n_t.html">DC_<wbr/>EVENT</a> events as "new message", "message read" etc. To get these events, you have to create an event emitter using this function and call <a class="m-doc" href="classdc__accounts__event__emitter__t.html#a0ab2aaba09fac304432799553c21606c">dc_<wbr/>accounts_<wbr/>get_<wbr/>next_<wbr/>event()</a> on the emitter.</p><p>This is similar to <a class="m-doc" href="classdc__context__t.html#aaee94728c947b297a2d3e34b4f1a84dd">dc_<wbr/>get_<wbr/>event_<wbr/>emitter()</a>, which, however, must not be called for accounts handled by the account manager.</p><p>Note: Use only one event emitter per account manager. Having more than one event emitter running at the same time on the same account manager will result in events randomly delivered to the one or to the other.</p>
+          </div></section>
+          <section class="m-doc-details" id="a248604bc2d5d4b5f0c83f01e7fdeab32"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classdc__context__t.html">dc_<wbr/>context_<wbr/>t</a>* dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a248604bc2d5d4b5f0c83f01e7fdeab32">dc_accounts_get_selected_account</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span></span>
+            </h3>
+            <p>Get the currently selected account.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">accounts</td>
+                  <td>Account manager as created by <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The account-context, this can be used most similar as a normal, unmanaged account-context as created by <a class="m-doc" href="classdc__context__t.html#a9f4a6e04a111ff4e9e6e7d5d8fb59df7">dc_<wbr/>context_<wbr/>new()</a>. Once you do no longer need the context-object, you have to call <a class="m-doc" href="classdc__context__t.html#a4d9482502241924728ad66251f779184">dc_<wbr/>context_<wbr/>unref()</a> on it, which, however, will not close the account but only decrease a reference counter. If there is no selected account, NULL is returned.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>If there is at least one account in the account-manager, there is always a selected one. To change the selected account, use <a class="m-doc" href="classdc__accounts__t.html#a115792e5dd63a068a8383d4bc8b1254a">dc_<wbr/>accounts_<wbr/>select_<wbr/>account()</a>; also adding/importing/migrating accounts may change the selection.</p>
+          </div></section>
+          <section class="m-doc-details" id="a2d652b774acda018cb818e50bd390595"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a2d652b774acda018cb818e50bd390595">dc_accounts_maybe_network</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span></span>
+            </h3>
+            <p>This function should be called when there is a hint that the network is available again.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">accounts</td>
+                  <td>Account manager as created by <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>This is similar to <a class="m-doc" href="classdc__context__t.html#a2f61e875270dbb7e7a2533461baa659b">dc_<wbr/>maybe_<wbr/>network()</a>, which, however, must not be called for accounts handled by the account manager.</p>
+          </div></section>
+          <section class="m-doc-details" id="aae556265a33a29f2c38fa6c791b061bd"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aae556265a33a29f2c38fa6c791b061bd">dc_accounts_maybe_network_lost</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span></span>
+            </h3>
+            <p>This function can be called when there is a hint that the network is lost.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">accounts</td>
+                  <td>Account manager as created by <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>This is similar to <a class="m-doc" href="classdc__accounts__t.html#a2d652b774acda018cb818e50bd390595">dc_<wbr/>accounts_<wbr/>maybe_<wbr/>network()</a>, however, it does not retry job processing.</p><p><a class="m-doc" href="classdc__accounts__t.html#aae556265a33a29f2c38fa6c791b061bd">dc_<wbr/>accounts_<wbr/>maybe_<wbr/>network_<wbr/>lost()</a> is needed only on systems where the core cannot find out the connectivity loss on its own, eg. iOS. The function is not needed on Android, MacOS, Windows or Linux.</p>
+          </div></section>
+          <section class="m-doc-details" id="a323d8e8f541e4f6415ba6b5713cab0ad"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a323d8e8f541e4f6415ba6b5713cab0ad">dc_accounts_migrate_account</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts,
+              const char* dbfile)</span></span>
+            </h3>
+            <p>Migrate independent accounts into accounts managed by the account manager.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">accounts</td>
+                  <td>Account manager as created by <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</td>
+                </tr>
+                <tr>
+                  <td>dbfile</td>
+                  <td>Unmanaged database-file that was created at some point using <a class="m-doc" href="classdc__context__t.html#a9f4a6e04a111ff4e9e6e7d5d8fb59df7">dc_<wbr/>context_<wbr/>new()</a>.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>Account-id, use <a class="m-doc" href="classdc__accounts__t.html#a6524044350c476a4e8e969ae3d091b01">dc_<wbr/>accounts_<wbr/>get_<wbr/>account()</a> to get the context object. On errors, 0 is returned.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This will <em>move</em> the database-file and all blob-files to the directory managed by the account-manager (to save disk-space on small devices, the files are not <em>copied</em> Once the migration is done, the original file is no longer existent). Moreover, the newly created account will be the selected one.</p>
+          </div></section>
+          <section class="m-doc-details" id="a6e88b85f765439665c299dccd85f7a59"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a6e88b85f765439665c299dccd85f7a59">dc_accounts_new</a>(</span><span class="m-doc-wrap">const char* os_name,
+              const char* dir)</span></span>
+            </h3>
+            <p>Create a new account manager.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">os_name</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>dir</td>
+                  <td>The directory to create the context-databases in. If the directory does not exist, <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a> will try to create it.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>An account manager object. The object must be passed to the other account manager functions and must be freed using <a class="m-doc" href="classdc__accounts__t.html#a1b44bb38f8e7b3ef268a550f63867191">dc_<wbr/>accounts_<wbr/>unref()</a> after usage. On errors, NULL is returned.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The account manager takes an directory where all context-databases are placed in. To add a context to the account manager, use <a class="m-doc" href="classdc__accounts__t.html#acf9e9ca54aeec496d4abfb6877e6451e">dc_<wbr/>accounts_<wbr/>add_<wbr/>account()</a> or <a class="m-doc" href="classdc__accounts__t.html#a323d8e8f541e4f6415ba6b5713cab0ad">dc_<wbr/>accounts_<wbr/>migrate_<wbr/>account()</a>. All account information are persisted. To remove a context from the account manager, use <a class="m-doc" href="classdc__accounts__t.html#ae02553e45229afb70a8fcc0521ea5bcd">dc_<wbr/>accounts_<wbr/>remove_<wbr/>account()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ae02553e45229afb70a8fcc0521ea5bcd"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ae02553e45229afb70a8fcc0521ea5bcd">dc_accounts_remove_account</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> account_id)</span></span>
+            </h3>
+            <p>Remove an account from the account manager.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">accounts</td>
+                  <td>Account manager as created by <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</td>
+                </tr>
+                <tr>
+                  <td>account_id</td>
+                  <td>The account-id as returned e.g. by <a class="m-doc" href="classdc__accounts__t.html#acf9e9ca54aeec496d4abfb6877e6451e">dc_<wbr/>accounts_<wbr/>add_<wbr/>account()</a>.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=success, 0=error</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This also removes the database-file and all blobs physically. If the removed account is the selected account, one of the other accounts will be selected.</p>
+          </div></section>
+          <section class="m-doc-details" id="a115792e5dd63a068a8383d4bc8b1254a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a115792e5dd63a068a8383d4bc8b1254a">dc_accounts_select_account</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> account_id)</span></span>
+            </h3>
+            <p>Change the selected account.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">accounts</td>
+                  <td>Account manager as created by <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</td>
+                </tr>
+                <tr>
+                  <td>account_id</td>
+                  <td>The account-id as returned e.g. by <a class="m-doc" href="classdc__accounts__t.html#a6859b296a8de872983b900086b3f9e89">dc_<wbr/>accounts_<wbr/>get_<wbr/>all()</a> or <a class="m-doc" href="classdc__accounts__t.html#acf9e9ca54aeec496d4abfb6877e6451e">dc_<wbr/>accounts_<wbr/>add_<wbr/>account()</a>.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>1=success, 0=error</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a8eeea2b50af2ed92c30dacdb40c6d5f7"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a8eeea2b50af2ed92c30dacdb40c6d5f7">dc_accounts_start_io</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span></span>
+            </h3>
+            <p>Start job and IMAP/SMTP tasks for all accounts managed by the account manager.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">accounts</td>
+                  <td>Account manager as created by <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>If IO is already running, nothing happens. This is similar to <a class="m-doc" href="classdc__context__t.html#ab020d546b0f859cc603d0a8df57ecece">dc_<wbr/>start_<wbr/>io()</a>, which, however, must not be called for accounts handled by the account manager.</p>
+          </div></section>
+          <section class="m-doc-details" id="a976eaf8ce4eba43cdcbe62287b9331f1"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a976eaf8ce4eba43cdcbe62287b9331f1">dc_accounts_stop_io</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span></span>
+            </h3>
+            <p>Stop job and IMAP/SMTP tasks for all accounts and return when they are finished.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">accounts</td>
+                  <td>Account manager as created by <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>This is similar to <a class="m-doc" href="classdc__context__t.html#a38b66c7232d5fc486ef8b87a3908cd5e">dc_<wbr/>stop_<wbr/>io()</a>, which, however, must not be called for accounts handled by the account manager.</p>
+          </div></section>
+          <section class="m-doc-details" id="a1b44bb38f8e7b3ef268a550f63867191"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>accounts_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a1b44bb38f8e7b3ef268a550f63867191">dc_accounts_unref</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__accounts__t.html">dc_<wbr/>accounts_<wbr/>t</a>* accounts)</span></span>
+            </h3>
+            <p>Free an account manager object.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">accounts</td>
+                  <td>Account manager as created by <a class="m-doc" href="classdc__accounts__t.html#a6e88b85f765439665c299dccd85f7a59">dc_<wbr/>accounts_<wbr/>new()</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">…</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div class="m-text m-dim m-text-center" id="search-help">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script async="async" src="searchdata-v1.js"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        
+    <a download="" href="Delta_Chat_Core_C_Interface.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+    <br/><br/>
+    Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+
+      </div>
+    </div>
+  </div>
+</nav></footer>
+
+
+</body></html>

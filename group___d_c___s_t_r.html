@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <title>DC_STR module | Delta Chat Core C Interface</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" rel="stylesheet"/>
+  <link href="m-dark+documentation.compiled.css" rel="stylesheet"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#22272e" name="theme-color"/>
+  <meta content="Delta Chat Core C Interface" name="twitter:title"/>
+  <meta content="Delta Chat Core C Interface" property="og:title"/>
+  <meta content="Delta Chat Core C Interface" itemprop="name"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="Poxy v0.5.3" name="generator"/>
+  <meta content="no-referrer-when-downgrade" name="referrer"/>
+  <link href="poxy-0.5.3.css" rel="stylesheet"/>
+  <link href="poxy-0.5.3-dark.css" rel="stylesheet"/>
+  <script src="poxy-0.5.3.js"></script>
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="Doxyfile-logo.png"/>Delta Chat Core C Interface</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+        </svg></a>
+        <a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+        <a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+      </div>
+      <div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="files.html">Files</a></li>
+            <li><a href="modules.html">Modules</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="namespaces.html">Namespaces</a></li>
+            <li><a href="annotated.html">Classes</a></li>
+            <li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path"></use>
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          DC_STR <span class="m-thin">module</span></h1>
+        <p>These constants are used to define strings using <a class="m-doc" href="classdc__context__t.html#a6092255f0b5317d08c41ea214a319461">dc_<wbr/>set_<wbr/>stock_<wbr/>translation()</a>.</p>
+        <div class="m-block m-default poxy-toc">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#define-members">Defines</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>This allows localisation of the texts used by the core, you have to call <a class="m-doc" href="classdc__context__t.html#a6092255f0b5317d08c41ea214a319461">dc_<wbr/>set_<wbr/>stock_<wbr/>translation()</a> for every <a class="m-doc" href="group___d_c___s_t_r.html">DC_<wbr/>STR</a> string you want to translate.</p><p>Some strings contain some placeholders as <code>%1$s</code> or <code>%2$s</code> - these will be replaced by some content defined in the <a class="m-doc" href="group___d_c___s_t_r.html">DC_<wbr/>STR</a> description below. As a synonym for <code>%1$s</code> you can also use <code>%1$d</code> or <code>%1$@</code>; same for <code>%2$s</code>.</p><p>If you do not call <a class="m-doc" href="classdc__context__t.html#a6092255f0b5317d08c41ea214a319461">dc_<wbr/>set_<wbr/>stock_<wbr/>translation()</a> for a concrete <a class="m-doc" href="group___d_c___s_t_r.html">DC_<wbr/>STR</a> constant, a default string will be used.</p>
+        <section id="define-members">
+          <h2><a href="#define-members">Defines</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gae42728ca3c34eafd38b3a150055d88c7">DC_STR_AC_SETUP_MSG_BODY</a></span>
+            </dt>
+            <dd>"This is the Autocrypt Setup Message, open it in a compatible client to use your setup"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gaa03cb244d9e4804a4995f99098b09ca8">DC_STR_AC_SETUP_MSG_SUBJECT</a></span>
+            </dt>
+            <dd>"Autocrypt Setup Message"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gad7bc2feb24e09d00b176a05adae338e5">DC_STR_ARCHIVEDCHATS</a></span>
+            </dt>
+            <dd>"Archived chats"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gae108b1686a2192ac82081c4c9333231b">DC_STR_AUDIO</a></span>
+            </dt>
+            <dd>"Audio"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga198e96473a92e1a40c75d4047acf57a1">DC_STR_BAD_TIME_MSG_BODY</a></span>
+            </dt>
+            <dd>"Date or time of your device seem to be inaccurate (%1$s). Adjust your clock to ensure your messages are received correctly"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gaafc066cea642dffe341c49a2bceeb287">DC_STR_BROADCAST_LIST</a></span>
+            </dt>
+            <dd>"Broadcast List"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gac5cdb11994a15b4a6e997b09b3ca5535">DC_STR_CANNOT_LOGIN</a></span>
+            </dt>
+            <dd>"Cannot login as %1$s."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga48634840a17a6ae0d9c325cc7a565964">DC_STR_CANTDECRYPT_MSG_BODY</a></span>
+            </dt>
+            <dd>"This message was encrypted for another setup."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gad574b0ccc0fd06993b98a85d0321de2b">DC_STR_CONFIGURATION_FAILED</a></span>
+            </dt>
+            <dd>"Error: %1$s"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga80d9344b36e059d404df61b34fa18447">DC_STR_CONNECTED</a></span>
+            </dt>
+            <dd>"Connected"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga7441c8a479d467f31bd984afb587767c">DC_STR_CONNTECTING</a></span>
+            </dt>
+            <dd>"Connecting…"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gae10f9b7d0c37e354f1e593f485a7024e">DC_STR_CONTACT_NOT_VERIFIED</a></span>
+            </dt>
+            <dd>"Cannot verify %1$s."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga21b83579f3690229bd0818b6c68ebc2f">DC_STR_CONTACT_SETUP_CHANGED</a></span>
+            </dt>
+            <dd>"Changed setup for %1$s."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga4dc4deb46af399f2f6832ad0d460d34f">DC_STR_CONTACT_VERIFIED</a></span>
+            </dt>
+            <dd>"%1$s verified"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga927f9dfbd4a6d383c7dce3c013aad239">DC_STR_DEVICE_MESSAGES</a></span>
+            </dt>
+            <dd>"Device messages"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gadd2af3bb51f5a47c6c22f5354e57f52d">DC_STR_DEVICE_MESSAGES_HINT</a></span>
+            </dt>
+            <dd>"Messages in this chat are generated locally by your Delta Chat app."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga7f468d641c63e8e6c92cec0b3bf0bafc">DC_STR_DOWNLOAD_AVAILABILITY</a></span>
+            </dt>
+            <dd>"Download maximum available until %1$s"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga10f70ad058363762f8194d2c68700ecc">DC_STR_DRAFT</a></span>
+            </dt>
+            <dd>"Draft"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga2025629ecb152101fca8347b97ce516d">DC_STR_E2E_AVAILABLE</a></span>
+            </dt>
+            <dd>"End-to-end encryption available."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gaaf68df9f876a78d007461d1dd269560b">DC_STR_E2E_PREFERRED</a></span>
+            </dt>
+            <dd>"End-to-end encryption preferred."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga20281b4761405991b0dd1ea1a979ec5e">DC_STR_ENCRYPTEDMSG</a></span>
+            </dt>
+            <dd>"Encrypted message"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gafd0f5b0bf9d001598559ff8a9d4caf61">DC_STR_ENCR_NONE</a></span>
+            </dt>
+            <dd>"No encryption."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga8b5d01d752862187cab5effde4f2f339">DC_STR_EPHEMERAL_DAY</a></span>
+            </dt>
+            <dd>"Message deletion timer is set to 1 day."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga0acc2a84a1b55b40abac40ffde7af1e6">DC_STR_EPHEMERAL_DAYS</a></span>
+            </dt>
+            <dd>"Message deletion timer is set to %1$s days."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gae5501c1ef396cd0b4659a2ba40f54417">DC_STR_EPHEMERAL_DISABLED</a></span>
+            </dt>
+            <dd>"Message deletion timer is disabled."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga18df9e971887ae1b188e89f10af06916">DC_STR_EPHEMERAL_HOUR</a></span>
+            </dt>
+            <dd>"Message deletion timer is set to 1 hour."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gadf717393ad0a58dd808a24513541136f">DC_STR_EPHEMERAL_HOURS</a></span>
+            </dt>
+            <dd>"Message deletion timer is set to %1$s hours."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga13200b7a48eed83981104a61130b9d0d">DC_STR_EPHEMERAL_MINUTE</a></span>
+            </dt>
+            <dd>"Message deletion timer is set to 1 minute."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga026deada25788acc3b8d2e1b4a309e81">DC_STR_EPHEMERAL_MINUTES</a></span>
+            </dt>
+            <dd>"Message deletion timer is set to %1$s minutes."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gadefbca4773823dfcf4d0c869bf23c1d8">DC_STR_EPHEMERAL_SECONDS</a></span>
+            </dt>
+            <dd>"Message deletion timer is set to %1$s s."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga01f4e6b1cd217c8ec39ba9c8dbb93311">DC_STR_EPHEMERAL_WEEK</a></span>
+            </dt>
+            <dd>"Message deletion timer is set to 1 week."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga6cf8a005233f490fb5dc0b1028a3903a">DC_STR_EPHEMERAL_WEEKS</a></span>
+            </dt>
+            <dd>"Message deletion timer is set to %1$s weeks."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gaa3ce238e89e8ba08e05878b5a2c2ff53">DC_STR_ERROR</a></span>
+            </dt>
+            <dd>"Error: %1$s"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga582c682078b6aa2239bf07e07c9d3bd2">DC_STR_ERROR_NO_NETWORK</a></span>
+            </dt>
+            <dd>"No network."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gab66a98fa2bc3b5856381799898583fe0">DC_STR_FAILED_SENDING_TO</a></span>
+            </dt>
+            <dd>"Failed to send message to %1$s."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga77fb4b783ea13309da947820032a4bb5">DC_STR_FILE</a></span>
+            </dt>
+            <dd>"File"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga7ff4a320b47368040d2e5dd1b1d8b5d8">DC_STR_FINGERPRINTS</a></span>
+            </dt>
+            <dd>"Fingerprints"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga334341f876a29a2435d6d89476930d1d">DC_STR_FORWARDED</a></span>
+            </dt>
+            <dd>"Forwarded"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gaae22bd1ca0c55fcd870b93f4bda4c691">DC_STR_GIF</a></span>
+            </dt>
+            <dd>"GIF"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga0c3333e38172bf80bb1587e82432336d">DC_STR_IMAGE</a></span>
+            </dt>
+            <dd>"Image"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga9bb7930167b8095087d640b3ec70433a">DC_STR_INCOMING_MESSAGES</a></span>
+            </dt>
+            <dd>"Incoming Messages"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga53f8ce615ad09a0888118fde7fc3e2f3">DC_STR_LAST_MSG_SENT_SUCCESSFULLY</a></span>
+            </dt>
+            <dd>"Your last message was sent successfully."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga40a01c6c8a3c5e8a35e72b18a4b97dc1">DC_STR_LOCATION</a></span>
+            </dt>
+            <dd>"Location"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga232d506032cc6ced0b72e5b8bc7945d5">DC_STR_MESSAGES</a></span>
+            </dt>
+            <dd>"Messages"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gab4904e074545e6770047c11453ac6da1">DC_STR_MSGACTIONBYME</a></span>
+            </dt>
+            <dd>"%1$s by me"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gab9c23c06cbbf2026e75544791e4661ea">DC_STR_MSGACTIONBYUSER</a></span>
+            </dt>
+            <dd>"%1$s by %2$s"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gaf3f97754f75eb30c405a01ac4df54e35">DC_STR_MSGADDMEMBER</a></span>
+            </dt>
+            <dd>"Member %1$s added."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gab9e9f6bbe84abe733a78511ba1839d8d">DC_STR_MSGDELMEMBER</a></span>
+            </dt>
+            <dd>"Member %1$s removed."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga029aa6cdf2d246167e9cbe4091a0d9bd">DC_STR_MSGGROUPLEFT</a></span>
+            </dt>
+            <dd>"Group left."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga31b33b24dcbec1aab2fd16466f876aa3">DC_STR_MSGGRPIMGCHANGED</a></span>
+            </dt>
+            <dd>"Group image changed."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga0128c79abfd114d312a5251f8ff6335c">DC_STR_MSGGRPIMGDELETED</a></span>
+            </dt>
+            <dd>"Group image deleted."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gac9a26bbb92b8e95600e1aacff07c1d8c">DC_STR_MSGGRPNAME</a></span>
+            </dt>
+            <dd>"Group name changed from %1$s to %2$s."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga794c5e5ee2ed3581880582bb824e36f8">DC_STR_MSGLOCATIONDISABLED</a></span>
+            </dt>
+            <dd>"Location streaming disabled."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga483c687a375513c32c84c6e195b6c285">DC_STR_MSGLOCATIONENABLED</a></span>
+            </dt>
+            <dd>"Location streaming enabled."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gadceaecbcff0edc3c8d5d22e68e82b969">DC_STR_NOMESSAGES</a></span>
+            </dt>
+            <dd>"No messages."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga44a6a551b99c4a49044b2ab94dd1865c">DC_STR_NOT_SUPPORTED_BY_PROVIDER</a></span>
+            </dt>
+            <dd>"Not supported by your provider."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga46a29cef70ed2b9ed669a547796f9faf">DC_STR_ONE_MOMENT</a></span>
+            </dt>
+            <dd>"One moment…"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gad51dc20f927150812ee12394e6832c4f">DC_STR_OUTGOING_MESSAGES</a></span>
+            </dt>
+            <dd>"Outgoing Messages"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gac4a7aff04b384fc8439d7f2bcf46ae9f">DC_STR_PARTIAL_DOWNLOAD_MSG_BODY</a></span>
+            </dt>
+            <dd>"%1$s message"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga5dd321d40f02afd6964ff202e44b6923">DC_STR_PART_OF_TOTAL_USED</a></span>
+            </dt>
+            <dd>"%1$s of %2$s used"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga78c4a463db6a17f9eea8f86d43ffc59e">DC_STR_PROTECTION_DISABLED</a></span>
+            </dt>
+            <dd>"Chat protection disabled."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga58b5e9f6262bf281d98dce49c6685947">DC_STR_PROTECTION_ENABLED</a></span>
+            </dt>
+            <dd>"Chat protection enabled."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga86b137524876d3ed1e499de3a3f484c4">DC_STR_QUOTA_EXCEEDING_MSG_BODY</a></span>
+            </dt>
+            <dd>"Quota exceeding, already %1$s%% used."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga36c9cce855db9636aaaa0ce40bd45230">DC_STR_READRCPT</a></span>
+            </dt>
+            <dd>"Message opened"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gaa161f2c1b75d840bfabffe3412a1c205">DC_STR_READRCPT_MAILBODY</a></span>
+            </dt>
+            <dd>"The message '%1$s' you sent was displayed on the screen of the recipient."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga960a5990c391d2a3cdfe6c4d28cff043">DC_STR_REPLY_NOUN</a></span>
+            </dt>
+            <dd>"Reply"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga7b1ef37ea4799ff0b0e146b2783a7ab6">DC_STR_SAVED_MESSAGES</a></span>
+            </dt>
+            <dd>"Saved messages"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga968725c107867bf4ec0a65d01a12caa4">DC_STR_SECURE_JOIN_GROUP_QR_DESC</a></span>
+            </dt>
+            <dd>"Scan to join %1$s"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gae5e3b9aca9c067ca376555157b266d19">DC_STR_SECURE_JOIN_REPLIES</a></span>
+            </dt>
+            <dd>"%1$s replied, waiting for being added to the group…"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga4ecaa0ca7081003410fff75d18eaff5f">DC_STR_SECURE_JOIN_STARTED</a></span>
+            </dt>
+            <dd>"%1$s invited you to join this group. Waiting for the device of %2$s to reply…"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga3ad91f704c34907b0754378715c487a1">DC_STR_SELF</a></span>
+            </dt>
+            <dd>"Me"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gacf49846d4ac6e5aec692e83f364b8823">DC_STR_SELF_DELETED_MSG_BODY</a></span>
+            </dt>
+            <dd>"You deleted the 'Saved messages' chat..."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga22df69cd85b1a4ae9575d961e77b76dc">DC_STR_SENDING</a></span>
+            </dt>
+            <dd>"Sending…"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gaebd7630af52d1a3703b6a4a005775d7a">DC_STR_SERVER_TURNED_OFF</a></span>
+            </dt>
+            <dd>"'Delete messages from server' turned off as now all folders are affected."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gada2d2977a881cbb0208a608a962d79f3">DC_STR_SETUP_CONTACT_QR_DESC</a></span>
+            </dt>
+            <dd>"Scan to chat with %1$s"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga3a8d4cc17dbc96dbbbf7b3a80df5dd62">DC_STR_STICKER</a></span>
+            </dt>
+            <dd>"Sticker"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga92ca03d0c3b2b6a1cacd01f1de8e62dc">DC_STR_STORAGE_ON_DOMAIN</a></span>
+            </dt>
+            <dd>"Storage on %1$s"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gaeb679cf77838ba08fe5d0d97d23d0264">DC_STR_SUBJECT_FOR_NEW_CONTACT</a></span>
+            </dt>
+            <dd>"Message from %1$s"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gade330d1585edd0e0bdf94a1add4a9078">DC_STR_SYNC_MSG_BODY</a></span>
+            </dt>
+            <dd>"This message is used to synchronize data between your devices."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga64f36379657a5cd6dfada6baf44e67a8">DC_STR_SYNC_MSG_SUBJECT</a></span>
+            </dt>
+            <dd>"Multi Device Synchronization"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga06bca814b724337a990579e72ca9a89c">DC_STR_UNKNOWN_SENDER_FOR_CHAT</a></span>
+            </dt>
+            <dd>"Unknown sender for this chat. See 'info' for more details."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga6e18cd97f1a48952198b75cae0138304">DC_STR_UPDATE_REMINDER_MSG_BODY</a></span>
+            </dt>
+            <dd>"Your Delta Chat version might be outdated, check https://get.delta.chat for updates."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gabec4c1916530fad3bdfd615e1ac3ee43">DC_STR_UPDATING</a></span>
+            </dt>
+            <dd>"Updating…"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga41a81693b87270aea81234e6ad66c34f">DC_STR_VIDEO</a></span>
+            </dt>
+            <dd>"Video"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga84e1b47635042d8dd8878338133bfcdf">DC_STR_VIDEOCHAT_INVITATION</a></span>
+            </dt>
+            <dd>"Video chat invitation"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gad8c4812198dd2f5fa5dfeac78353d353">DC_STR_VIDEOCHAT_INVITE_MSG_BODY</a></span>
+            </dt>
+            <dd>"You are invited to a video chat, click %1$s to join."</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gacbaf2ae986a8af9f6d0d163ee79f510b">DC_STR_VOICEMESSAGE</a></span>
+            </dt>
+            <dd>"Voice message"</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga2443bdf947f9a9929a6626f77593dd48">DC_STR_WELCOME_MESSAGE</a></span>
+            </dt>
+            <dd>"Welcome to Delta Chat! Delta Chat looks and feels like other popular messenger apps ..."</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Define documentation</h2>
+          <section class="m-doc-details" id="gae42728ca3c34eafd38b3a150055d88c7"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gae42728ca3c34eafd38b3a150055d88c7">DC_STR_AC_SETUP_MSG_BODY</a></span>
+            </h3>
+            <p>"This is the Autocrypt Setup Message, open it in a compatible client to use your setup"</p>
+<p>Used as message text of outgoing Autocrypt Setup Messages.</p>
+          </div></section>
+          <section class="m-doc-details" id="gaa03cb244d9e4804a4995f99098b09ca8"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gaa03cb244d9e4804a4995f99098b09ca8">DC_STR_AC_SETUP_MSG_SUBJECT</a></span>
+            </h3>
+            <p>"Autocrypt Setup Message"</p>
+<p>Used in subjects of outgoing Autocrypt Setup Messages.</p>
+          </div></section>
+          <section class="m-doc-details" id="gad7bc2feb24e09d00b176a05adae338e5"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gad7bc2feb24e09d00b176a05adae338e5">DC_STR_ARCHIVEDCHATS</a></span>
+            </h3>
+            <p>"Archived chats"</p>
+<p>Used as the name for the corresponding chatlist entry.</p>
+          </div></section>
+          <section class="m-doc-details" id="gae108b1686a2192ac82081c4c9333231b"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gae108b1686a2192ac82081c4c9333231b">DC_STR_AUDIO</a></span>
+            </h3>
+            <p>"Audio"</p>
+<p>Used in summaries.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga198e96473a92e1a40c75d4047acf57a1"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga198e96473a92e1a40c75d4047acf57a1">DC_STR_BAD_TIME_MSG_BODY</a></span>
+            </h3>
+            <p>"Date or time of your device seem to be inaccurate (%1$s). Adjust your clock to ensure your messages are received correctly"</p>
+<p>Used as device message if a wrong date or time was detected.</p><ul><li>%1$s will be replaced by a date/time string as YY-mm-dd HH:MM:SS</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="gaafc066cea642dffe341c49a2bceeb287"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gaafc066cea642dffe341c49a2bceeb287">DC_STR_BROADCAST_LIST</a></span>
+            </h3>
+            <p>"Broadcast List"</p>
+<p>Used as the default name for broadcast lists; a number may be added.</p>
+          </div></section>
+          <section class="m-doc-details" id="gac5cdb11994a15b4a6e997b09b3ca5535"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gac5cdb11994a15b4a6e997b09b3ca5535">DC_STR_CANNOT_LOGIN</a></span>
+            </h3>
+            <p>"Cannot login as %1$s."</p>
+<p>Used in error strings.</p><ul><li>%1$s will be replaced by the failing login name</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="ga48634840a17a6ae0d9c325cc7a565964"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga48634840a17a6ae0d9c325cc7a565964">DC_STR_CANTDECRYPT_MSG_BODY</a></span>
+            </h3>
+            <p>"This message was encrypted for another setup."</p>
+<p>Used as message text if decryption fails.</p>
+          </div></section>
+          <section class="m-doc-details" id="gad574b0ccc0fd06993b98a85d0321de2b"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gad574b0ccc0fd06993b98a85d0321de2b">DC_STR_CONFIGURATION_FAILED</a></span>
+            </h3>
+            <p>"Error: %1$s"</p>
+<p>Used in error strings.</p><ul><li>%1$s will be replaced by the concrete error</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="ga80d9344b36e059d404df61b34fa18447"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga80d9344b36e059d404df61b34fa18447">DC_STR_CONNECTED</a></span>
+            </h3>
+            <p>"Connected"</p>
+<p>Used as status in the connectivity view.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga7441c8a479d467f31bd984afb587767c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga7441c8a479d467f31bd984afb587767c">DC_STR_CONNTECTING</a></span>
+            </h3>
+            <p>"Connecting…"</p>
+<p>Used as status in the connectivity view.</p>
+          </div></section>
+          <section class="m-doc-details" id="gae10f9b7d0c37e354f1e593f485a7024e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gae10f9b7d0c37e354f1e593f485a7024e">DC_STR_CONTACT_NOT_VERIFIED</a></span>
+            </h3>
+            <p>"Cannot verify %1$s."</p>
+<p>Used in status messages.</p><ul><li>%1$s will be replaced by the name of the contact that cannot be verified</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="ga21b83579f3690229bd0818b6c68ebc2f"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga21b83579f3690229bd0818b6c68ebc2f">DC_STR_CONTACT_SETUP_CHANGED</a></span>
+            </h3>
+            <p>"Changed setup for %1$s."</p>
+<p>Used in status messages.</p><ul><li>%1$s will be replaced by the name of the contact with the changed setup</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="ga4dc4deb46af399f2f6832ad0d460d34f"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga4dc4deb46af399f2f6832ad0d460d34f">DC_STR_CONTACT_VERIFIED</a></span>
+            </h3>
+            <p>"%1$s verified"</p>
+<p>Used in status messages.</p><ul><li>%1$s will be replaced by the name of the verified contact</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="ga927f9dfbd4a6d383c7dce3c013aad239"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga927f9dfbd4a6d383c7dce3c013aad239">DC_STR_DEVICE_MESSAGES</a></span>
+            </h3>
+            <p>"Device messages"</p>
+<p>Used as the name for the corresponding chat.</p>
+          </div></section>
+          <section class="m-doc-details" id="gadd2af3bb51f5a47c6c22f5354e57f52d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gadd2af3bb51f5a47c6c22f5354e57f52d">DC_STR_DEVICE_MESSAGES_HINT</a></span>
+            </h3>
+            <p>"Messages in this chat are generated locally by your Delta Chat app."</p>
+<p>Used as message text for the message added to a newly created device chat.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga7f468d641c63e8e6c92cec0b3bf0bafc"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga7f468d641c63e8e6c92cec0b3bf0bafc">DC_STR_DOWNLOAD_AVAILABILITY</a></span>
+            </h3>
+            <p>"Download maximum available until %1$s"</p>
+<p>Appended after some separator to <a class="m-doc" href="group___d_c___s_t_r.html#gac4a7aff04b384fc8439d7f2bcf46ae9f">DC_<wbr/>STR_<wbr/>PARTIAL_<wbr/>DOWNLOAD_<wbr/>MSG_<wbr/>BODY</a>.</p><p><code>%1$s</code> will be replaced by human-readable date and time.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga10f70ad058363762f8194d2c68700ecc"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga10f70ad058363762f8194d2c68700ecc">DC_STR_DRAFT</a></span>
+            </h3>
+            <p>"Draft"</p>
+<p>Used in summaries.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga2025629ecb152101fca8347b97ce516d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga2025629ecb152101fca8347b97ce516d">DC_STR_E2E_AVAILABLE</a></span>
+            </h3>
+            <p>"End-to-end encryption available."</p>
+<p>Used to build the string returned by <a class="m-doc" href="classdc__context__t.html#a2a14d2a3389b16ba5ffff02a7ed232b1">dc_<wbr/>get_<wbr/>contact_<wbr/>encrinfo()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="gaaf68df9f876a78d007461d1dd269560b"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gaaf68df9f876a78d007461d1dd269560b">DC_STR_E2E_PREFERRED</a></span>
+            </h3>
+            <p>"End-to-end encryption preferred."</p>
+<p>Used to build the string returned by <a class="m-doc" href="classdc__context__t.html#a2a14d2a3389b16ba5ffff02a7ed232b1">dc_<wbr/>get_<wbr/>contact_<wbr/>encrinfo()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga20281b4761405991b0dd1ea1a979ec5e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga20281b4761405991b0dd1ea1a979ec5e">DC_STR_ENCRYPTEDMSG</a></span>
+            </h3>
+            <p>"Encrypted message"</p>
+<p>Used in subjects of outgoing messages.</p>
+          </div></section>
+          <section class="m-doc-details" id="gafd0f5b0bf9d001598559ff8a9d4caf61"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gafd0f5b0bf9d001598559ff8a9d4caf61">DC_STR_ENCR_NONE</a></span>
+            </h3>
+            <p>"No encryption."</p>
+<p>Used to build the string returned by <a class="m-doc" href="classdc__context__t.html#a2a14d2a3389b16ba5ffff02a7ed232b1">dc_<wbr/>get_<wbr/>contact_<wbr/>encrinfo()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga8b5d01d752862187cab5effde4f2f339"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga8b5d01d752862187cab5effde4f2f339">DC_STR_EPHEMERAL_DAY</a></span>
+            </h3>
+            <p>"Message deletion timer is set to 1 day."</p>
+<p>Used in status messages.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga0acc2a84a1b55b40abac40ffde7af1e6"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga0acc2a84a1b55b40abac40ffde7af1e6">DC_STR_EPHEMERAL_DAYS</a></span>
+            </h3>
+            <p>"Message deletion timer is set to %1$s days."</p>
+<p>Used in status messages. <code>%1$s</code> will be replaced by the number of days (always &gt;1) the timer is set to.</p>
+          </div></section>
+          <section class="m-doc-details" id="gae5501c1ef396cd0b4659a2ba40f54417"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gae5501c1ef396cd0b4659a2ba40f54417">DC_STR_EPHEMERAL_DISABLED</a></span>
+            </h3>
+            <p>"Message deletion timer is disabled."</p>
+<p>Used in status messages.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga18df9e971887ae1b188e89f10af06916"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga18df9e971887ae1b188e89f10af06916">DC_STR_EPHEMERAL_HOUR</a></span>
+            </h3>
+            <p>"Message deletion timer is set to 1 hour."</p>
+<p>Used in status messages.</p>
+          </div></section>
+          <section class="m-doc-details" id="gadf717393ad0a58dd808a24513541136f"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gadf717393ad0a58dd808a24513541136f">DC_STR_EPHEMERAL_HOURS</a></span>
+            </h3>
+            <p>"Message deletion timer is set to %1$s hours."</p>
+<p>Used in status messages. <code>%1$s</code> will be replaced by the number of hours (always &gt;1) the timer is set to.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga13200b7a48eed83981104a61130b9d0d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga13200b7a48eed83981104a61130b9d0d">DC_STR_EPHEMERAL_MINUTE</a></span>
+            </h3>
+            <p>"Message deletion timer is set to 1 minute."</p>
+<p>Used in status messages.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga026deada25788acc3b8d2e1b4a309e81"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga026deada25788acc3b8d2e1b4a309e81">DC_STR_EPHEMERAL_MINUTES</a></span>
+            </h3>
+            <p>"Message deletion timer is set to %1$s minutes."</p>
+<p>Used in status messages. <code>%1$s</code> will be replaced by the number of minutes (alwasy &gt;1) the timer is set to.</p>
+          </div></section>
+          <section class="m-doc-details" id="gadefbca4773823dfcf4d0c869bf23c1d8"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gadefbca4773823dfcf4d0c869bf23c1d8">DC_STR_EPHEMERAL_SECONDS</a></span>
+            </h3>
+            <p>"Message deletion timer is set to %1$s s."</p>
+<p>Used in status messages when the other constants (<a class="m-doc" href="group___d_c___s_t_r.html#ga13200b7a48eed83981104a61130b9d0d">DC_<wbr/>STR_<wbr/>EPHEMERAL_<wbr/>MINUTE</a>, <a class="m-doc" href="group___d_c___s_t_r.html#ga18df9e971887ae1b188e89f10af06916">DC_<wbr/>STR_<wbr/>EPHEMERAL_<wbr/>HOUR</a> and so on) do not match the timer.</p><ul><li>%1$s will be replaced by the number of seconds the timer is set to</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="ga01f4e6b1cd217c8ec39ba9c8dbb93311"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga01f4e6b1cd217c8ec39ba9c8dbb93311">DC_STR_EPHEMERAL_WEEK</a></span>
+            </h3>
+            <p>"Message deletion timer is set to 1 week."</p>
+<p>Used in status messages.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga6cf8a005233f490fb5dc0b1028a3903a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga6cf8a005233f490fb5dc0b1028a3903a">DC_STR_EPHEMERAL_WEEKS</a></span>
+            </h3>
+            <p>"Message deletion timer is set to %1$s weeks."</p>
+<p>Used in status messages. <code>%1$s</code> will be replaced by the number of weeks (always &gt;1) the timer is set to.</p>
+          </div></section>
+          <section class="m-doc-details" id="gaa3ce238e89e8ba08e05878b5a2c2ff53"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gaa3ce238e89e8ba08e05878b5a2c2ff53">DC_STR_ERROR</a></span>
+            </h3>
+            <p>"Error: %1$s"</p>
+<p>Used as status in the connectivity view.</p><p><code>%1$s</code> will be replaced by a possibly more detailed, typically english, error description.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga582c682078b6aa2239bf07e07c9d3bd2"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga582c682078b6aa2239bf07e07c9d3bd2">DC_STR_ERROR_NO_NETWORK</a></span>
+            </h3>
+            <p>"No network."</p>
+<p>Used in error strings.</p>
+          </div></section>
+          <section class="m-doc-details" id="gab66a98fa2bc3b5856381799898583fe0"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gab66a98fa2bc3b5856381799898583fe0">DC_STR_FAILED_SENDING_TO</a></span>
+            </h3>
+            <p>"Failed to send message to %1$s."</p>
+<p>Used in status messages.</p><ul><li>%1$s will be replaced by the name of the contact the message cannot be sent to</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="ga77fb4b783ea13309da947820032a4bb5"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga77fb4b783ea13309da947820032a4bb5">DC_STR_FILE</a></span>
+            </h3>
+            <p>"File"</p>
+<p>Used in summaries.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga7ff4a320b47368040d2e5dd1b1d8b5d8"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga7ff4a320b47368040d2e5dd1b1d8b5d8">DC_STR_FINGERPRINTS</a></span>
+            </h3>
+            <p>"Fingerprints"</p>
+<p>Used to build the string returned by <a class="m-doc" href="classdc__context__t.html#a2a14d2a3389b16ba5ffff02a7ed232b1">dc_<wbr/>get_<wbr/>contact_<wbr/>encrinfo()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga334341f876a29a2435d6d89476930d1d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga334341f876a29a2435d6d89476930d1d">DC_STR_FORWARDED</a></span>
+            </h3>
+            <p>"Forwarded"</p>
+<p>Used in message summary text for notifications and chatlist.</p>
+          </div></section>
+          <section class="m-doc-details" id="gaae22bd1ca0c55fcd870b93f4bda4c691"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gaae22bd1ca0c55fcd870b93f4bda4c691">DC_STR_GIF</a></span>
+            </h3>
+            <p>"GIF"</p>
+<p>Used in summaries.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga0c3333e38172bf80bb1587e82432336d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga0c3333e38172bf80bb1587e82432336d">DC_STR_IMAGE</a></span>
+            </h3>
+            <p>"Image"</p>
+<p>Used in summaries.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga9bb7930167b8095087d640b3ec70433a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga9bb7930167b8095087d640b3ec70433a">DC_STR_INCOMING_MESSAGES</a></span>
+            </h3>
+            <p>"Incoming Messages"</p>
+<p>Used as a headline in the connectivity view.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga53f8ce615ad09a0888118fde7fc3e2f3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga53f8ce615ad09a0888118fde7fc3e2f3">DC_STR_LAST_MSG_SENT_SUCCESSFULLY</a></span>
+            </h3>
+            <p>"Your last message was sent successfully."</p>
+<p>Used as status in the connectivity view.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga40a01c6c8a3c5e8a35e72b18a4b97dc1"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga40a01c6c8a3c5e8a35e72b18a4b97dc1">DC_STR_LOCATION</a></span>
+            </h3>
+            <p>"Location"</p>
+<p>Used in summaries.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga232d506032cc6ced0b72e5b8bc7945d5"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga232d506032cc6ced0b72e5b8bc7945d5">DC_STR_MESSAGES</a></span>
+            </h3>
+            <p>"Messages"</p>
+<p>Used as a subtitle in quota context; can be plural always.</p>
+          </div></section>
+          <section class="m-doc-details" id="gab4904e074545e6770047c11453ac6da1"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gab4904e074545e6770047c11453ac6da1">DC_STR_MSGACTIONBYME</a></span>
+            </h3>
+            <p>"%1$s by me"</p>
+<p>Used to concretize actions.</p><ul><li>%1$s will be replaced by an action as <a class="m-doc" href="group___d_c___s_t_r.html#gaf3f97754f75eb30c405a01ac4df54e35">DC_<wbr/>STR_<wbr/>MSGADDMEMBER</a> or <a class="m-doc" href="group___d_c___s_t_r.html#ga31b33b24dcbec1aab2fd16466f876aa3">DC_<wbr/>STR_<wbr/>MSGGRPIMGCHANGED</a> (full-stop removed, if any)</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="gab9c23c06cbbf2026e75544791e4661ea"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gab9c23c06cbbf2026e75544791e4661ea">DC_STR_MSGACTIONBYUSER</a></span>
+            </h3>
+            <p>"%1$s by %2$s"</p>
+<p>Used to concretize actions,</p><ul><li>%1$s will be replaced by an action as <a class="m-doc" href="group___d_c___s_t_r.html#gaf3f97754f75eb30c405a01ac4df54e35">DC_<wbr/>STR_<wbr/>MSGADDMEMBER</a> or <a class="m-doc" href="group___d_c___s_t_r.html#ga31b33b24dcbec1aab2fd16466f876aa3">DC_<wbr/>STR_<wbr/>MSGGRPIMGCHANGED</a> (full-stop removed, if any)</li><li>%2$s will be replaced by the name of the user taking that action</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="gaf3f97754f75eb30c405a01ac4df54e35"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gaf3f97754f75eb30c405a01ac4df54e35">DC_STR_MSGADDMEMBER</a></span>
+            </h3>
+            <p>"Member %1$s added."</p>
+<p>Used in status messages for added members.</p><ul><li>%1$s will be replaced by the name of the added member</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="gab9e9f6bbe84abe733a78511ba1839d8d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gab9e9f6bbe84abe733a78511ba1839d8d">DC_STR_MSGDELMEMBER</a></span>
+            </h3>
+            <p>"Member %1$s removed."</p>
+<p>Used in status messages for removed members.</p><ul><li>%1$s will be replaced by the name of the removed member</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="ga029aa6cdf2d246167e9cbe4091a0d9bd"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga029aa6cdf2d246167e9cbe4091a0d9bd">DC_STR_MSGGROUPLEFT</a></span>
+            </h3>
+            <p>"Group left."</p>
+<p>Used in status messages.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga31b33b24dcbec1aab2fd16466f876aa3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga31b33b24dcbec1aab2fd16466f876aa3">DC_STR_MSGGRPIMGCHANGED</a></span>
+            </h3>
+            <p>"Group image changed."</p>
+<p>Used in status messages for group images changes.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga0128c79abfd114d312a5251f8ff6335c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga0128c79abfd114d312a5251f8ff6335c">DC_STR_MSGGRPIMGDELETED</a></span>
+            </h3>
+            <p>"Group image deleted."</p>
+<p>Used in status messages for deleted group images.</p>
+          </div></section>
+          <section class="m-doc-details" id="gac9a26bbb92b8e95600e1aacff07c1d8c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gac9a26bbb92b8e95600e1aacff07c1d8c">DC_STR_MSGGRPNAME</a></span>
+            </h3>
+            <p>"Group name changed from %1$s to %2$s."</p>
+<p>Used in status messages for group name changes.</p><ul><li>%1$s will be replaced by the old group name</li><li>%2$s will be replaced by the new group name</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="ga794c5e5ee2ed3581880582bb824e36f8"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga794c5e5ee2ed3581880582bb824e36f8">DC_STR_MSGLOCATIONDISABLED</a></span>
+            </h3>
+            <p>"Location streaming disabled."</p>
+<p>Used in status messages.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga483c687a375513c32c84c6e195b6c285"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga483c687a375513c32c84c6e195b6c285">DC_STR_MSGLOCATIONENABLED</a></span>
+            </h3>
+            <p>"Location streaming enabled."</p>
+<p>Used in status messages.</p>
+          </div></section>
+          <section class="m-doc-details" id="gadceaecbcff0edc3c8d5d22e68e82b969"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gadceaecbcff0edc3c8d5d22e68e82b969">DC_STR_NOMESSAGES</a></span>
+            </h3>
+            <p>"No messages."</p>
+<p>Used in summaries.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga44a6a551b99c4a49044b2ab94dd1865c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga44a6a551b99c4a49044b2ab94dd1865c">DC_STR_NOT_SUPPORTED_BY_PROVIDER</a></span>
+            </h3>
+            <p>"Not supported by your provider."</p>
+<p>Used in the connectivity view.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga46a29cef70ed2b9ed669a547796f9faf"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga46a29cef70ed2b9ed669a547796f9faf">DC_STR_ONE_MOMENT</a></span>
+            </h3>
+            <p>"One moment…"</p>
+<p>Used in the connectivity view when some information are not yet there.</p>
+          </div></section>
+          <section class="m-doc-details" id="gad51dc20f927150812ee12394e6832c4f"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gad51dc20f927150812ee12394e6832c4f">DC_STR_OUTGOING_MESSAGES</a></span>
+            </h3>
+            <p>"Outgoing Messages"</p>
+<p>Used as a headline in the connectivity view.</p>
+          </div></section>
+          <section class="m-doc-details" id="gac4a7aff04b384fc8439d7f2bcf46ae9f"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gac4a7aff04b384fc8439d7f2bcf46ae9f">DC_STR_PARTIAL_DOWNLOAD_MSG_BODY</a></span>
+            </h3>
+            <p>"%1$s message"</p>
+<p>Used as the message body when a message was not yet downloaded completely (<a class="m-doc" href="classdc__msg__t.html#a2cfa8744f0dfa1d6cada95bf2ea9aaf4">dc_<wbr/>msg_<wbr/>get_<wbr/>download_<wbr/>state()</a> is eg. <a class="m-doc" href="group___d_c___d_o_w_n_l_o_a_d.html#ga33ed6e1e946fb8d2209e41d8ce03a2d4">DC_<wbr/>DOWNLOAD_<wbr/>AVAILABLE</a>).</p><p><code>%1$s</code> will be replaced by human-readable size (eg. "1.2 MiB").</p>
+          </div></section>
+          <section class="m-doc-details" id="ga5dd321d40f02afd6964ff202e44b6923"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga5dd321d40f02afd6964ff202e44b6923">DC_STR_PART_OF_TOTAL_USED</a></span>
+            </h3>
+            <p>"%1$s of %2$s used"</p>
+<p>Used for describing resource usage, resulting string will be eg. "1.2 GiB of 3 GiB used".</p>
+          </div></section>
+          <section class="m-doc-details" id="ga78c4a463db6a17f9eea8f86d43ffc59e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga78c4a463db6a17f9eea8f86d43ffc59e">DC_STR_PROTECTION_DISABLED</a></span>
+            </h3>
+            <p>"Chat protection disabled."</p>
+<p>Used in status messages.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga58b5e9f6262bf281d98dce49c6685947"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga58b5e9f6262bf281d98dce49c6685947">DC_STR_PROTECTION_ENABLED</a></span>
+            </h3>
+            <p>"Chat protection enabled."</p>
+<p>Used in status messages.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga86b137524876d3ed1e499de3a3f484c4"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga86b137524876d3ed1e499de3a3f484c4">DC_STR_QUOTA_EXCEEDING_MSG_BODY</a></span>
+            </h3>
+            <p>"Quota exceeding, already %1$s%% used."</p>
+<p>Used as device message text.</p><p><code>%1$s</code> will be replaced by the percentage used</p>
+          </div></section>
+          <section class="m-doc-details" id="ga36c9cce855db9636aaaa0ce40bd45230"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga36c9cce855db9636aaaa0ce40bd45230">DC_STR_READRCPT</a></span>
+            </h3>
+            <p>"Message opened"</p>
+<p>Used in subjects of outgoing read receipts.</p>
+          </div></section>
+          <section class="m-doc-details" id="gaa161f2c1b75d840bfabffe3412a1c205"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gaa161f2c1b75d840bfabffe3412a1c205">DC_STR_READRCPT_MAILBODY</a></span>
+            </h3>
+            <p>"The message '%1$s' you sent was displayed on the screen of the recipient."</p>
+<p>Used as message text of outgoing read receipts.</p><ul><li>%1$s will be replaced by the subject of the displayed message</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="ga960a5990c391d2a3cdfe6c4d28cff043"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga960a5990c391d2a3cdfe6c4d28cff043">DC_STR_REPLY_NOUN</a></span>
+            </h3>
+            <p>"Reply"</p>
+<p>Used in summaries. Note: the string has to be a noun, not a verb (not: "to reply").</p>
+          </div></section>
+          <section class="m-doc-details" id="ga7b1ef37ea4799ff0b0e146b2783a7ab6"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga7b1ef37ea4799ff0b0e146b2783a7ab6">DC_STR_SAVED_MESSAGES</a></span>
+            </h3>
+            <p>"Saved messages"</p>
+<p>Used as the name for the corresponding chat.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga968725c107867bf4ec0a65d01a12caa4"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga968725c107867bf4ec0a65d01a12caa4">DC_STR_SECURE_JOIN_GROUP_QR_DESC</a></span>
+            </h3>
+            <p>"Scan to join %1$s"</p>
+<p>Subtitle for group join qrcode svg image generated by the core.</p><p><code>%1$s</code> will be replaced with the group name.</p>
+          </div></section>
+          <section class="m-doc-details" id="gae5e3b9aca9c067ca376555157b266d19"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gae5e3b9aca9c067ca376555157b266d19">DC_STR_SECURE_JOIN_REPLIES</a></span>
+            </h3>
+            <p>"%1$s replied, waiting for being added to the group…"</p>
+<p>Info-message on scanning a QR code for joining a group. Added after <a class="m-doc" href="group___d_c___s_t_r.html#ga4ecaa0ca7081003410fff75d18eaff5f">DC_<wbr/>STR_<wbr/>SECURE_<wbr/>JOIN_<wbr/>STARTED</a>. If the handshake allows to skip a step and go for <a class="m-doc" href="group___d_c___s_t_r.html#ga4dc4deb46af399f2f6832ad0d460d34f">DC_<wbr/>STR_<wbr/>CONTACT_<wbr/>VERIFIED</a> directly, this info-message is skipped.</p><p><code>%1$s</code> will be replaced by the name of the inviter.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga4ecaa0ca7081003410fff75d18eaff5f"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga4ecaa0ca7081003410fff75d18eaff5f">DC_STR_SECURE_JOIN_STARTED</a></span>
+            </h3>
+            <p>"%1$s invited you to join this group. Waiting for the device of %2$s to reply…"</p>
+<p>Added as an info-message directly after scanning a QR code for joining a group. May be followed by the info-messages <a class="m-doc" href="group___d_c___s_t_r.html#gae5e3b9aca9c067ca376555157b266d19">DC_<wbr/>STR_<wbr/>SECURE_<wbr/>JOIN_<wbr/>REPLIES</a>, <a class="m-doc" href="group___d_c___s_t_r.html#ga4dc4deb46af399f2f6832ad0d460d34f">DC_<wbr/>STR_<wbr/>CONTACT_<wbr/>VERIFIED</a> and <a class="m-doc" href="group___d_c___s_t_r.html#gaf3f97754f75eb30c405a01ac4df54e35">DC_<wbr/>STR_<wbr/>MSGADDMEMBER</a>.</p><p><code>%1$s</code> will be replaced by name and address of the inviter, <code>%2$s</code> will be replaced by the name of the inviter.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga3ad91f704c34907b0754378715c487a1"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga3ad91f704c34907b0754378715c487a1">DC_STR_SELF</a></span>
+            </h3>
+            <p>"Me"</p>
+<p>Used as the sender name for oneself.</p>
+          </div></section>
+          <section class="m-doc-details" id="gacf49846d4ac6e5aec692e83f364b8823"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gacf49846d4ac6e5aec692e83f364b8823">DC_STR_SELF_DELETED_MSG_BODY</a></span>
+            </h3>
+            <p>"You deleted the 'Saved messages' chat..."</p>
+<p>Used as device message text.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga22df69cd85b1a4ae9575d961e77b76dc"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga22df69cd85b1a4ae9575d961e77b76dc">DC_STR_SENDING</a></span>
+            </h3>
+            <p>"Sending…"</p>
+<p>Used as status in the connectivity view.</p>
+          </div></section>
+          <section class="m-doc-details" id="gaebd7630af52d1a3703b6a4a005775d7a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gaebd7630af52d1a3703b6a4a005775d7a">DC_STR_SERVER_TURNED_OFF</a></span>
+            </h3>
+            <p>"'Delete messages from server' turned off as now all folders are affected."</p>
+<p>Used as device message text.</p>
+          </div></section>
+          <section class="m-doc-details" id="gada2d2977a881cbb0208a608a962d79f3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gada2d2977a881cbb0208a608a962d79f3">DC_STR_SETUP_CONTACT_QR_DESC</a></span>
+            </h3>
+            <p>"Scan to chat with %1$s"</p>
+<p>Subtitle for verification qrcode svg image generated by the core.</p><p><code>%1$s</code> will be replaced by name and address of the inviter.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga3a8d4cc17dbc96dbbbf7b3a80df5dd62"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga3a8d4cc17dbc96dbbbf7b3a80df5dd62">DC_STR_STICKER</a></span>
+            </h3>
+            <p>"Sticker"</p>
+<p>Used in summaries.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga92ca03d0c3b2b6a1cacd01f1de8e62dc"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga92ca03d0c3b2b6a1cacd01f1de8e62dc">DC_STR_STORAGE_ON_DOMAIN</a></span>
+            </h3>
+            <p>"Storage on %1$s"</p>
+<p>Used as a headline in the connectivity view.</p><p><code>%1$s</code> will be replaced by the domain of the configured email-address.</p>
+          </div></section>
+          <section class="m-doc-details" id="gaeb679cf77838ba08fe5d0d97d23d0264"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gaeb679cf77838ba08fe5d0d97d23d0264">DC_STR_SUBJECT_FOR_NEW_CONTACT</a></span>
+            </h3>
+            <p>"Message from %1$s"</p>
+<p>Used in subjects of outgoing messages in one-to-one chats.</p><ul><li>%1$s will be replaced by the name of the sender, this is the <a class="m-doc" href="classdc__context__t.html#aff3b894f6cfca46cab5248fdffdf083d">dc_<wbr/>set_<wbr/>config()</a>-option <code>displayname</code> or <code>addr</code></li></ul>
+          </div></section>
+          <section class="m-doc-details" id="gade330d1585edd0e0bdf94a1add4a9078"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gade330d1585edd0e0bdf94a1add4a9078">DC_STR_SYNC_MSG_BODY</a></span>
+            </h3>
+            <p>"This message is used to synchronize data between your devices."</p>
+<p>Used as message text of outgoing sync messages. The text is visible in non-dc-muas or in outdated Delta Chat versions, the default text therefore adds the following hint: "If you see this message in Delta Chat,
+please update your Delta Chat apps on all devices."</p>
+          </div></section>
+          <section class="m-doc-details" id="ga64f36379657a5cd6dfada6baf44e67a8"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga64f36379657a5cd6dfada6baf44e67a8">DC_STR_SYNC_MSG_SUBJECT</a></span>
+            </h3>
+            <p>"Multi Device Synchronization"</p>
+<p>Used in subjects of outgoing sync messages.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga06bca814b724337a990579e72ca9a89c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga06bca814b724337a990579e72ca9a89c">DC_STR_UNKNOWN_SENDER_FOR_CHAT</a></span>
+            </h3>
+            <p>"Unknown sender for this chat. See 'info' for more details."</p>
+<p>Use as message text if assigning the message to a chat is not totally correct.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga6e18cd97f1a48952198b75cae0138304"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga6e18cd97f1a48952198b75cae0138304">DC_STR_UPDATE_REMINDER_MSG_BODY</a></span>
+            </h3>
+            <p>"Your Delta Chat version might be outdated, check https://get.delta.chat for updates."</p>
+<p>Used as device message if the used version is probably outdated.</p>
+          </div></section>
+          <section class="m-doc-details" id="gabec4c1916530fad3bdfd615e1ac3ee43"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gabec4c1916530fad3bdfd615e1ac3ee43">DC_STR_UPDATING</a></span>
+            </h3>
+            <p>"Updating…"</p>
+<p>Used as status in the connectivity view.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga41a81693b87270aea81234e6ad66c34f"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga41a81693b87270aea81234e6ad66c34f">DC_STR_VIDEO</a></span>
+            </h3>
+            <p>"Video"</p>
+<p>Used in summaries.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga84e1b47635042d8dd8878338133bfcdf"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga84e1b47635042d8dd8878338133bfcdf">DC_STR_VIDEOCHAT_INVITATION</a></span>
+            </h3>
+            <p>"Video chat invitation"</p>
+<p>Used in summaries.</p>
+          </div></section>
+          <section class="m-doc-details" id="gad8c4812198dd2f5fa5dfeac78353d353"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gad8c4812198dd2f5fa5dfeac78353d353">DC_STR_VIDEOCHAT_INVITE_MSG_BODY</a></span>
+            </h3>
+            <p>"You are invited to a video chat, click %1$s to join."</p>
+<p>Used as message text of outgoing video chat invitations.</p><ul><li>%1$s will be replaced by the URL of the video chat</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="gacbaf2ae986a8af9f6d0d163ee79f510b"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gacbaf2ae986a8af9f6d0d163ee79f510b">DC_STR_VOICEMESSAGE</a></span>
+            </h3>
+            <p>"Voice message"</p>
+<p>Used in summaries.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga2443bdf947f9a9929a6626f77593dd48"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga2443bdf947f9a9929a6626f77593dd48">DC_STR_WELCOME_MESSAGE</a></span>
+            </h3>
+            <p>"Welcome to Delta Chat! Delta Chat looks and feels like other popular messenger apps ..."</p>
+<p>Used as message text for the message added to the device chat after successful login.</p>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">…</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div class="m-text m-dim m-text-center" id="search-help">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script async="async" src="searchdata-v1.js"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        
+    <a download="" href="Delta_Chat_Core_C_Interface.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+    <br/><br/>
+    Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+
+      </div>
+    </div>
+  </div>
+</nav></footer>
+
+
+</body></html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <title>DC_EVENT module | Delta Chat Core C Interface</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" rel="stylesheet"/>
+  <link href="m-dark+documentation.compiled.css" rel="stylesheet"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#22272e" name="theme-color"/>
+  <meta content="Delta Chat Core C Interface" name="twitter:title"/>
+  <meta content="Delta Chat Core C Interface" property="og:title"/>
+  <meta content="Delta Chat Core C Interface" itemprop="name"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="Poxy v0.5.3" name="generator"/>
+  <meta content="no-referrer-when-downgrade" name="referrer"/>
+  <link href="poxy-0.5.3.css" rel="stylesheet"/>
+  <link href="poxy-0.5.3-dark.css" rel="stylesheet"/>
+  <script src="poxy-0.5.3.js"></script>
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="Doxyfile-logo.png"/>Delta Chat Core C Interface</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+        </svg></a>
+        <a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+        <a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+      </div>
+      <div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="files.html">Files</a></li>
+            <li><a href="modules.html">Modules</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="namespaces.html">Namespaces</a></li>
+            <li><a href="annotated.html">Classes</a></li>
+            <li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path"></use>
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          DC_EVENT <span class="m-thin">module</span></h1>
+        <p>These constants are used as event-id in events returned by <a class="m-doc" href="classdc__event__emitter__t.html#abd0356a4eeaddc091067e85c8a857812">dc_<wbr/>get_<wbr/>next_<wbr/>event()</a>.</p>
+        <div class="m-block m-default poxy-toc">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#define-members">Defines</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>Events typically come with some additional data, use <a class="m-doc" href="classdc__event__t.html#a900f267609b9768610ecbb5f833ead0e">dc_<wbr/>event_<wbr/>get_<wbr/>data1_<wbr/>int()</a>, <a class="m-doc" href="classdc__event__t.html#a189a61d211040263eb9c19582539c941">dc_<wbr/>event_<wbr/>get_<wbr/>data2_<wbr/>int()</a> and <a class="m-doc" href="classdc__event__t.html#a65954ff569082bf7c2f2f3f1ea1ef401">dc_<wbr/>event_<wbr/>get_<wbr/>data2_<wbr/>str()</a> to read this data. The meaning of the data depends on the event.</p>
+        <section id="define-members">
+          <h2><a href="#define-members">Defines</a></h2>
+          <dl class="m-doc">
+            <dt id="ga7aae7c07140fa24095ba054e83374aed">
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga7aae7c07140fa24095ba054e83374aed">DC_EVENT_CHAT_EPHEMERAL_TIMER_MODIFIED</a></span>
+            </dt>
+            <dd>Chat ephemeral timer changed.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga27512e465c573fcf295014f8e0075adf">DC_EVENT_CHAT_MODIFIED</a></span>
+            </dt>
+            <dd>Chat changed.</dd>
+            <dt id="gae047f9361d57c42d82a794324f5b9fd6">
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gae047f9361d57c42d82a794324f5b9fd6">DC_EVENT_CONFIGURE_PROGRESS</a></span>
+            </dt>
+            <dd>Inform about the configuration progress started by <a class="m-doc" href="classdc__context__t.html#adfe52669a5bed893df78a620566dd698">dc_<wbr/>configure()</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga3ced1bbde752feba46ab089611287d71">DC_EVENT_CONNECTIVITY_CHANGED</a></span>
+            </dt>
+            <dd>The connectivity to the server changed.</dd>
+            <dt id="ga658b9fc4315badab7afe265b7fa8c2af">
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga658b9fc4315badab7afe265b7fa8c2af">DC_EVENT_CONTACTS_CHANGED</a></span>
+            </dt>
+            <dd>Contact(s) created, renamed, verified, blocked or deleted.</dd>
+            <dt id="ga22f447da7529e86c72b1c925633d9286">
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga22f447da7529e86c72b1c925633d9286">DC_EVENT_DELETED_BLOB_FILE</a></span>
+            </dt>
+            <dd>Emitted when a blob file was successfully deleted.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gaf7b3f4a361fc9515a79758bd49a376d0">DC_EVENT_ERROR</a></span>
+            </dt>
+            <dd>The library-user should report an error to the end-user.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gab55bc1fec869d92d722618c05bd74604">DC_EVENT_ERROR_SELF_NOT_IN_GROUP</a></span>
+            </dt>
+            <dd>An action cannot be performed because the user is not in the group.</dd>
+            <dt id="ga867b454250458393e4f405a064c02928">
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga867b454250458393e4f405a064c02928">DC_EVENT_IMAP_CONNECTED</a></span>
+            </dt>
+            <dd>Emitted when IMAP connection is established and login was successful.</dd>
+            <dt id="ga93ef5602e9e411aa5306d0c9ed299cd8">
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga93ef5602e9e411aa5306d0c9ed299cd8">DC_EVENT_IMAP_MESSAGE_DELETED</a></span>
+            </dt>
+            <dd>Emitted when a message was successfully marked as deleted on the IMAP server.</dd>
+            <dt id="ga947fbe70db73f2b6d26f0a96db3ae25d">
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga947fbe70db73f2b6d26f0a96db3ae25d">DC_EVENT_IMAP_MESSAGE_MOVED</a></span>
+            </dt>
+            <dd>Emitted when a message was successfully moved on IMAP.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga7ffbea55be6a5e6da7ac7e35ba6bf985">DC_EVENT_IMEX_FILE_WRITTEN</a></span>
+            </dt>
+            <dd>A file has been exported.</dd>
+            <dt id="ga006ea41d9c1a76ffc672752484c61e6c">
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga006ea41d9c1a76ffc672752484c61e6c">DC_EVENT_IMEX_PROGRESS</a></span>
+            </dt>
+            <dd>Inform about the import/export progress started by <a class="m-doc" href="classdc__context__t.html#ab04a07bb49363824f6fe3b03e6aaaca7">dc_<wbr/>imex()</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga3f0831ca83189879a2f224b424d8b58f">DC_EVENT_INCOMING_MSG</a></span>
+            </dt>
+            <dd>There is a fresh message.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga0f492424e22941431e2562731a5f21ba">DC_EVENT_INFO</a></span>
+            </dt>
+            <dd>The library-user may write an informational string to the log.</dd>
+            <dt id="ga1eded0156765a6c55f31e39ca6cf6adf">
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga1eded0156765a6c55f31e39ca6cf6adf">DC_EVENT_LOCATION_CHANGED</a></span>
+            </dt>
+            <dd>Location of one or more contact has changed.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga0f52cdaad70dd24f7540abda6193cc2d">DC_EVENT_MSGS_CHANGED</a></span>
+            </dt>
+            <dd>Messages or chats changed.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gaa02ff510ef8c8b16e5829b6fd2bd82a9">DC_EVENT_MSGS_NOTICED</a></span>
+            </dt>
+            <dd>Messages were marked noticed or seen.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga4438030310448a61af0a4bc72c6765dc">DC_EVENT_MSG_DELIVERED</a></span>
+            </dt>
+            <dd>A single message is sent successfully.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga1690a84950e2bc948c674d0271262d2a">DC_EVENT_MSG_FAILED</a></span>
+            </dt>
+            <dd>A single message could not be sent.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga750f252b4bc82d91dfdd788860f36989">DC_EVENT_MSG_READ</a></span>
+            </dt>
+            <dd>A single message is read by the receiver.</dd>
+            <dt id="ga9eef48ff47b135c5481db88ce2cff72c">
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga9eef48ff47b135c5481db88ce2cff72c">DC_EVENT_NEW_BLOB_FILE</a></span>
+            </dt>
+            <dd>Emitted when a new blob file was successfully written.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gae1b19779138b8ea63d1b6a5b450c181a">DC_EVENT_SECUREJOIN_INVITER_PROGRESS</a></span>
+            </dt>
+            <dd>Progress information of a secure-join handshake from the view of the inviter (Alice, the person who shows the QR code).</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#gae9113049bec969095e2cda81ebc1773a">DC_EVENT_SECUREJOIN_JOINER_PROGRESS</a></span>
+            </dt>
+            <dd>Progress information of a secure-join handshake from the view of the joiner (Bob, the person who scans the QR code).</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga1e7835bb5dd4d752df5f4783a48f7353">DC_EVENT_SELFAVATAR_CHANGED</a></span>
+            </dt>
+            <dd>The user's avatar changed.</dd>
+            <dt id="ga68af4630b2e79d8a387c8a9b83c9a088">
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga68af4630b2e79d8a387c8a9b83c9a088">DC_EVENT_SMTP_CONNECTED</a></span>
+            </dt>
+            <dd>Emitted when SMTP connection is established and login was successful.</dd>
+            <dt id="gace252b291eaa12fd593ea8384b2205e4">
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gace252b291eaa12fd593ea8384b2205e4">DC_EVENT_SMTP_MESSAGE_SENT</a></span>
+            </dt>
+            <dd>Emitted when a message was successfully sent to the SMTP server.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga2e4cc3e6e1c3ba8f152b2cf94632a967">DC_EVENT_WARNING</a></span>
+            </dt>
+            <dd>The library-user should write a warning string to the log.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc" href="#ga4f235a085abfc3b70e37a8e4149aa838">DC_EVENT_WEBXDC_STATUS_UPDATE</a></span>
+            </dt>
+            <dd>webxdc status update received.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Define documentation</h2>
+          <section class="m-doc-details" id="ga27512e465c573fcf295014f8e0075adf"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga27512e465c573fcf295014f8e0075adf">DC_EVENT_CHAT_MODIFIED</a></span>
+            </h3>
+            <p>Chat changed.</p>
+<p>The name or the image of a chat group was changed or members were added or removed. Or the verify state of a chat has changed. See <a class="m-doc" href="classdc__context__t.html#a6e324717f073f0c52f2c77d07dc40fd6">dc_<wbr/>set_<wbr/>chat_<wbr/>name()</a>, <a class="m-doc" href="classdc__context__t.html#a2dc155d28e257fe540c2af4524e20cb6">dc_<wbr/>set_<wbr/>chat_<wbr/>profile_<wbr/>image()</a>, <a class="m-doc" href="classdc__context__t.html#a9360baf78e9b45e45af1de5856b63282">dc_<wbr/>add_<wbr/>contact_<wbr/>to_<wbr/>chat()</a> and <a class="m-doc" href="classdc__context__t.html#a72d4db8f0fcb595f11045882284f408f">dc_<wbr/>remove_<wbr/>contact_<wbr/>from_<wbr/>chat()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga3ced1bbde752feba46ab089611287d71"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga3ced1bbde752feba46ab089611287d71">DC_EVENT_CONNECTIVITY_CHANGED</a></span>
+            </h3>
+            <p>The connectivity to the server changed.</p>
+<p>This means that you should refresh the connectivity view and possibly the connectivtiy HTML; see <a class="m-doc" href="classdc__context__t.html#a80bf9812eb5a50f8eb097cbe72df1096">dc_<wbr/>get_<wbr/>connectivity()</a> and <a class="m-doc" href="classdc__context__t.html#a98d41f00d9a96d83a662f39d0fc23afb">dc_<wbr/>get_<wbr/>connectivity_<wbr/>html()</a> for details.</p>
+          </div></section>
+          <section class="m-doc-details" id="gaf7b3f4a361fc9515a79758bd49a376d0"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gaf7b3f4a361fc9515a79758bd49a376d0">DC_EVENT_ERROR</a></span>
+            </h3>
+            <p>The library-user should report an error to the end-user.</p>
+<p>As most things are asynchronous, things may go wrong at any time and the user should not be disturbed by a dialog or so. Instead, use a bubble or so.</p><p>However, for ongoing processes (e.g. <a class="m-doc" href="classdc__context__t.html#adfe52669a5bed893df78a620566dd698">dc_<wbr/>configure()</a>) or for functions that are expected to fail (e.g. <a class="m-doc" href="classdc__context__t.html#a5af2cdd80c7286b2a495d56fa6c0832f">dc_<wbr/>continue_<wbr/>key_<wbr/>transfer()</a>) it might be better to delay showing these events until the function has really failed (returned false). It should be sufficient to report only the <em>last</em> error in a message box then.</p>
+          </div></section>
+          <section class="m-doc-details" id="gab55bc1fec869d92d722618c05bd74604"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gab55bc1fec869d92d722618c05bd74604">DC_EVENT_ERROR_SELF_NOT_IN_GROUP</a></span>
+            </h3>
+            <p>An action cannot be performed because the user is not in the group.</p>
+<p>Reported e.g. after a call to <a class="m-doc" href="classdc__context__t.html#a6e324717f073f0c52f2c77d07dc40fd6">dc_<wbr/>set_<wbr/>chat_<wbr/>name()</a>, <a class="m-doc" href="classdc__context__t.html#a2dc155d28e257fe540c2af4524e20cb6">dc_<wbr/>set_<wbr/>chat_<wbr/>profile_<wbr/>image()</a>, <a class="m-doc" href="classdc__context__t.html#a9360baf78e9b45e45af1de5856b63282">dc_<wbr/>add_<wbr/>contact_<wbr/>to_<wbr/>chat()</a>, <a class="m-doc" href="classdc__context__t.html#a72d4db8f0fcb595f11045882284f408f">dc_<wbr/>remove_<wbr/>contact_<wbr/>from_<wbr/>chat()</a>, <a class="m-doc" href="classdc__context__t.html#a2e30845e0c4676e1b0f7c5b4a15fb2b6">dc_<wbr/>send_<wbr/>text_<wbr/>msg()</a> or another sending function.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga7ffbea55be6a5e6da7ac7e35ba6bf985"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga7ffbea55be6a5e6da7ac7e35ba6bf985">DC_EVENT_IMEX_FILE_WRITTEN</a></span>
+            </h3>
+            <p>A file has been exported.</p>
+<p>A file has been written by <a class="m-doc" href="classdc__context__t.html#ab04a07bb49363824f6fe3b03e6aaaca7">dc_<wbr/>imex()</a>. This event may be sent multiple times by a single call to <a class="m-doc" href="classdc__context__t.html#ab04a07bb49363824f6fe3b03e6aaaca7">dc_<wbr/>imex()</a>.</p><p>A typical purpose for a handler of this event may be to make the file public to some system services.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga3f0831ca83189879a2f224b424d8b58f"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga3f0831ca83189879a2f224b424d8b58f">DC_EVENT_INCOMING_MSG</a></span>
+            </h3>
+            <p>There is a fresh message.</p>
+<p>Typically, the user will show an notification when receiving this message.</p><p>There is no extra <a class="m-doc" href="group___d_c___e_v_e_n_t.html#ga0f52cdaad70dd24f7540abda6193cc2d">DC_<wbr/>EVENT_<wbr/>MSGS_<wbr/>CHANGED</a> event send together with this event.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga0f492424e22941431e2562731a5f21ba"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga0f492424e22941431e2562731a5f21ba">DC_EVENT_INFO</a></span>
+            </h3>
+            <p>The library-user may write an informational string to the log.</p>
+<p>This event should not be reported to the end-user using a popup or something like that.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga0f52cdaad70dd24f7540abda6193cc2d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga0f52cdaad70dd24f7540abda6193cc2d">DC_EVENT_MSGS_CHANGED</a></span>
+            </h3>
+            <p>Messages or chats changed.</p>
+<p>One or more messages or chats changed for various reasons in the database:</p><ul><li>Messages sent, received or removed</li><li>Chats created, deleted or archived</li><li>A draft has been set</li></ul>
+          </div></section>
+          <section class="m-doc-details" id="gaa02ff510ef8c8b16e5829b6fd2bd82a9"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gaa02ff510ef8c8b16e5829b6fd2bd82a9">DC_EVENT_MSGS_NOTICED</a></span>
+            </h3>
+            <p>Messages were marked noticed or seen.</p>
+<p>The UI may update badge counters or stop showing a chatlist-item with a bold font.</p><p>This event is emitted e.g. when calling <a class="m-doc" href="classdc__context__t.html#ae5305a90c09380dffe54e68c2a709128">dc_<wbr/>markseen_<wbr/>msgs()</a> or <a class="m-doc" href="classdc__context__t.html#a7286128d6c3ae3f274f72241fbc4353c">dc_<wbr/>marknoticed_<wbr/>chat()</a> or when a chat is answered on another device. Do not try to derive the state of an item from just the fact you received the event; use e.g. <a class="m-doc" href="classdc__msg__t.html#a83fbf6e74d09a0b598ccefe9b48bd68c">dc_<wbr/>msg_<wbr/>get_<wbr/>state()</a> or <a class="m-doc" href="classdc__context__t.html#a6d47f15d87049f2afa60e059f705c1c5">dc_<wbr/>get_<wbr/>fresh_<wbr/>msg_<wbr/>cnt()</a> for this purpose.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga4438030310448a61af0a4bc72c6765dc"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga4438030310448a61af0a4bc72c6765dc">DC_EVENT_MSG_DELIVERED</a></span>
+            </h3>
+            <p>A single message is sent successfully.</p>
+<p>State changed from <a class="m-doc" href="group___d_c___s_t_a_t_e.html#ga796d22b160b58d2683da1088dabe934c">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>PENDING</a> to <a class="m-doc" href="group___d_c___s_t_a_t_e.html#gac7f31ab9eee663b86d5745e82e4df861">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>DELIVERED</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga1690a84950e2bc948c674d0271262d2a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga1690a84950e2bc948c674d0271262d2a">DC_EVENT_MSG_FAILED</a></span>
+            </h3>
+            <p>A single message could not be sent.</p>
+<p>State changed from <a class="m-doc" href="group___d_c___s_t_a_t_e.html#ga796d22b160b58d2683da1088dabe934c">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>PENDING</a>, <a class="m-doc" href="group___d_c___s_t_a_t_e.html#gac7f31ab9eee663b86d5745e82e4df861">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>DELIVERED</a> or <a class="m-doc" href="group___d_c___s_t_a_t_e.html#ga96a73f1935f0a059d0304c70e5971077">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>MDN_<wbr/>RCVD</a> to <a class="m-doc" href="group___d_c___s_t_a_t_e.html#ga5ce5dbd6ee227e66a771be7202de8786">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>FAILED</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga750f252b4bc82d91dfdd788860f36989"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga750f252b4bc82d91dfdd788860f36989">DC_EVENT_MSG_READ</a></span>
+            </h3>
+            <p>A single message is read by the receiver.</p>
+<p>State changed from <a class="m-doc" href="group___d_c___s_t_a_t_e.html#gac7f31ab9eee663b86d5745e82e4df861">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>DELIVERED</a> to <a class="m-doc" href="group___d_c___s_t_a_t_e.html#ga96a73f1935f0a059d0304c70e5971077">DC_<wbr/>STATE_<wbr/>OUT_<wbr/>MDN_<wbr/>RCVD</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="gae1b19779138b8ea63d1b6a5b450c181a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gae1b19779138b8ea63d1b6a5b450c181a">DC_EVENT_SECUREJOIN_INVITER_PROGRESS</a></span>
+            </h3>
+            <p>Progress information of a secure-join handshake from the view of the inviter (Alice, the person who shows the QR code).</p>
+<p>These events are typically sent after a joiner has scanned the QR code generated by <a class="m-doc" href="classdc__context__t.html#a586a3211762fd27924f53c316955e03d">dc_<wbr/>get_<wbr/>securejoin_<wbr/>qr()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="gae9113049bec969095e2cda81ebc1773a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#gae9113049bec969095e2cda81ebc1773a">DC_EVENT_SECUREJOIN_JOINER_PROGRESS</a></span>
+            </h3>
+            <p>Progress information of a secure-join handshake from the view of the joiner (Bob, the person who scans the QR code).</p>
+<p>The events are typically sent while <a class="m-doc" href="classdc__context__t.html#ae49176cbc26d4d40d52de4f5301d1fa7">dc_<wbr/>join_<wbr/>securejoin()</a>, which may take some time, is executed.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga1e7835bb5dd4d752df5f4783a48f7353"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga1e7835bb5dd4d752df5f4783a48f7353">DC_EVENT_SELFAVATAR_CHANGED</a></span>
+            </h3>
+            <p>The user's avatar changed.</p>
+<p>You can get the new avatar file with <code>dc_get_config(context, "selfavatar")</code>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga2e4cc3e6e1c3ba8f152b2cf94632a967"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga2e4cc3e6e1c3ba8f152b2cf94632a967">DC_EVENT_WARNING</a></span>
+            </h3>
+            <p>The library-user should write a warning string to the log.</p>
+<p>This event should not be reported to the end-user using a popup or something like that.</p>
+          </div></section>
+          <section class="m-doc-details" id="ga4f235a085abfc3b70e37a8e4149aa838"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">#define <a class="m-doc-self" href="#ga4f235a085abfc3b70e37a8e4149aa838">DC_EVENT_WEBXDC_STATUS_UPDATE</a></span>
+            </h3>
+            <p>webxdc status update received.</p>
+<p>To get the received status update, use <a class="m-doc" href="classdc__context__t.html#ae308c5f89c29da5b0580ce05a5c36887">dc_<wbr/>get_<wbr/>webxdc_<wbr/>status_<wbr/>updates()</a>. To send status updates, use <a class="m-doc" href="classdc__context__t.html#ac53bb4421efd47d156ad0dd550ede288">dc_<wbr/>send_<wbr/>webxdc_<wbr/>status_<wbr/>update()</a>.</p><p>Note, that you do not get events that arrive when the app is not running; instead, you can use <a class="m-doc" href="classdc__context__t.html#ae308c5f89c29da5b0580ce05a5c36887">dc_<wbr/>get_<wbr/>webxdc_<wbr/>status_<wbr/>updates()</a> to get all status updates and catch up that way.</p>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">…</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div class="m-text m-dim m-text-center" id="search-help">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script async="async" src="searchdata-v1.js"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        
+    <a download="" href="Delta_Chat_Core_C_Interface.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+    <br/><br/>
+    Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+
+      </div>
+    </div>
+  </div>
+</nav></footer>
+
+
+</body></html>

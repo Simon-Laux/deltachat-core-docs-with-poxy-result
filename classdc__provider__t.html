@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <title>dc_provider_t class | Delta Chat Core C Interface</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" rel="stylesheet"/>
+  <link href="m-dark+documentation.compiled.css" rel="stylesheet"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#22272e" name="theme-color"/>
+  <meta content="Delta Chat Core C Interface" name="twitter:title"/>
+  <meta content="Delta Chat Core C Interface" property="og:title"/>
+  <meta content="Delta Chat Core C Interface" itemprop="name"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="Poxy v0.5.3" name="generator"/>
+  <meta content="no-referrer-when-downgrade" name="referrer"/>
+  <link href="poxy-0.5.3.css" rel="stylesheet"/>
+  <link href="poxy-0.5.3-dark.css" rel="stylesheet"/>
+  <script src="poxy-0.5.3.js"></script>
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="Doxyfile-logo.png"/>Delta Chat Core C Interface</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+        </svg></a>
+        <a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+        <a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+      </div>
+      <div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="files.html">Files</a></li>
+            <li><a href="modules.html">Modules</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="namespaces.html">Namespaces</a></li>
+            <li><a href="annotated.html">Classes</a></li>
+            <li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path"></use>
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          dc_provider_t <span class="m-thin">class</span>
+        </h1>
+        <p>Opaque object containing information about one single email provider.</p>
+        <div class="m-block m-default poxy-toc">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#pub-methods">Public functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a72740dc24e660fabb6db32feb613cbfb">dc_provider_get_before_login_hint</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__provider__t.html">dc_<wbr/>provider_<wbr/>t</a>* provider) -&gt; char*</span>
+            </dt>
+            <dd>Get hints to be shown to the user on the login screen.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ab32fc5beb439838a16dee3c3160e0f03">dc_provider_get_overview_page</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__provider__t.html">dc_<wbr/>provider_<wbr/>t</a>* provider) -&gt; char*</span>
+            </dt>
+            <dd>URL of the overview page.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a2feeb8709214272a21430dd3bbd0258e">dc_provider_get_status</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__provider__t.html">dc_<wbr/>provider_<wbr/>t</a>* provider) -&gt; int</span>
+            </dt>
+            <dd>Whether DC works with this provider.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ad6a166c6cf4793acab8d038c76d37c35">dc_provider_new_from_email</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__context__t.html">dc_<wbr/>context_<wbr/>t</a>* context,
+              const char* email) -&gt; <a class="m-doc" href="classdc__provider__t.html">dc_<wbr/>provider_<wbr/>t</a>*</span>
+            </dt>
+            <dd>Create a provider struct for the given email address.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#af49391e0457067d83eece869febb82fe">dc_provider_unref</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__provider__t.html">dc_<wbr/>provider_<wbr/>t</a>* provider)</span>
+            </dt>
+            <dd>Free the provider info struct.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a72740dc24e660fabb6db32feb613cbfb"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>provider_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a72740dc24e660fabb6db32feb613cbfb">dc_provider_get_before_login_hint</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__provider__t.html">dc_<wbr/>provider_<wbr/>t</a>* provider)</span></span>
+            </h3>
+            <p>Get hints to be shown to the user on the login screen.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">provider</td>
+                  <td>The <a class="m-doc" href="classdc__provider__t.html">dc_<wbr/>provider_<wbr/>t</a> struct.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>A string with the hint to show to the user, may contain multiple lines, if there is no such hint, an empty string is returned, NULL is never returned. The returned value must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a>.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Depending on the <a class="m-doc" href="group___d_c___p_r_o_v_i_d_e_r___s_t_a_t_u_s.html">DC_<wbr/>PROVIDER_<wbr/>STATUS</a> returned by <a class="m-doc" href="classdc__provider__t.html#a2feeb8709214272a21430dd3bbd0258e">dc_<wbr/>provider_<wbr/>get_<wbr/>status()</a>, the UI may want to highlight the hint.</p><p>Moreover, the UI should display a "More information" link that forwards to the url returned by <a class="m-doc" href="classdc__provider__t.html#ab32fc5beb439838a16dee3c3160e0f03">dc_<wbr/>provider_<wbr/>get_<wbr/>overview_<wbr/>page()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ab32fc5beb439838a16dee3c3160e0f03"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">char* dc_<wbr/>provider_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ab32fc5beb439838a16dee3c3160e0f03">dc_provider_get_overview_page</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__provider__t.html">dc_<wbr/>provider_<wbr/>t</a>* provider)</span></span>
+            </h3>
+            <p>URL of the overview page.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">provider</td>
+                  <td>The <a class="m-doc" href="classdc__provider__t.html">dc_<wbr/>provider_<wbr/>t</a> struct.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>String with a fully-qualified URL, if there is no such URL, an empty string is returned, NULL is never returned. The returned value must be released using <a class="m-doc" href="classdc__context__t.html#aca9549878866d55e33175f333ed8cfca">dc_<wbr/>str_<wbr/>unref()</a>.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This URL allows linking to the providers page on providers.delta.chat.</p>
+          </div></section>
+          <section class="m-doc-details" id="a2feeb8709214272a21430dd3bbd0258e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">int dc_<wbr/>provider_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a2feeb8709214272a21430dd3bbd0258e">dc_provider_get_status</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__provider__t.html">dc_<wbr/>provider_<wbr/>t</a>* provider)</span></span>
+            </h3>
+            <p>Whether DC works with this provider.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">provider</td>
+                  <td>The <a class="m-doc" href="classdc__provider__t.html">dc_<wbr/>provider_<wbr/>t</a> struct.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The status as a constant number.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Can be one of <a class="m-doc" href="group___d_c___p_r_o_v_i_d_e_r___s_t_a_t_u_s.html#gacdd5dbddbbf0b7fa4eb1f531ae432634">DC_<wbr/>PROVIDER_<wbr/>STATUS_<wbr/>OK</a>, <a class="m-doc" href="group___d_c___p_r_o_v_i_d_e_r___s_t_a_t_u_s.html#gaa1f8abe384455b7b069b31e432914e29">DC_<wbr/>PROVIDER_<wbr/>STATUS_<wbr/>PREPARATION</a> or <a class="m-doc" href="group___d_c___p_r_o_v_i_d_e_r___s_t_a_t_u_s.html#gadb6c83dcc2002d49c810019e1a690719">DC_<wbr/>PROVIDER_<wbr/>STATUS_<wbr/>BROKEN</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ad6a166c6cf4793acab8d038c76d37c35"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classdc__provider__t.html">dc_<wbr/>provider_<wbr/>t</a>* dc_<wbr/>provider_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ad6a166c6cf4793acab8d038c76d37c35">dc_provider_new_from_email</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdc__context__t.html">dc_<wbr/>context_<wbr/>t</a>* context,
+              const char* email)</span></span>
+            </h3>
+            <p>Create a provider struct for the given email address.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">context</td>
+                  <td>The context object.</td>
+                </tr>
+                <tr>
+                  <td>email</td>
+                  <td>The user's email address to extract the provider info form.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>a <a class="m-doc" href="classdc__provider__t.html">dc_<wbr/>provider_<wbr/>t</a> struct which can be used with the dc_provider_get_* accessor functions. If no provider info is found, NULL will be returned.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The provider is extracted from the email address and it's information is returned.</p>
+          </div></section>
+          <section class="m-doc-details" id="af49391e0457067d83eece869febb82fe"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void dc_<wbr/>provider_<wbr/>t::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#af49391e0457067d83eece869febb82fe">dc_provider_unref</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdc__provider__t.html">dc_<wbr/>provider_<wbr/>t</a>* provider)</span></span>
+            </h3>
+            <p>Free the provider info struct.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">provider</td>
+                  <td>The <a class="m-doc" href="classdc__provider__t.html">dc_<wbr/>provider_<wbr/>t</a> struct.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">…</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div class="m-text m-dim m-text-center" id="search-help">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script async="async" src="searchdata-v1.js"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        
+    <a download="" href="Delta_Chat_Core_C_Interface.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+    <br/><br/>
+    Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+
+      </div>
+    </div>
+  </div>
+</nav></footer>
+
+
+</body></html>
